@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://blw6u6h47yn1i"]
 
-[ext_resource type="Script" uid="uid://bfo6c0uxbgxhx" path="res://runebook.gd" id="1_qwl53"]
+[ext_resource type="Script" uid="uid://bfo6c0uxbgxhx" path="res://scripts/runebook.gd" id="1_qwl53"]
 
 [node name="Node2D" type="Node2D" unique_id=1283650794]
 script = ExtResource("1_qwl53")
