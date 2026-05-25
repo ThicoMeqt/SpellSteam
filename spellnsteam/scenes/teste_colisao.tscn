@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b3mi57oyxbhon"]
+
+[ext_resource type="Script" uid="uid://ckcsf5mf522ie" path="res://scripts/teste_colisão.gd" id="1_u6yho"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gam5l"]
+size = Vector2(51.865677, 67.052246)
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=865711025]
+script = ExtResource("1_u6yho")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1612693069]
+position = Vector2(16.067163, 31.473883)
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_gam5l")
+debug_color = Color(0.9812735, 0, 0.095994495, 0.41960785)

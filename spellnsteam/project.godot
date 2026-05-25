@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="spellnsteam"
+run/main_scene="uid://dx5sswfm1uehy"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://assets/icon.svg"
+
+[autoload]
+
+GameManager="*uid://brfvh1l7wmv66"
 
 [input]
 
