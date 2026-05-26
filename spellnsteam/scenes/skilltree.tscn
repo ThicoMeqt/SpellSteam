@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://ct71guhtf1hlg"]
+
+[ext_resource type="Script" uid="uid://ba8v3cg43vee7" path="res://scenes/skilltree.gd" id="1_n6rpy"]
+
+[node name="Skilltree" type="Control" unique_id=394577640]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n6rpy")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=654379642]
+layout_mode = 0
+offset_left = 310.0
+offset_top = 71.0
+offset_right = 599.0
+offset_bottom = 199.53232
+scale = Vector2(1.8491414, 1.7450364)
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=804337379]
+layout_mode = 2
+text = "agua"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=80063841]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.77
+localize_numeral_system = false
+alignment = 1
+
+[node name="water1" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=183735015]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="water2" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=751338165]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="water3" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=1208064225]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=2078483965]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -259.0
+offset_top = 54.0
+offset_right = 30.0
+offset_bottom = 172.71765
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.849759, 1.8697404)
+
+[node name="Label" type="Label" parent="VBoxContainer2" unique_id=848798770]
+layout_mode = 2
+text = "conforto"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer2" unique_id=1415909189]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.77
+localize_numeral_system = false
+alignment = 1
+
+[node name="comfort1" type="Button" parent="VBoxContainer2/HBoxContainer" unique_id=880533907]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="comfort2" type="Button" parent="VBoxContainer2/HBoxContainer" unique_id=842457019]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="comfort3" type="Button" parent="VBoxContainer2/HBoxContainer" unique_id=1936100672]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="comfort4" type="Button" parent="VBoxContainer2/HBoxContainer" unique_id=1709912298]
+layout_mode = 2
+size_flags_horizontal = 3
