@@ -29,11 +29,25 @@ offset_right = 386.0
 offset_bottom = 213.0
 color = Color(0.3347436, 0.33474356, 0.33474356, 1)
 
+[node name="Label" type="Label" parent="RightStack/ColorRect" unique_id=807133794]
+layout_mode = 0
+offset_right = 385.0
+offset_bottom = 252.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "teste"
+
 [node name="ColorRect2" type="ColorRect" parent="RightStack" unique_id=1287188494]
 offset_top = -212.0
 offset_right = 386.0
 offset_bottom = 213.0
 color = Color(0.42941594, 0.42941603, 0.429416, 1)
+
+[node name="Label" type="Label" parent="RightStack/ColorRect2" unique_id=1515567251]
+layout_mode = 0
+offset_right = 385.0
+offset_bottom = 252.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "teste"
 
 [node name="ColorRect3" type="ColorRect" parent="RightStack" unique_id=1219519901]
 offset_top = -212.0
@@ -41,14 +55,35 @@ offset_right = 386.0
 offset_bottom = 213.0
 color = Color(0.5931336, 0.59313357, 0.59313357, 1)
 
+[node name="Label" type="Label" parent="RightStack/ColorRect3" unique_id=1299874131]
+layout_mode = 0
+offset_right = 385.0
+offset_bottom = 252.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "teste"
+
 [node name="ColorRect4" type="ColorRect" parent="RightStack" unique_id=186849563]
 offset_top = -212.0
 offset_right = 386.0
 offset_bottom = 213.0
 color = Color(0.7708395, 0.77083945, 0.77083945, 1)
 
+[node name="Label" type="Label" parent="RightStack/ColorRect4" unique_id=815779472]
+layout_mode = 0
+offset_right = 385.0
+offset_bottom = 252.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "teste"
+
 [node name="ColorRect5" type="ColorRect" parent="RightStack" unique_id=1165082894]
 offset_top = -212.0
 offset_right = 386.0
 offset_bottom = 213.0
 color = Color(0.98234254, 0.9823423, 0.9823424, 1)
+
+[node name="Label" type="Label" parent="RightStack/ColorRect5" unique_id=1525036109]
+layout_mode = 0
+offset_right = 385.0
+offset_bottom = 252.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "teste"
