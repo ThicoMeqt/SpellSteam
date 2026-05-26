@@ -34,14 +34,17 @@ alignment = 1
 [node name="water1" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=183735015]
 layout_mode = 2
 size_flags_horizontal = 3
+text = "1"
 
 [node name="water2" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=751338165]
 layout_mode = 2
 size_flags_horizontal = 3
+text = "2"
 
 [node name="water3" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=1208064225]
 layout_mode = 2
 size_flags_horizontal = 3
+text = "3"
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=2078483965]
 layout_mode = 1
@@ -73,15 +76,19 @@ alignment = 1
 [node name="comfort1" type="Button" parent="VBoxContainer2/HBoxContainer" unique_id=880533907]
 layout_mode = 2
 size_flags_horizontal = 3
+text = "1"
 
 [node name="comfort2" type="Button" parent="VBoxContainer2/HBoxContainer" unique_id=842457019]
 layout_mode = 2
 size_flags_horizontal = 3
+text = "2"
 
 [node name="comfort3" type="Button" parent="VBoxContainer2/HBoxContainer" unique_id=1936100672]
 layout_mode = 2
 size_flags_horizontal = 3
+text = "3"
 
 [node name="comfort4" type="Button" parent="VBoxContainer2/HBoxContainer" unique_id=1709912298]
 layout_mode = 2
 size_flags_horizontal = 3
+text = "4"
