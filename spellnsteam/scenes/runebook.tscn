@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://bfo6c0uxbgxhx" path="res://scripts/runebook.gd" id="1_qwl53"]
 [ext_resource type="Texture2D" uid="uid://cplt024oy60tv" path="res://assets/icon.svg" id="2_6tsts"]
-[ext_resource type="Texture2D" uid="uid://b203wqxc4qvo4" path="res://assets/ChatGPT Image Jun 8, 2026, 05_06_56 PM.png" id="3_5i8lv"]
 [ext_resource type="Texture2D" uid="uid://ci6hpcjauy2ts" path="res://assets/ChatGPT Image Jun 8, 2026, 05_09_10 PM.png" id="3_8iq38"]
 [ext_resource type="Texture2D" uid="uid://dqsbfdxslvfp4" path="res://assets/cianeto.png" id="4_8iq38"]
 [ext_resource type="Texture2D" uid="uid://35tmhlcyw31l" path="res://assets/ChatGPT Image Jun 8, 2026, 05_02_18 PM.png" id="4_n6dvn"]
@@ -43,6 +42,7 @@ color = Color(0.3347436, 0.33474356, 0.33474356, 1)
 
 [node name="TextureRectF" type="TextureRect" parent="RightStack/ColorRect" unique_id=1180223676]
 layout_mode = 0
+
 [node name="Label" type="Label" parent="RightStack/ColorRect" unique_id=807133794]
 layout_mode = 0
 offset_right = 385.0
@@ -79,6 +79,7 @@ expand_mode = 1
 [node name="TextureRectB" type="TextureRect" parent="RightStack/ColorRect2" unique_id=350008530]
 visible = false
 layout_mode = 0
+
 [node name="Label" type="Label" parent="RightStack/ColorRect2" unique_id=1515567251]
 layout_mode = 0
 offset_right = 385.0
@@ -98,6 +99,7 @@ color = Color(0.5931336, 0.59313357, 0.59313357, 1)
 
 [node name="TextureRectF" type="TextureRect" parent="RightStack/ColorRect3" unique_id=446015213]
 layout_mode = 0
+
 [node name="Label" type="Label" parent="RightStack/ColorRect3" unique_id=1299874131]
 layout_mode = 0
 offset_right = 385.0
@@ -140,6 +142,7 @@ offset_bottom = 171.0
 texture = ExtResource("5_8iq38")
 expand_mode = 1
 flip_h = true
+
 [node name="Label" type="Label" parent="RightStack/ColorRect4" unique_id=815779472]
 layout_mode = 0
 offset_right = 385.0
