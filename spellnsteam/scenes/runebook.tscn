@@ -41,26 +41,14 @@ offset_bottom = 212.5
 grow_vertical = 2
 color = Color(0.3347436, 0.33474356, 0.33474356, 1)
 
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
 [node name="TextureRectF" type="TextureRect" parent="RightStack/ColorRect" unique_id=1180223676]
 layout_mode = 0
-=======
->>>>>>> Stashed changes
 [node name="Label" type="Label" parent="RightStack/ColorRect" unique_id=807133794]
 layout_mode = 0
 offset_right = 385.0
 offset_bottom = 252.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "teste"
-
-[node name="ColorRect2" type="ColorRect" parent="RightStack" unique_id=1287188494]
-offset_top = -212.0
->>>>>>> a14b4c5bf059e69a10c2b13bc4579ce012fbcd57
-offset_right = 386.0
-offset_bottom = 426.0
-texture = ExtResource("2_6tsts")
 
 [node name="TextureRectB" type="TextureRect" parent="RightStack/ColorRect" unique_id=2038253214]
 visible = false
@@ -79,9 +67,6 @@ offset_bottom = 212.5
 grow_vertical = 2
 color = Color(0.42941594, 0.42941603, 0.429416, 1)
 
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
 [node name="TextureRectF" type="TextureRect" parent="RightStack/ColorRect2" unique_id=2125419026]
 layout_mode = 0
 offset_left = 6.0
@@ -94,21 +79,12 @@ expand_mode = 1
 [node name="TextureRectB" type="TextureRect" parent="RightStack/ColorRect2" unique_id=350008530]
 visible = false
 layout_mode = 0
-=======
->>>>>>> Stashed changes
 [node name="Label" type="Label" parent="RightStack/ColorRect2" unique_id=1515567251]
 layout_mode = 0
 offset_right = 385.0
 offset_bottom = 252.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "teste"
-
-[node name="ColorRect3" type="ColorRect" parent="RightStack" unique_id=1219519901]
-offset_top = -212.0
->>>>>>> a14b4c5bf059e69a10c2b13bc4579ce012fbcd57
-offset_right = 386.0
-offset_bottom = 171.0
-texture = ExtResource("2_6tsts")
 
 [node name="ColorRect3" type="ColorRect" parent="RightStack" unique_id=1219519901]
 anchors_preset = 4
@@ -120,27 +96,14 @@ offset_bottom = 212.5
 grow_vertical = 2
 color = Color(0.5931336, 0.59313357, 0.59313357, 1)
 
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
 [node name="TextureRectF" type="TextureRect" parent="RightStack/ColorRect3" unique_id=446015213]
 layout_mode = 0
-=======
->>>>>>> Stashed changes
 [node name="Label" type="Label" parent="RightStack/ColorRect3" unique_id=1299874131]
 layout_mode = 0
 offset_right = 385.0
 offset_bottom = 252.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "teste"
-
-[node name="ColorRect4" type="ColorRect" parent="RightStack" unique_id=186849563]
-offset_top = -212.0
->>>>>>> a14b4c5bf059e69a10c2b13bc4579ce012fbcd57
-offset_right = 386.0
-offset_bottom = 426.0
-texture = ExtResource("3_5i8lv")
-expand_mode = 1
 
 [node name="TextureRectB" type="TextureRect" parent="RightStack/ColorRect3" unique_id=1870430449]
 visible = false
@@ -161,9 +124,6 @@ offset_bottom = 212.5
 grow_vertical = 2
 color = Color(0.7708395, 0.77083945, 0.77083945, 1)
 
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
 [node name="TextureRectF" type="TextureRect" parent="RightStack/ColorRect4" unique_id=1489348892]
 layout_mode = 0
 offset_top = 22.5
@@ -180,18 +140,12 @@ offset_bottom = 171.0
 texture = ExtResource("5_8iq38")
 expand_mode = 1
 flip_h = true
-=======
->>>>>>> Stashed changes
 [node name="Label" type="Label" parent="RightStack/ColorRect4" unique_id=815779472]
 layout_mode = 0
 offset_right = 385.0
 offset_bottom = 252.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "teste"
-<<<<<<< Updated upstream
-=======
->>>>>>> a14b4c5bf059e69a10c2b13bc4579ce012fbcd57
->>>>>>> Stashed changes
 
 [node name="ColorRect5" type="ColorRect" parent="RightStack" unique_id=1165082894]
 anchors_preset = 4
@@ -211,7 +165,6 @@ anchor_bottom = 0.5
 offset_top = -213.0
 offset_right = 386.0
 offset_bottom = 213.0
-<<<<<<< HEAD
 grow_vertical = 2
 texture = ExtResource("6_g2smf")
 
@@ -223,16 +176,3 @@ offset_bottom = 171.0
 texture = ExtResource("7_c4h71")
 expand_mode = 1
 flip_h = true
-=======
-color = Color(0.98234254, 0.9823423, 0.9823424, 1)
-
-[node name="Label" type="Label" parent="RightStack/ColorRect5" unique_id=1525036109]
-layout_mode = 0
-offset_right = 385.0
-offset_bottom = 252.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "teste"
-<<<<<<< Updated upstream
-=======
->>>>>>> a14b4c5bf059e69a10c2b13bc4579ce012fbcd57
->>>>>>> Stashed changes
