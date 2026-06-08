@@ -62,6 +62,10 @@ func flip_forward():
 	tween.parallel().tween_property(page, "rotation", tilt, flip_duration / 2)
 
 	tween.tween_callback(func():
+
+		page.get_node("TextureRectF").visible = false
+		page.get_node("TextureRectB").visible = true
+
 		right_stack.remove_child(page)
 		left_stack.add_child(page)
 
@@ -72,7 +76,7 @@ func flip_forward():
 	var final_index = left_pages.size() - 1
 	var final_pos = Vector2(-final_index * spacing, -page.size.y / 2)
 
-	# Move + open + straighten
+	# Move + open + straighten	
 	tween.parallel().tween_property(page, "position", final_pos, flip_duration / 2)
 	tween.parallel().tween_property(page, "scale:x", -1.0, flip_duration / 2)
 	tween.parallel().tween_property(page, "rotation", 0.0, flip_duration / 2)
@@ -106,6 +110,10 @@ func flip_backward():
 	tween.parallel().tween_property(page, "rotation", tilt, flip_duration / 2)
 
 	tween.tween_callback(func():
+
+		page.get_node("TextureRectF").visible = true
+		page.get_node("TextureRectB").visible = false
+
 		left_stack.remove_child(page)
 		right_stack.add_child(page)
 
