@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://craxedtm2qvep"]
+
+[ext_resource type="Script" uid="uid://blwapydlbs7su" path="res://scripts/acoes.gd" id="1_6xtfj"]
+[ext_resource type="Texture2D" uid="uid://c5o64khspf5o6" path="res://assets/fogo1.webp" id="2_dwa4f"]
+[ext_resource type="Texture2D" uid="uid://c73ffvmlnyhv8" path="res://assets/fogo2.webp" id="3_6sg37"]
+[ext_resource type="Texture2D" uid="uid://d21y73oecvbuo" path="res://assets/fogo3.webp" id="4_drhnp"]
+
+[node name="display_fogo" type="Control" unique_id=1732794301]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6xtfj")
+
+[node name="TextureRect1" type="TextureRect" parent="." unique_id=1329699570]
+layout_mode = 0
+offset_left = 997.0
+offset_top = 582.0
+offset_right = 1040.0486
+offset_bottom = 643.0
+texture = ExtResource("2_dwa4f")
+expand_mode = 3
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1071624568]
+layout_mode = 0
+offset_left = 1044.0
+offset_top = 582.0
+offset_right = 1090.7086
+offset_bottom = 643.0
+texture = ExtResource("3_6sg37")
+expand_mode = 3
+
+[node name="TextureRect3" type="TextureRect" parent="." unique_id=190110634]
+layout_mode = 0
+offset_left = 1094.0
+offset_top = 582.0
+offset_right = 1149.5972
+offset_bottom = 643.0
+texture = ExtResource("4_drhnp")
+expand_mode = 3

@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c8ytc0g2ok0su" path="res://scenes/teste_transição.tscn" id="3_qhvma"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ws5rw"]
-size = Vector2(345, 272.5)
+size = Vector2(345, 106.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xgbnv"]
 size = Vector2(482, 55)
@@ -46,7 +46,7 @@ position = Vector2(1064, 361)
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=845747796]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1107566392]
-position = Vector2(654.5, 146.25)
+position = Vector2(654.5, 229.25)
 shape = SubResource("RectangleShape2D_ws5rw")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D2" unique_id=594904421]

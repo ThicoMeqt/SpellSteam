@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b887v0bxihb8w" path="res://assets/map_sauna_3.png" id="1_5e0lc"]
 [ext_resource type="PackedScene" uid="uid://c8ytc0g2ok0su" path="res://scenes/teste_transição.tscn" id="2_sc4fi"]
+[ext_resource type="PackedScene" uid="uid://c5bjugykfyuvf" path="res://scenes/btn_menos_fogo.tscn" id="3_sc4fi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uemsp"]
 size = Vector2(121.82678, 290.01746)
@@ -88,3 +89,9 @@ shape = SubResource("RectangleShape2D_ltcdp")
 position = Vector2(796, 116.00001)
 rotation = -1.5882496
 shape = SubResource("RectangleShape2D_grtg5")
+
+[node name="BTN_menos_fogo" parent="." unique_id=1835488899 instance=ExtResource("3_sc4fi")]
+offset_left = 583.0
+offset_top = 137.0
+offset_right = 583.0
+offset_bottom = 137.0

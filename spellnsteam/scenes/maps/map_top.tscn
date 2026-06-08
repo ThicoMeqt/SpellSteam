@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://3it61ge4a5cw" path="res://assets/map_top.png" id="1_lbp10"]
 [ext_resource type="PackedScene" uid="uid://c8ytc0g2ok0su" path="res://scenes/teste_transição.tscn" id="2_gpp1e"]
+[ext_resource type="PackedScene" uid="uid://c5bjugykfyuvf" path="res://scenes/btn_menos_fogo.tscn" id="3_gpp1e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uoslu"]
 size = Vector2(401.5, 112.8125)
@@ -99,3 +100,15 @@ shape = SubResource("RectangleShape2D_7t04i")
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1821069602]
 position = Vector2(911, 311.8125)
 shape = SubResource("RectangleShape2D_tc7h6")
+
+[node name="BTN_menos_fogo" parent="." unique_id=1835488899 instance=ExtResource("3_gpp1e")]
+offset_left = 203.0
+offset_top = 329.0
+offset_right = 203.0
+offset_bottom = 329.0
+
+[node name="BTN_menos_fogo2" parent="." unique_id=1868988512 instance=ExtResource("3_gpp1e")]
+offset_left = 912.0
+offset_top = 313.0
+offset_right = 912.0
+offset_bottom = 313.0

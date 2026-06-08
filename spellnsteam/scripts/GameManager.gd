@@ -29,28 +29,22 @@ var rival_comfort = 2
 var rival_popularity = 2
 
 #SISTEMA DE ACOES
-func spend_action(amount := 1):
-	if remaining_actions < amount:
-		print("NO ACTIONS LEFT")
-		return false
+signal actions_changed(valor)
+
+func gastar_fogo(amount := 1):
 	remaining_actions -= amount
-	print("Remaining actions:", remaining_actions)
-	return true
+	actions_changed.emit(remaining_actions)
 
 #SISTEMA DIA/NOITE
 func end_phase():
-
 	# DAY -> NIGHT
 	if is_daytime:
-
 		is_daytime = false
 		remaining_actions = max_night_actions
-
 		print("Night begins")
 
 	# NIGHT -> NEXT DAY
 	else:
-
 		is_daytime = true
 		current_day += 1
 		remaining_actions = max_day_actions
