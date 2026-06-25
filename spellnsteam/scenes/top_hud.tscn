@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://plckmc868rus"]
 
 [ext_resource type="Script" uid="uid://cfcdg868sut0l" path="res://scripts/top_hud.gd" id="1_r33n1"]
+[ext_resource type="Texture2D" uid="uid://cplt024oy60tv" path="res://assets/icon.svg" id="2_2iueu"]
 [ext_resource type="Texture2D" uid="uid://cwstbiuaktp1v" path="res://assets/map_full.png" id="2_4f3nj"]
 
 [node name="top_HUD" type="Control" unique_id=1072271423]
@@ -17,17 +18,6 @@ offset_top = -154.0
 offset_right = 1152.0
 color = Color(0.686364, 0.5429937, 0.3953848, 1)
 script = ExtResource("1_r33n1")
-
-[node name="btn_abrir_mapa" type="Button" parent="ColorRect" unique_id=132462734]
-layout_mode = 0
-offset_left = 26.0
-offset_top = 23.0
-offset_right = 137.0
-offset_bottom = 134.0
-focus_mode = 0
-mouse_default_cursor_shape = 2
-text = "mapinha
-ihihihihi"
 
 [node name="ColorRect2" type="ColorRect" parent="ColorRect" unique_id=739479730]
 layout_mode = 0
@@ -53,6 +43,185 @@ grow_vertical = 2
 focus_mode = 0
 mouse_default_cursor_shape = 2
 
+[node name="b1" type="Button" parent="ColorRect" unique_id=485396418]
+layout_mode = 0
+offset_left = 328.0
+offset_top = 11.0
+offset_right = 347.0
+offset_bottom = 67.0
+
+[node name="b2" type="Button" parent="ColorRect" unique_id=348513622]
+layout_mode = 0
+offset_left = 489.0
+offset_top = 12.0
+offset_right = 508.0
+offset_bottom = 68.0
+
+[node name="b3" type="Button" parent="ColorRect" unique_id=1582558131]
+layout_mode = 0
+offset_left = 644.0
+offset_top = 11.0
+offset_right = 663.0
+offset_bottom = 67.0
+
+[node name="b4" type="Button" parent="ColorRect" unique_id=1630312013]
+layout_mode = 0
+offset_left = 801.0
+offset_top = 11.0
+offset_right = 820.0
+offset_bottom = 67.0
+
+[node name="b5" type="Button" parent="ColorRect" unique_id=482788289]
+layout_mode = 0
+offset_left = 958.0
+offset_top = 8.0
+offset_right = 977.0
+offset_bottom = 64.0
+
+[node name="b6" type="Button" parent="ColorRect" unique_id=237771484]
+layout_mode = 0
+offset_left = 1115.0
+offset_top = 12.0
+offset_right = 1134.0
+offset_bottom = 68.0
+
+[node name="btn_abrir_mapa" type="Button" parent="ColorRect" unique_id=132462734]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 23.0
+offset_right = 156.0
+offset_bottom = 134.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+text = "mapinha
+ihihihihi"
+
+[node name="slot_madeira" type="Node2D" parent="ColorRect" unique_id=111870621]
+position = Vector2(19, 0)
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect/slot_madeira" unique_id=1613100641]
+offset_left = 189.0
+offset_top = 24.0
+offset_right = 301.0
+offset_bottom = 136.0
+texture = ExtResource("2_2iueu")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="ColorRect/slot_madeira" unique_id=1492123785]
+offset_left = 263.0
+offset_top = 102.0
+offset_right = 303.0
+offset_bottom = 137.0
+theme_override_font_sizes/font_size = 25
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="slot_carvao" type="Node2D" parent="ColorRect" unique_id=1133901709]
+position = Vector2(172, 0)
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect/slot_carvao" unique_id=1992710431]
+offset_left = 189.0
+offset_top = 24.0
+offset_right = 301.0
+offset_bottom = 136.0
+texture = ExtResource("2_2iueu")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="ColorRect/slot_carvao" unique_id=1318974039]
+offset_left = 263.0
+offset_top = 102.0
+offset_right = 303.0
+offset_bottom = 137.0
+theme_override_font_sizes/font_size = 25
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="slot_up_toalha" type="Node2D" parent="ColorRect" unique_id=363678899]
+position = Vector2(332, 0)
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect/slot_up_toalha" unique_id=325667672]
+offset_left = 189.0
+offset_top = 24.0
+offset_right = 301.0
+offset_bottom = 136.0
+texture = ExtResource("2_2iueu")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="ColorRect/slot_up_toalha" unique_id=186980384]
+offset_left = 263.0
+offset_top = 102.0
+offset_right = 303.0
+offset_bottom = 137.0
+theme_override_font_sizes/font_size = 25
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="slot_up_eucalipto" type="Node2D" parent="ColorRect" unique_id=660100188]
+position = Vector2(488, 0)
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect/slot_up_eucalipto" unique_id=51727671]
+offset_left = 189.0
+offset_top = 24.0
+offset_right = 301.0
+offset_bottom = 136.0
+texture = ExtResource("2_2iueu")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="ColorRect/slot_up_eucalipto" unique_id=1671742508]
+offset_left = 263.0
+offset_top = 102.0
+offset_right = 303.0
+offset_bottom = 137.0
+theme_override_font_sizes/font_size = 25
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="slot_up_cerca1" type="Node2D" parent="ColorRect" unique_id=1640757315]
+position = Vector2(641, 0)
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect/slot_up_cerca1" unique_id=627613335]
+offset_left = 189.0
+offset_top = 24.0
+offset_right = 301.0
+offset_bottom = 136.0
+texture = ExtResource("2_2iueu")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="ColorRect/slot_up_cerca1" unique_id=1461552398]
+offset_left = 263.0
+offset_top = 102.0
+offset_right = 303.0
+offset_bottom = 137.0
+theme_override_font_sizes/font_size = 25
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="slot_up_cerca2" type="Node2D" parent="ColorRect" unique_id=1216894440]
+position = Vector2(801, 0)
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect/slot_up_cerca2" unique_id=1744330340]
+offset_left = 189.0
+offset_top = 24.0
+offset_right = 301.0
+offset_bottom = 136.0
+texture = ExtResource("2_2iueu")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="ColorRect/slot_up_cerca2" unique_id=546757238]
+offset_left = 263.0
+offset_top = 102.0
+offset_right = 303.0
+offset_bottom = 137.0
+theme_override_font_sizes/font_size = 25
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="btn_mapao" type="TextureButton" parent="." unique_id=1662516648]
 visible = false
 layout_mode = 1
@@ -65,6 +234,12 @@ texture_normal = ExtResource("2_4f3nj")
 ignore_texture_size = true
 stretch_mode = 0
 
-[connection signal="pressed" from="ColorRect/btn_abrir_mapa" to="ColorRect" method="_on_btn_abrir_mapa_pressed"]
 [connection signal="pressed" from="ColorRect/ColorRect2/btn_puxar" to="ColorRect" method="_on_button_pressed"]
+[connection signal="pressed" from="ColorRect/b1" to="ColorRect" method="_on_b_1_pressed"]
+[connection signal="pressed" from="ColorRect/b2" to="ColorRect" method="_on_b_2_pressed"]
+[connection signal="pressed" from="ColorRect/b3" to="ColorRect" method="_on_b_3_pressed"]
+[connection signal="pressed" from="ColorRect/b4" to="ColorRect" method="_on_b_4_pressed"]
+[connection signal="pressed" from="ColorRect/b5" to="ColorRect" method="_on_b_5_pressed"]
+[connection signal="pressed" from="ColorRect/b6" to="ColorRect" method="_on_b_6_pressed"]
+[connection signal="pressed" from="ColorRect/btn_abrir_mapa" to="ColorRect" method="_on_btn_abrir_mapa_pressed"]
 [connection signal="pressed" from="btn_mapao" to="ColorRect" method="_on_btn_mapao_pressed"]

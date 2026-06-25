@@ -19,9 +19,31 @@ var comfort = 0
 var popularity = 0
 
 #INVENTARIO PLAYER
-var wood = 0
-var coal = 0
-var shopitem = 0
+
+var inventory = {
+	"madeira": 0,
+	"carvao": 0,
+	"up_toalha": 0,
+	"up_eucalipto": 0,
+	"up_cerca1": 0,
+	"up_cerca2": 0
+}
+
+signal inventory_changed
+
+func add_item(item_name: String):
+	if !inventory.has(item_name):
+		return
+	inventory[item_name] += 1
+	inventory_changed.emit()
+
+
+
+
+
+
+
+
 
 #SAUNA RIVAL 1
 var rival_water = 2
