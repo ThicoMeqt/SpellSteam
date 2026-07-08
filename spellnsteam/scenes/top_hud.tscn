@@ -49,6 +49,14 @@ offset_left = 328.0
 offset_top = 11.0
 offset_right = 347.0
 offset_bottom = 67.0
+focus_mode = 0
+
+[node name="b11" type="Button" parent="ColorRect/b1" unique_id=734998994]
+layout_mode = 0
+offset_top = 87.0
+offset_right = 19.0
+offset_bottom = 108.0
+focus_mode = 0
 
 [node name="b2" type="Button" parent="ColorRect" unique_id=348513622]
 layout_mode = 0
@@ -56,6 +64,14 @@ offset_left = 489.0
 offset_top = 12.0
 offset_right = 508.0
 offset_bottom = 68.0
+focus_mode = 0
+
+[node name="b22" type="Button" parent="ColorRect/b2" unique_id=531475139]
+layout_mode = 0
+offset_top = 87.0
+offset_right = 19.0
+offset_bottom = 108.0
+focus_mode = 0
 
 [node name="b3" type="Button" parent="ColorRect" unique_id=1582558131]
 layout_mode = 0
@@ -63,6 +79,14 @@ offset_left = 644.0
 offset_top = 11.0
 offset_right = 663.0
 offset_bottom = 67.0
+focus_mode = 0
+
+[node name="b33" type="Button" parent="ColorRect/b3" unique_id=1368201875]
+layout_mode = 0
+offset_top = 87.0
+offset_right = 19.0
+offset_bottom = 108.0
+focus_mode = 0
 
 [node name="b4" type="Button" parent="ColorRect" unique_id=1630312013]
 layout_mode = 0
@@ -70,6 +94,14 @@ offset_left = 801.0
 offset_top = 11.0
 offset_right = 820.0
 offset_bottom = 67.0
+focus_mode = 0
+
+[node name="b44" type="Button" parent="ColorRect/b4" unique_id=1241916673]
+layout_mode = 0
+offset_top = 87.0
+offset_right = 19.0
+offset_bottom = 108.0
+focus_mode = 0
 
 [node name="b5" type="Button" parent="ColorRect" unique_id=482788289]
 layout_mode = 0
@@ -77,6 +109,14 @@ offset_left = 958.0
 offset_top = 8.0
 offset_right = 977.0
 offset_bottom = 64.0
+focus_mode = 0
+
+[node name="b55" type="Button" parent="ColorRect/b5" unique_id=1254228630]
+layout_mode = 0
+offset_top = 87.0
+offset_right = 19.0
+offset_bottom = 108.0
+focus_mode = 0
 
 [node name="b6" type="Button" parent="ColorRect" unique_id=237771484]
 layout_mode = 0
@@ -84,6 +124,14 @@ offset_left = 1115.0
 offset_top = 12.0
 offset_right = 1134.0
 offset_bottom = 68.0
+focus_mode = 0
+
+[node name="b66" type="Button" parent="ColorRect/b6" unique_id=835991693]
+layout_mode = 0
+offset_top = 87.0
+offset_right = 19.0
+offset_bottom = 108.0
+focus_mode = 0
 
 [node name="btn_abrir_mapa" type="Button" parent="ColorRect" unique_id=132462734]
 layout_mode = 0
@@ -99,13 +147,16 @@ ihihihihi"
 [node name="slot_madeira" type="Node2D" parent="ColorRect" unique_id=111870621]
 position = Vector2(19, 0)
 
-[node name="TextureRect" type="TextureRect" parent="ColorRect/slot_madeira" unique_id=1613100641]
+[node name="btn_madeira" type="TextureButton" parent="ColorRect/slot_madeira" unique_id=765850707]
 offset_left = 189.0
-offset_top = 24.0
+offset_top = 23.0
 offset_right = 301.0
-offset_bottom = 136.0
-texture = ExtResource("2_2iueu")
-expand_mode = 1
+offset_bottom = 135.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("2_2iueu")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="Label" type="Label" parent="ColorRect/slot_madeira" unique_id=1492123785]
 offset_left = 263.0
@@ -120,13 +171,16 @@ vertical_alignment = 1
 [node name="slot_carvao" type="Node2D" parent="ColorRect" unique_id=1133901709]
 position = Vector2(172, 0)
 
-[node name="TextureRect" type="TextureRect" parent="ColorRect/slot_carvao" unique_id=1992710431]
+[node name="btn_carvao" type="TextureButton" parent="ColorRect/slot_carvao" unique_id=129005890]
 offset_left = 189.0
-offset_top = 24.0
+offset_top = 23.0
 offset_right = 301.0
-offset_bottom = 136.0
-texture = ExtResource("2_2iueu")
-expand_mode = 1
+offset_bottom = 135.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("2_2iueu")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="Label" type="Label" parent="ColorRect/slot_carvao" unique_id=1318974039]
 offset_left = 263.0
@@ -141,13 +195,16 @@ vertical_alignment = 1
 [node name="slot_up_toalha" type="Node2D" parent="ColorRect" unique_id=363678899]
 position = Vector2(332, 0)
 
-[node name="TextureRect" type="TextureRect" parent="ColorRect/slot_up_toalha" unique_id=325667672]
+[node name="btn_toalha" type="TextureButton" parent="ColorRect/slot_up_toalha" unique_id=1320299106]
 offset_left = 189.0
-offset_top = 24.0
+offset_top = 23.0
 offset_right = 301.0
-offset_bottom = 136.0
-texture = ExtResource("2_2iueu")
-expand_mode = 1
+offset_bottom = 135.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("2_2iueu")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="Label" type="Label" parent="ColorRect/slot_up_toalha" unique_id=186980384]
 offset_left = 263.0
@@ -162,13 +219,16 @@ vertical_alignment = 1
 [node name="slot_up_eucalipto" type="Node2D" parent="ColorRect" unique_id=660100188]
 position = Vector2(488, 0)
 
-[node name="TextureRect" type="TextureRect" parent="ColorRect/slot_up_eucalipto" unique_id=51727671]
+[node name="btn_eucalipto" type="TextureButton" parent="ColorRect/slot_up_eucalipto" unique_id=1517081042]
 offset_left = 189.0
-offset_top = 24.0
+offset_top = 23.0
 offset_right = 301.0
-offset_bottom = 136.0
-texture = ExtResource("2_2iueu")
-expand_mode = 1
+offset_bottom = 135.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("2_2iueu")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="Label" type="Label" parent="ColorRect/slot_up_eucalipto" unique_id=1671742508]
 offset_left = 263.0
@@ -183,13 +243,16 @@ vertical_alignment = 1
 [node name="slot_up_cerca1" type="Node2D" parent="ColorRect" unique_id=1640757315]
 position = Vector2(641, 0)
 
-[node name="TextureRect" type="TextureRect" parent="ColorRect/slot_up_cerca1" unique_id=627613335]
+[node name="btn_cerca1" type="TextureButton" parent="ColorRect/slot_up_cerca1" unique_id=170512495]
 offset_left = 189.0
-offset_top = 24.0
+offset_top = 23.0
 offset_right = 301.0
-offset_bottom = 136.0
-texture = ExtResource("2_2iueu")
-expand_mode = 1
+offset_bottom = 135.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("2_2iueu")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="Label" type="Label" parent="ColorRect/slot_up_cerca1" unique_id=1461552398]
 offset_left = 263.0
@@ -204,13 +267,16 @@ vertical_alignment = 1
 [node name="slot_up_cerca2" type="Node2D" parent="ColorRect" unique_id=1216894440]
 position = Vector2(801, 0)
 
-[node name="TextureRect" type="TextureRect" parent="ColorRect/slot_up_cerca2" unique_id=1744330340]
+[node name="btn_cerca2" type="TextureButton" parent="ColorRect/slot_up_cerca2" unique_id=595899117]
 offset_left = 189.0
-offset_top = 24.0
+offset_top = 23.0
 offset_right = 301.0
-offset_bottom = 136.0
-texture = ExtResource("2_2iueu")
-expand_mode = 1
+offset_bottom = 135.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("2_2iueu")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="Label" type="Label" parent="ColorRect/slot_up_cerca2" unique_id=546757238]
 offset_left = 263.0
@@ -222,24 +288,156 @@ text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="btn_mapao" type="TextureButton" parent="." unique_id=1662516648]
+[node name="mapa" type="TextureRect" parent="." unique_id=473140118]
 visible = false
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_4f3nj")
+expand_mode = 1
+
+[node name="ColorRect2" type="ColorRect" parent="mapa" unique_id=1553723249]
+layout_mode = 0
+offset_left = 1104.0
+offset_right = 1152.0
+offset_bottom = 43.0
+color = Color(0.6862745, 0.5411765, 0.39607844, 1)
+
+[node name="btn_fechar_mapa" type="Button" parent="mapa/ColorRect2" unique_id=818652362]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -17.0
+offset_top = -15.5
+offset_right = 17.0
+offset_bottom = 15.5
 grow_horizontal = 2
 grow_vertical = 2
-texture_normal = ExtResource("2_4f3nj")
-ignore_texture_size = true
-stretch_mode = 0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+text = "X"
+
+[node name="info_item" type="ColorRect" parent="." unique_id=2115360988]
+visible = false
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 0.52156866)
+
+[node name="caixa_info" type="ColorRect" parent="info_item" unique_id=94476160]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -378.49792
+offset_top = -129.5
+offset_right = 378.49792
+offset_bottom = 129.5
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.6862745, 0.5411765, 0.39607844, 1)
+
+[node name="icon_info" type="TextureRect" parent="info_item/caixa_info" unique_id=1430526822]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 20.497925
+offset_top = -108.5
+offset_right = 237.49792
+offset_bottom = 108.5
+grow_vertical = 2
+texture = ExtResource("2_2iueu")
+
+[node name="label_info" type="Label" parent="info_item/caixa_info" unique_id=1689119592]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -506.49792
+offset_top = -94.625
+offset_right = -16.0
+offset_bottom = 94.625
+grow_horizontal = 0
+grow_vertical = 2
+text = "TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO "
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="label_nome" type="Label" parent="info_item/caixa_info" unique_id=2133397634]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -491.49792
+offset_top = -111.0
+offset_right = -54.497925
+offset_bottom = -69.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "NOME"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="label_quant" type="Label" parent="info_item/caixa_info" unique_id=1043977848]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -573.4979
+offset_top = 42.0
+offset_right = -516.4979
+offset_bottom = 111.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = " 0 "
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="btn_fechar_info" type="Button" parent="info_item/caixa_info" unique_id=1068036522]
+layout_mode = 0
+offset_left = 726.4979
+offset_top = 0.5
+offset_right = 756.99585
+offset_bottom = 31.5
+focus_mode = 0
+mouse_default_cursor_shape = 2
+text = "X"
 
 [connection signal="pressed" from="ColorRect/ColorRect2/btn_puxar" to="ColorRect" method="_on_button_pressed"]
 [connection signal="pressed" from="ColorRect/b1" to="ColorRect" method="_on_b_1_pressed"]
+[connection signal="pressed" from="ColorRect/b1/b11" to="ColorRect" method="_on_b_11_pressed"]
 [connection signal="pressed" from="ColorRect/b2" to="ColorRect" method="_on_b_2_pressed"]
+[connection signal="pressed" from="ColorRect/b2/b22" to="ColorRect" method="_on_b_22_pressed"]
 [connection signal="pressed" from="ColorRect/b3" to="ColorRect" method="_on_b_3_pressed"]
+[connection signal="pressed" from="ColorRect/b3/b33" to="ColorRect" method="_on_b_33_pressed"]
 [connection signal="pressed" from="ColorRect/b4" to="ColorRect" method="_on_b_4_pressed"]
+[connection signal="pressed" from="ColorRect/b4/b44" to="ColorRect" method="_on_b_44_pressed"]
 [connection signal="pressed" from="ColorRect/b5" to="ColorRect" method="_on_b_5_pressed"]
+[connection signal="pressed" from="ColorRect/b5/b55" to="ColorRect" method="_on_b_55_pressed"]
 [connection signal="pressed" from="ColorRect/b6" to="ColorRect" method="_on_b_6_pressed"]
+[connection signal="pressed" from="ColorRect/b6/b66" to="ColorRect" method="_on_b_66_pressed"]
 [connection signal="pressed" from="ColorRect/btn_abrir_mapa" to="ColorRect" method="_on_btn_abrir_mapa_pressed"]
-[connection signal="pressed" from="btn_mapao" to="ColorRect" method="_on_btn_mapao_pressed"]
+[connection signal="pressed" from="ColorRect/slot_madeira/btn_madeira" to="ColorRect" method="_on_btn_madeira_pressed"]
+[connection signal="pressed" from="ColorRect/slot_carvao/btn_carvao" to="ColorRect" method="_on_btn_carvao_pressed"]
+[connection signal="pressed" from="ColorRect/slot_up_toalha/btn_toalha" to="ColorRect" method="_on_btn_toalha_pressed"]
+[connection signal="pressed" from="ColorRect/slot_up_eucalipto/btn_eucalipto" to="ColorRect" method="_on_btn_eucalipto_pressed"]
+[connection signal="pressed" from="ColorRect/slot_up_cerca1/btn_cerca1" to="ColorRect" method="_on_btn_cerca_1_pressed"]
+[connection signal="pressed" from="ColorRect/slot_up_cerca2/btn_cerca2" to="ColorRect" method="_on_btn_cerca_2_pressed"]
+[connection signal="pressed" from="mapa/ColorRect2/btn_fechar_mapa" to="ColorRect" method="_on_btn_fechar_mapa_pressed"]
+[connection signal="pressed" from="info_item/caixa_info/btn_fechar_info" to="ColorRect" method="_on_btn_fechar_info_pressed"]

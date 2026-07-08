@@ -7,22 +7,17 @@ extends Area2D
 @export var costs_action := false
 
 func _on_body_entered(body):
-
 	if body.name != "Player":
 		return
-
 	if GameManager.changing_map:
 		return
 
-	# =========================
-	# ACTION CHECK
-	# =========================
-
+# =========================
+# ACTION CHECK
+# =========================
 	if costs_action:
-
 		if !GameManager.spend_action():
 			return
-
 	GameManager.changing_map = true
 	GameManager.next_spawn = spawn_name
 

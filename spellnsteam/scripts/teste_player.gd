@@ -4,6 +4,16 @@ extends CharacterBody2D
 @onready var anim = $AnimatedSprite2D
 
 func _physics_process(_delta):
+	if GameManager.player_mov == false:
+		velocity = Vector2.ZERO
+		move_and_slide()
+		return
+	if GameManager.player_enable == false:
+		velocity = Vector2.ZERO
+		move_and_slide()
+		anim.visible = false
+		return
+	anim.visible = true
 	var direction = Input.get_vector(
 		"ui_left",
 		"ui_right",

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bjy5qbwab5srl"]
+
+[ext_resource type="Script" uid="uid://cagitq75y03rw" path="res://scripts/btn_coletar_madeira.gd" id="1_8xyjj"]
+
+[node name="btn_coletar_carvao" type="Button" unique_id=1987194035]
+offset_right = 40.0
+offset_bottom = 40.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+text = "Ma"
+script = ExtResource("1_8xyjj")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
