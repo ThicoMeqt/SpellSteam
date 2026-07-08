@@ -4,6 +4,7 @@ extends ColorRect
 @onready var btn_fechar_mapa = $"../mapa/ColorRect2/btn_fechar_mapa"
 @onready var mapa = $"../mapa"
 @onready var info_item = $"../info_item"
+@onready var info_icon = $"../info_item/caixa_info/icon_info"
 @onready var info_desc = $"../info_item/caixa_info/label_info"
 @onready var info_quant = $"../info_item/caixa_info/label_quant"
 @onready var info_nome = $"../info_item/caixa_info/label_nome"
@@ -116,36 +117,42 @@ func _on_btn_madeira_pressed() -> void:
 	info_quant.text = str(GameManager.inventory["madeira"])
 	info_desc.text = desc[0]
 	info_nome.text = "Madeira"
+	info_icon.texture = madeira_icon.texture_normal
 	GameManager.player_mov = false
 func _on_btn_carvao_pressed() -> void:
 	info_item.visible = true
 	info_quant.text = str(GameManager.inventory["carvao"])
 	info_desc.text = desc[1]
 	info_nome.text = "Carvão"
+	info_icon.texture = carvao_icon.texture_normal
 	GameManager.player_mov = false
 func _on_btn_toalha_pressed() -> void:
 	info_item.visible = true
 	info_quant.text = str(GameManager.inventory["up_toalha"])
 	info_desc.text = desc[2]
 	info_nome.text = "Toalhas Fofinhas"
+	info_icon.texture = up_toalha_icon.texture_normal
 	GameManager.player_mov = false
 func _on_btn_eucalipto_pressed() -> void:
 	info_item.visible = true
 	info_quant.text = str(GameManager.inventory["up_eucalipto"])
 	info_desc.text = desc[3]
 	info_nome.text = "Essencia de Eucalipto"
+	info_icon.texture = up_eucalipto_icon.texture_normal
 	GameManager.player_mov = false
 func _on_btn_cerca_1_pressed() -> void:
 	info_item.visible = true
 	info_quant.text = str(GameManager.inventory["up_cerca1"])
 	info_desc.text = desc[4]
 	info_nome.text = "Cercas novas"
+	info_icon.texture = up_cerca1_icon.texture_normal
 	GameManager.player_mov = false
 func _on_btn_cerca_2_pressed() -> void:
 	info_item.visible = true
 	info_quant.text = str(GameManager.inventory["up_cerca2"])
 	info_desc.text = desc[5]
 	info_nome.text = "Mais cercas novas"
+	info_icon.texture = up_cerca2_icon.texture_normal
 	GameManager.player_mov = false
 
 func _on_btn_fechar_info_pressed() -> void:
