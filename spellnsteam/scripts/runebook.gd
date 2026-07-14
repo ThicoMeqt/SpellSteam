@@ -21,22 +21,18 @@ func _ready():
 
 	update_positions()
 
-
 func get_center_position(page):
 	return Vector2(0, -page.size.y / 2)
 
+func _on_btn_flip_forward_pressed() -> void:
+	if is_flipping:
+		return
+	flip_forward()
 
-func _input(event):
-	if event is InputEventMouseButton and event.pressed:
-		if is_flipping:
-			return
-
-		var mouse_x = get_global_mouse_position().x
-		
-		if mouse_x > global_position.x:
-			flip_forward()
-		else:
-			flip_backward()
+func _on_btn_flip_back_pressed() -> void:
+	if is_flipping:
+		return
+	flip_backward()
 
 
 # =========================

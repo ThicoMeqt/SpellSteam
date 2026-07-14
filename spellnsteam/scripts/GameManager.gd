@@ -32,8 +32,7 @@ var inventory = {
 	"carvao": 0,
 	"up_toalha": 0,
 	"up_eucalipto": 0,
-	"up_cerca1": 0,
-	"up_cerca2": 0
+	"up_cerca": 0
 }
 
 signal inventory_changed
