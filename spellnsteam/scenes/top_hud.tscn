@@ -488,9 +488,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -532.5
-offset_top = -342.5
+offset_top = -272.5
 offset_right = 532.5
-offset_bottom = 342.5
+offset_bottom = 272.5
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("13_mdkmy")
@@ -501,10 +501,10 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -97.5
-offset_top = 160.5
+offset_left = -98.5
+offset_top = 126.5
 offset_right = -44.5
-offset_bottom = 231.5
+offset_bottom = 184.5
 grow_horizontal = 0
 focus_mode = 0
 mouse_default_cursor_shape = 2
@@ -512,10 +512,10 @@ flat = true
 
 [node name="label_nome" type="Label" parent="info_sauna/caixa_info" unique_id=427773586]
 layout_mode = 0
-offset_left = 80.5
-offset_top = 173.5
-offset_right = 474.5
-offset_bottom = 215.5
+offset_left = 88.5
+offset_top = 137.5
+offset_right = 482.5
+offset_bottom = 179.5
 theme_override_font_sizes/font_size = 30
 text = "NOME"
 horizontal_alignment = 1
@@ -524,10 +524,10 @@ autowrap_mode = 3
 
 [node name="label_info" type="Label" parent="info_sauna/caixa_info" unique_id=153067589]
 layout_mode = 0
-offset_left = 54.5
-offset_top = 228.5
-offset_right = 498.5
-offset_bottom = 355.5
+offset_left = 68.5
+offset_top = 212.5
+offset_right = 512.5
+offset_bottom = 339.5
 theme_override_font_sizes/font_size = 16
 text = "TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO "
 vertical_alignment = 1
@@ -535,10 +535,10 @@ autowrap_mode = 3
 
 [node name="nivel_conf" type="VBoxContainer" parent="info_sauna/caixa_info" unique_id=892700008]
 layout_mode = 0
-offset_left = 637.5
-offset_top = 471.5
-offset_right = 683.5
-offset_bottom = 771.5
+offset_left = 641.5
+offset_top = 384.5
+offset_right = 687.5
+offset_bottom = 634.5
 rotation = 3.1415927
 
 [node name="ColorRect" type="ColorRect" parent="info_sauna/caixa_info/nivel_conf" unique_id=306010584]
@@ -568,10 +568,10 @@ color = Color(0, 0, 0, 0.43529412)
 
 [node name="nivel_agua" type="VBoxContainer" parent="info_sauna/caixa_info" unique_id=1520271154]
 layout_mode = 0
-offset_left = 785.5
-offset_top = 471.5
-offset_right = 831.5
-offset_bottom = 771.5
+offset_left = 789.5
+offset_top = 384.5
+offset_right = 835.5
+offset_bottom = 634.5
 rotation = 3.1415927
 
 [node name="ColorRect" type="ColorRect" parent="info_sauna/caixa_info/nivel_agua" unique_id=1067089505]
@@ -601,10 +601,10 @@ color = Color(0, 0, 0, 0.43529412)
 
 [node name="nivel_pop" type="VBoxContainer" parent="info_sauna/caixa_info" unique_id=359264732]
 layout_mode = 0
-offset_left = 929.5
-offset_top = 471.5
-offset_right = 975.5
-offset_bottom = 771.5
+offset_left = 933.5
+offset_top = 384.5
+offset_right = 979.5
+offset_bottom = 634.5
 rotation = 3.1415927
 
 [node name="ColorRect" type="ColorRect" parent="info_sauna/caixa_info/nivel_pop" unique_id=1294357880]
@@ -634,26 +634,26 @@ color = Color(0, 0, 0, 0.43529412)
 
 [node name="label_conf" type="Label" parent="info_sauna/caixa_info" unique_id=1488382845]
 layout_mode = 0
-offset_left = 571.5
-offset_top = 474.5
-offset_right = 660.5
-offset_bottom = 497.5
+offset_left = 575.5
+offset_top = 387.5
+offset_right = 664.5
+offset_bottom = 410.5
 text = "CONFORTO"
 
 [node name="label_agua" type="Label" parent="info_sauna/caixa_info" unique_id=1859775393]
 layout_mode = 0
-offset_left = 740.5
-offset_top = 475.5
-offset_right = 786.5
-offset_bottom = 498.5
+offset_left = 744.5
+offset_top = 388.5
+offset_right = 790.5
+offset_bottom = 411.5
 text = "ÁGUA"
 
 [node name="label_pop" type="Label" parent="info_sauna/caixa_info" unique_id=410930241]
 layout_mode = 0
-offset_left = 846.5
-offset_top = 474.5
-offset_right = 968.5
-offset_bottom = 497.5
+offset_left = 850.5
+offset_top = 387.5
+offset_right = 972.5
+offset_bottom = 410.5
 text = "POPULARIDADE"
 
 [node name="bg_livro" type="ColorRect" parent="." unique_id=633119277]

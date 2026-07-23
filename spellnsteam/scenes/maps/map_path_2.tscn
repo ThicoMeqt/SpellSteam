@@ -45,23 +45,23 @@ texture = ExtResource("1_652pj")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="teste_transição2" parent="." unique_id=559677914 instance=ExtResource("2_qg7xe")]
-position = Vector2(936, -32)
-rotation = 1.5707964
-target_scene = "uid://b1jcw4ob3ro1n"
-spawn_name = "sauna_2_0"
-
-[node name="teste_transição2" parent="teste_transição2" unique_id=1865884673 instance=ExtResource("2_qg7xe")]
-position = Vector2(613, -255.00005)
-rotation = 1.5707964
+[node name="teste_transição3" parent="." unique_id=1865884673 instance=ExtResource("2_qg7xe")]
+position = Vector2(1191, 581)
+rotation = -3.1415925
 target_scene = "uid://bcjkf4fx2wr1d"
 spawn_name = "path_3_0"
 
-[node name="teste_transição3" parent="teste_transição2" unique_id=19648868 instance=ExtResource("2_qg7xe")]
-position = Vector2(759.00006, 982.99994)
-rotation = 1.5707964
+[node name="teste_transição4" parent="." unique_id=19648868 instance=ExtResource("2_qg7xe")]
+position = Vector2(-47, 727)
+rotation = -3.1415925
 target_scene = "uid://cc2kruobki1pm"
 spawn_name = "path_1_2"
+
+[node name="teste_transição2" parent="." unique_id=559677914 instance=ExtResource("2_qg7xe")]
+position = Vector2(943, 4)
+rotation = 1.5707964
+target_scene = "uid://b1jcw4ob3ro1n"
+spawn_name = "sauna_2_0"
 
 [node name="SpawnPoints" type="Node2D" parent="." unique_id=1369560962]
 position = Vector2(1168, 152)

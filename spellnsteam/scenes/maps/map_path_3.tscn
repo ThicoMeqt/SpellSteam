@@ -45,17 +45,17 @@ texture = ExtResource("1_rg8e1")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
+[node name="teste_transição3" parent="." unique_id=19648868 instance=ExtResource("2_ydvp0")]
+position = Vector2(-25.999939, 733.00006)
+rotation = -3.1415925
+target_scene = "uid://bub14j364j5t2"
+spawn_name = "path_2_2"
+
 [node name="teste_transição2" parent="." unique_id=559677914 instance=ExtResource("2_ydvp0")]
-position = Vector2(936, -32)
+position = Vector2(946, -5)
 rotation = 1.5707964
 target_scene = "uid://cw012sgfmjbih"
 spawn_name = "sauna_3_0"
-
-[node name="teste_transição3" parent="teste_transição2" unique_id=19648868 instance=ExtResource("2_ydvp0")]
-position = Vector2(765.0001, 961.9999)
-rotation = 1.5707964
-target_scene = "uid://bub14j364j5t2"
-spawn_name = "path_2_2"
 
 [node name="SpawnPoints" type="Node2D" parent="." unique_id=1369560962]
 position = Vector2(1168, 152)
