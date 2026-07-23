@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bet3baj6v781n"
-path="res://.godot/imported/coal.png-5140a4b3d8a789dec45de3c2a035a8d8.ctex"
+uid="uid://drxhpjd0rbe2b"
+path="res://.godot/imported/map_sauna_2.jpg-efc8430f3a22c9c725be81b4d763f020.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/coal.png"
-dest_files=["res://.godot/imported/coal.png-5140a4b3d8a789dec45de3c2a035a8d8.ctex"]
+source_file="res://assets/map_sauna_2.jpg"
+dest_files=["res://.godot/imported/map_sauna_2.jpg-efc8430f3a22c9c725be81b4d763f020.ctex"]
 
 [params]
 

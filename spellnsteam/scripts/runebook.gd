@@ -135,7 +135,7 @@ func flip_backward():
 # 👉 STACK POSITIONING
 # =========================
 func update_positions():
-	var depth := 3.0  # increase this too
+	var depth := 1.5  # increase this too
 
 	# Left side
 	for i in range(left_pages.size()):

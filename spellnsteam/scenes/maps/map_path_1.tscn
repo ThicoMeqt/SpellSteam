@@ -71,13 +71,13 @@ spawn_name = "sauna_1_0"
 position = Vector2(1168, 152)
 
 [node name="path_1_0" type="Marker2D" parent="SpawnPoints" unique_id=973377456]
-position = Vector2(-1098, -26)
+position = Vector2(-1059, 5)
 
 [node name="path_1_1" type="Marker2D" parent="SpawnPoints" unique_id=305672893]
-position = Vector2(-555, 440)
+position = Vector2(-566, 393)
 
 [node name="path_1_2" type="Marker2D" parent="SpawnPoints" unique_id=1919337058]
-position = Vector2(-99, 175)
+position = Vector2(-140, 179)
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1810676667]
 

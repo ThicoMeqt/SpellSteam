@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cplt024oy60tv" path="res://assets/icon.svg" id="1_ur6tp"]
 [ext_resource type="Texture2D" uid="uid://bf7lkpatt5h6c" path="res://assets/homem.png" id="2_kjvmv"]
-[ext_resource type="Texture2D" uid="uid://bqjwdsigs07mx" path="res://assets/towel.png" id="2_xrfle"]
+[ext_resource type="Texture2D" uid="uid://bqjwdsigs07mx" path="res://assets/item_towel.png" id="2_xrfle"]
 
 [node name="Control" type="Control" unique_id=1184121270]
 layout_mode = 3

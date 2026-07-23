@@ -67,13 +67,13 @@ spawn_name = "path_1_2"
 position = Vector2(1168, 152)
 
 [node name="path_2_0" type="Marker2D" parent="SpawnPoints" unique_id=973377456]
-position = Vector2(-1080, 307)
+position = Vector2(-1040, 298)
 
 [node name="path_2_1" type="Marker2D" parent="SpawnPoints" unique_id=105835354]
-position = Vector2(-476, -108)
+position = Vector2(-486, -20)
 
 [node name="path_2_2" type="Marker2D" parent="SpawnPoints" unique_id=205755033]
-position = Vector2(-85, 199)
+position = Vector2(-152, 219)
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1810676667]
 

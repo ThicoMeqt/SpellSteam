@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dq5titpty1unv"]
 
-[ext_resource type="Texture2D" uid="uid://3it61ge4a5cw" path="res://assets/map_top.png" id="1_lbp10"]
+[ext_resource type="Texture2D" uid="uid://54to2p1acxis" path="res://assets/map_top.jpg" id="1_uoslu"]
 [ext_resource type="PackedScene" uid="uid://c8ytc0g2ok0su" path="res://scenes/teste_transição.tscn" id="2_gpp1e"]
 [ext_resource type="PackedScene" uid="uid://sp6opnx68pwg" path="res://scenes/btn_coletar_carvao.tscn" id="4_uoslu"]
 [ext_resource type="PackedScene" uid="uid://bjy5qbwab5srl" path="res://scenes/btn_coletar_madeira.tscn" id="4_yjhr0"]
@@ -8,8 +8,14 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uoslu"]
 size = Vector2(401.5, 112.8125)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dd8b1"]
+size = Vector2(353.88098, 116.85156)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k1hrc"]
+size = Vector2(221.87573, 116.85156)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lbp10"]
-size = Vector2(409.76196, 116.85156)
+size = Vector2(366.88098, 116.85156)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gpp1e"]
 size = Vector2(445.9375, 124.42578)
@@ -20,18 +26,30 @@ size = Vector2(109.96875, 421)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h24w2"]
 size = Vector2(109.96875, 90.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p6b7w"]
+size = Vector2(155.39355, 90.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mregx"]
+size = Vector2(245.81561, 116.85156)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7t04i"]
-size = Vector2(207.00238, 116.85156)
+size = Vector2(177.72649, 116.85156)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y40ic"]
+size = Vector2(119.36005, 116.85156)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tc7h6"]
-size = Vector2(109.96875, 107.625)
+size = Vector2(100.99219, 98.40625)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wdeav"]
+size = Vector2(321.29007, 116.85156)
 
 [node name="top" type="Node2D" unique_id=1048515249]
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1892074994]
 offset_right = 1152.0
 offset_bottom = 648.0
-texture = ExtResource("1_lbp10")
+texture = ExtResource("1_uoslu")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
@@ -45,24 +63,26 @@ spawn_name = "path_0_3"
 position = Vector2(1168, 152)
 
 [node name="top_0" type="Marker2D" parent="SpawnPoints" unique_id=1867883350]
-position = Vector2(-582, 427)
+position = Vector2(-687, 405)
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1183592957]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=2049694807]
-position = Vector2(919, 78.59375)
+position = Vector2(894, 81)
 shape = SubResource("RectangleShape2D_uoslu")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1647839183]
-position = Vector2(499, 189)
-shape = SubResource("RectangleShape2D_lbp10")
+position = Vector2(526.9405, 189)
+shape = SubResource("RectangleShape2D_dd8b1")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1086413201]
-position = Vector2(562, 144)
-shape = SubResource("RectangleShape2D_lbp10")
+position = Vector2(742, 123.999985)
+rotation = -0.5235988
+shape = SubResource("RectangleShape2D_k1hrc")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D2" unique_id=2091677103]
-position = Vector2(300, 236)
+position = Vector2(176, 127)
+rotation = -0.382492
 shape = SubResource("RectangleShape2D_lbp10")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D2" unique_id=439157393]
@@ -78,38 +98,52 @@ position = Vector2(1060, 508)
 shape = SubResource("RectangleShape2D_h24w2")
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D2" unique_id=166426306]
-position = Vector2(1070, 150)
-shape = SubResource("RectangleShape2D_h24w2")
+position = Vector2(1057, 154.99997)
+rotation = 0.7663545
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_p6b7w")
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1934313263]
-position = Vector2(101.730286, 403.02908)
+position = Vector2(101.23732, 380.6671)
 rotation = -0.863938
-shape = SubResource("RectangleShape2D_lbp10")
+shape = SubResource("RectangleShape2D_mregx")
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1661658336]
-position = Vector2(355, 628)
+position = Vector2(334, 622)
 rotation = 0.7853982
-scale = Vector2(0.99999994, 0.99999994)
+scale = Vector2(0.9999999, 0.9999999)
 shape = SubResource("RectangleShape2D_7t04i")
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1678322108]
-position = Vector2(111, 601.00006)
-rotation = 0.7853982
-scale = Vector2(0.99999994, 0.99999994)
-shape = SubResource("RectangleShape2D_7t04i")
+position = Vector2(39.960815, 569.30524)
+rotation = 1.0471976
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_y40ic")
 
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1821069602]
-position = Vector2(911, 311.8125)
+position = Vector2(862, 323)
 shape = SubResource("RectangleShape2D_tc7h6")
 
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1107274519]
+position = Vector2(660.4068, 530.40686)
+rotation = 0.7853982
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_wdeav")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="StaticBody2D2" unique_id=75107013]
+position = Vector2(353.00003, 154.00002)
+rotation = 1.0471976
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_p6b7w")
+
 [node name="btn_coletar_carvao" parent="." unique_id=1987194035 instance=ExtResource("4_uoslu")]
-offset_left = 189.0
-offset_top = 309.0
-offset_right = 229.0
-offset_bottom = 349.0
+offset_left = 203.0
+offset_top = 181.0
+offset_right = 243.0
+offset_bottom = 221.0
 
 [node name="btn_coletar_carvao2" parent="." unique_id=643144071 instance=ExtResource("4_yjhr0")]
-offset_left = 889.0
-offset_top = 294.0
-offset_right = 929.0
-offset_bottom = 334.0
+offset_left = 847.0
+offset_top = 265.0
+offset_right = 887.0
+offset_bottom = 305.0

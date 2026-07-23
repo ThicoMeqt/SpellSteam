@@ -47,7 +47,7 @@ spawn_name = "path_3_1"
 position = Vector2(1168, 152)
 
 [node name="sauna_3_0" type="Marker2D" parent="SpawnPoints" unique_id=1303436826]
-position = Vector2(-598, 433)
+position = Vector2(-597, 377)
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=643273907]
 

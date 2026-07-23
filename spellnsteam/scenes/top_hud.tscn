@@ -1,14 +1,19 @@
 [gd_scene format=3 uid="uid://plckmc868rus"]
 
+[ext_resource type="Texture2D" uid="uid://c3jp0b6ds4778" path="res://assets/top_hud.png" id="1_43nka"]
 [ext_resource type="Script" uid="uid://cfcdg868sut0l" path="res://scripts/top_hud.gd" id="1_r33n1"]
 [ext_resource type="Texture2D" uid="uid://b5f7jsdoxuoup" path="res://assets/mapa_icone.png" id="2_00wr1"]
 [ext_resource type="Texture2D" uid="uid://cplt024oy60tv" path="res://assets/icon.svg" id="2_2iueu"]
 [ext_resource type="Texture2D" uid="uid://cwstbiuaktp1v" path="res://assets/map_full.png" id="2_4f3nj"]
-[ext_resource type="Texture2D" uid="uid://bqpkqe245o5u7" path="res://assets/wood.png" id="2_idhx5"]
+[ext_resource type="Texture2D" uid="uid://bqpkqe245o5u7" path="res://assets/item_wood.png" id="2_idhx5"]
 [ext_resource type="Texture2D" uid="uid://xwjepqjagn24" path="res://assets/teste_livro.png" id="3_dfbvg"]
-[ext_resource type="Texture2D" uid="uid://bet3baj6v781n" path="res://assets/coal.png" id="3_u6q5j"]
-[ext_resource type="Texture2D" uid="uid://bqjwdsigs07mx" path="res://assets/towel.png" id="4_dfbvg"]
+[ext_resource type="Texture2D" uid="uid://bet3baj6v781n" path="res://assets/item_coal.png" id="3_u6q5j"]
+[ext_resource type="Texture2D" uid="uid://bqjwdsigs07mx" path="res://assets/item_towel.png" id="4_dfbvg"]
 [ext_resource type="PackedScene" uid="uid://blw6u6h47yn1i" path="res://scenes/runebook.tscn" id="8_dfbvg"]
+[ext_resource type="Texture2D" uid="uid://bwipkqujadrxx" path="res://assets/item_cerca.png" id="8_ovh0w"]
+[ext_resource type="Script" uid="uid://cqa0tixa5dpyu" path="res://scripts/info_sauna.gd" id="9_dtdep"]
+[ext_resource type="Texture2D" uid="uid://c08o77nlja8dw" path="res://assets/popup1.png" id="11_q8aqb"]
+[ext_resource type="Texture2D" uid="uid://ce465aek0urwp" path="res://assets/popup2.png" id="13_mdkmy"]
 
 [node name="top_HUD" type="Control" unique_id=1072271423]
 layout_mode = 3
@@ -18,161 +23,213 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=17044054]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1064594781]
 layout_mode = 0
-offset_top = -154.0
-offset_right = 1152.0
-color = Color(0.686364, 0.5429937, 0.3953848, 1)
+offset_left = -116.0
+offset_top = -513.0
+offset_right = 1178.0
+offset_bottom = 310.0
+mouse_filter = 2
+texture = ExtResource("1_43nka")
+expand_mode = 1
 script = ExtResource("1_r33n1")
 
-[node name="ColorRect" type="ColorRect" parent="ColorRect" unique_id=1614292139]
+[node name="ColorRect2" type="ColorRect" parent="TextureRect" unique_id=739479730]
 layout_mode = 0
-offset_left = 317.0
-offset_top = 11.0
-offset_right = 324.0
-offset_bottom = 143.0
-color = Color(0.59821963, 0.41090885, 0.24658358, 1)
+offset_left = 1116.0
+offset_top = 513.0
+offset_right = 1230.0
+offset_bottom = 551.0
+color = Color(0.6862745, 0.5411765, 0.39607844, 0)
 
-[node name="ColorRect2" type="ColorRect" parent="ColorRect" unique_id=739479730]
-layout_mode = 0
-offset_left = 1038.0
-offset_top = 152.0
-offset_right = 1152.0
-offset_bottom = 190.0
-color = Color(0.6862745, 0.5411765, 0.39607844, 1)
-
-[node name="btn_puxar" type="Button" parent="ColorRect/ColorRect2" unique_id=2055995910]
+[node name="btn_puxar" type="Button" parent="TextureRect/ColorRect2" unique_id=2055995910]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -28.5
-offset_top = -10.0
-offset_right = 28.5
-offset_bottom = 10.0
+offset_left = -67.0
+offset_top = -17.0
+offset_right = 44.0
+offset_bottom = 3.0
 grow_horizontal = 2
 grow_vertical = 2
 focus_mode = 0
 mouse_default_cursor_shape = 2
 
-[node name="b1" type="Button" parent="ColorRect" unique_id=485396418]
+[node name="ColorRect3" type="ColorRect" parent="TextureRect" unique_id=1672981594]
 layout_mode = 0
-offset_left = 474.0
-offset_top = 11.0
-offset_right = 493.0
-offset_bottom = 67.0
-focus_mode = 0
+offset_left = 187.0
+offset_top = 516.0
+offset_right = 345.0
+offset_bottom = 554.0
+color = Color(0.6862745, 0.5411765, 0.39607844, 0)
 
-[node name="b11" type="Button" parent="ColorRect/b1" unique_id=734998994]
+[node name="btn_info_sauna" type="TextureButton" parent="TextureRect/ColorRect3" unique_id=204457180]
 layout_mode = 0
-offset_top = 87.0
-offset_right = 19.0
-offset_bottom = 108.0
-focus_mode = 0
-
-[node name="b2" type="Button" parent="ColorRect" unique_id=348513622]
-layout_mode = 0
-offset_left = 635.0
-offset_top = 12.0
-offset_right = 654.0
-offset_bottom = 68.0
-focus_mode = 0
-
-[node name="b22" type="Button" parent="ColorRect/b2" unique_id=531475139]
-layout_mode = 0
-offset_top = 87.0
-offset_right = 19.0
-offset_bottom = 108.0
-focus_mode = 0
-
-[node name="b3" type="Button" parent="ColorRect" unique_id=1582558131]
-layout_mode = 0
-offset_left = 790.0
-offset_top = 11.0
-offset_right = 809.0
-offset_bottom = 67.0
-focus_mode = 0
-
-[node name="b33" type="Button" parent="ColorRect/b3" unique_id=1368201875]
-layout_mode = 0
-offset_top = 87.0
-offset_right = 19.0
-offset_bottom = 108.0
-focus_mode = 0
-
-[node name="b4" type="Button" parent="ColorRect" unique_id=1630312013]
-layout_mode = 0
-offset_left = 947.0
-offset_top = 11.0
-offset_right = 966.0
-offset_bottom = 67.0
-focus_mode = 0
-
-[node name="b44" type="Button" parent="ColorRect/b4" unique_id=1241916673]
-layout_mode = 0
-offset_top = 87.0
-offset_right = 19.0
-offset_bottom = 108.0
-focus_mode = 0
-
-[node name="b5" type="Button" parent="ColorRect" unique_id=482788289]
-layout_mode = 0
-offset_left = 1104.0
-offset_top = 8.0
-offset_right = 1123.0
-offset_bottom = 64.0
-focus_mode = 0
-
-[node name="b55" type="Button" parent="ColorRect/b5" unique_id=1254228630]
-layout_mode = 0
-offset_top = 87.0
-offset_right = 19.0
-offset_bottom = 108.0
-focus_mode = 0
-
-[node name="runebook" type="Node2D" parent="ColorRect" unique_id=111870621]
-position = Vector2(1, 0)
-
-[node name="btn_runebook" type="TextureButton" parent="ColorRect/runebook" unique_id=765850707]
-offset_left = 40.0
-offset_top = 23.0
+offset_left = 121.0
+offset_top = 4.0
 offset_right = 152.0
-offset_bottom = 135.0
+offset_bottom = 35.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("2_2iueu")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="btn_info_sauna2" type="TextureButton" parent="TextureRect/ColorRect3" unique_id=328722399]
+layout_mode = 0
+offset_left = 162.0
+offset_top = 4.0
+offset_right = 193.0
+offset_bottom = 35.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("2_2iueu")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="btn_info_sauna3" type="TextureButton" parent="TextureRect/ColorRect3" unique_id=1862239770]
+layout_mode = 0
+offset_left = 195.0
+offset_top = 4.0
+offset_right = 226.0
+offset_bottom = 35.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("2_2iueu")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="btn_info_sauna4" type="TextureButton" parent="TextureRect/ColorRect3" unique_id=514177918]
+layout_mode = 0
+offset_left = 228.0
+offset_top = 4.0
+offset_right = 259.0
+offset_bottom = 35.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("2_2iueu")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="b1" type="Button" parent="TextureRect" unique_id=485396418]
+layout_mode = 0
+offset_left = 586.0
+offset_top = 399.0
+offset_right = 605.0
+offset_bottom = 455.0
+focus_mode = 0
+
+[node name="b11" type="Button" parent="TextureRect/b1" unique_id=734998994]
+layout_mode = 0
+offset_top = 87.0
+offset_right = 19.0
+offset_bottom = 108.0
+focus_mode = 0
+
+[node name="b2" type="Button" parent="TextureRect" unique_id=348513622]
+layout_mode = 0
+offset_left = 747.0
+offset_top = 400.0
+offset_right = 766.0
+offset_bottom = 456.0
+focus_mode = 0
+
+[node name="b22" type="Button" parent="TextureRect/b2" unique_id=531475139]
+layout_mode = 0
+offset_top = 87.0
+offset_right = 19.0
+offset_bottom = 108.0
+focus_mode = 0
+
+[node name="b3" type="Button" parent="TextureRect" unique_id=1582558131]
+layout_mode = 0
+offset_left = 902.0
+offset_top = 399.0
+offset_right = 921.0
+offset_bottom = 455.0
+focus_mode = 0
+
+[node name="b33" type="Button" parent="TextureRect/b3" unique_id=1368201875]
+layout_mode = 0
+offset_top = 87.0
+offset_right = 19.0
+offset_bottom = 108.0
+focus_mode = 0
+
+[node name="b4" type="Button" parent="TextureRect" unique_id=1630312013]
+layout_mode = 0
+offset_left = 1059.0
+offset_top = 399.0
+offset_right = 1078.0
+offset_bottom = 455.0
+focus_mode = 0
+
+[node name="b44" type="Button" parent="TextureRect/b4" unique_id=1241916673]
+layout_mode = 0
+offset_top = 87.0
+offset_right = 19.0
+offset_bottom = 108.0
+focus_mode = 0
+
+[node name="b5" type="Button" parent="TextureRect" unique_id=482788289]
+layout_mode = 0
+offset_left = 1216.0
+offset_top = 396.0
+offset_right = 1235.0
+offset_bottom = 452.0
+focus_mode = 0
+
+[node name="b55" type="Button" parent="TextureRect/b5" unique_id=1254228630]
+layout_mode = 0
+offset_top = 87.0
+offset_right = 19.0
+offset_bottom = 108.0
+focus_mode = 0
+
+[node name="runebook" type="Node2D" parent="TextureRect" unique_id=111870621]
+position = Vector2(116, 366)
+
+[node name="btn_runebook" type="TextureButton" parent="TextureRect/runebook" unique_id=765850707]
+offset_left = 77.0
+offset_top = 154.0
+offset_right = 178.0
+offset_bottom = 185.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("3_dfbvg")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="btn_abrir_mapa" type="Button" parent="ColorRect" unique_id=132462734]
+[node name="btn_abrir_mapa" type="Button" parent="TextureRect" unique_id=132462734]
 layout_mode = 0
-offset_left = 181.0
-offset_top = 23.0
-offset_right = 292.0
-offset_bottom = 134.0
+offset_left = 195.0
+offset_top = 401.0
+offset_right = 446.0
+offset_bottom = 512.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
 icon = ExtResource("2_00wr1")
-flat = true
+icon_alignment = 1
 expand_icon = true
 
-[node name="slot_madeira" type="Node2D" parent="ColorRect" unique_id=544842448]
-position = Vector2(165, 0)
+[node name="slot_madeira" type="Node2D" parent="TextureRect" unique_id=544842448]
+position = Vector2(290, 378)
 
-[node name="btn_madeira" type="TextureButton" parent="ColorRect/slot_madeira" unique_id=1996179280]
-offset_left = 189.0
-offset_top = 23.0
-offset_right = 301.0
-offset_bottom = 135.0
+[node name="btn_madeira" type="TextureButton" parent="TextureRect/slot_madeira" unique_id=1996179280]
+offset_left = 202.0
+offset_top = 30.0
+offset_right = 292.0
+offset_bottom = 120.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("2_idhx5")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="ColorRect/slot_madeira" unique_id=689742113]
+[node name="Label" type="Label" parent="TextureRect/slot_madeira" unique_id=689742113]
 offset_left = 263.0
 offset_top = 102.0
 offset_right = 303.0
@@ -182,21 +239,21 @@ text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="slot_carvao" type="Node2D" parent="ColorRect" unique_id=1133901709]
-position = Vector2(318, 0)
+[node name="slot_carvao" type="Node2D" parent="TextureRect" unique_id=1133901709]
+position = Vector2(443, 378)
 
-[node name="btn_carvao" type="TextureButton" parent="ColorRect/slot_carvao" unique_id=129005890]
-offset_left = 189.0
-offset_top = 23.0
-offset_right = 301.0
-offset_bottom = 135.0
+[node name="btn_carvao" type="TextureButton" parent="TextureRect/slot_carvao" unique_id=129005890]
+offset_left = 202.0
+offset_top = 30.0
+offset_right = 292.0
+offset_bottom = 120.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("3_u6q5j")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="ColorRect/slot_carvao" unique_id=1318974039]
+[node name="Label" type="Label" parent="TextureRect/slot_carvao" unique_id=1318974039]
 offset_left = 263.0
 offset_top = 102.0
 offset_right = 303.0
@@ -206,21 +263,21 @@ text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="slot_up_toalha" type="Node2D" parent="ColorRect" unique_id=363678899]
-position = Vector2(478, 0)
+[node name="slot_up_toalha" type="Node2D" parent="TextureRect" unique_id=363678899]
+position = Vector2(603, 378)
 
-[node name="btn_toalha" type="TextureButton" parent="ColorRect/slot_up_toalha" unique_id=1320299106]
-offset_left = 189.0
-offset_top = 23.0
-offset_right = 301.0
-offset_bottom = 135.0
+[node name="btn_toalha" type="TextureButton" parent="TextureRect/slot_up_toalha" unique_id=1320299106]
+offset_left = 202.0
+offset_top = 30.0
+offset_right = 292.0
+offset_bottom = 120.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("4_dfbvg")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="ColorRect/slot_up_toalha" unique_id=186980384]
+[node name="Label" type="Label" parent="TextureRect/slot_up_toalha" unique_id=186980384]
 offset_left = 263.0
 offset_top = 102.0
 offset_right = 303.0
@@ -230,21 +287,21 @@ text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="slot_up_eucalipto" type="Node2D" parent="ColorRect" unique_id=660100188]
-position = Vector2(634, 0)
+[node name="slot_up_eucalipto" type="Node2D" parent="TextureRect" unique_id=660100188]
+position = Vector2(759, 378)
 
-[node name="btn_eucalipto" type="TextureButton" parent="ColorRect/slot_up_eucalipto" unique_id=1517081042]
-offset_left = 189.0
-offset_top = 23.0
-offset_right = 301.0
-offset_bottom = 135.0
+[node name="btn_eucalipto" type="TextureButton" parent="TextureRect/slot_up_eucalipto" unique_id=1517081042]
+offset_left = 202.0
+offset_top = 30.0
+offset_right = 292.0
+offset_bottom = 120.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("2_2iueu")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="ColorRect/slot_up_eucalipto" unique_id=1671742508]
+[node name="Label" type="Label" parent="TextureRect/slot_up_eucalipto" unique_id=1671742508]
 offset_left = 263.0
 offset_top = 102.0
 offset_right = 303.0
@@ -254,21 +311,21 @@ text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="slot_up_cerca" type="Node2D" parent="ColorRect" unique_id=1640757315]
-position = Vector2(787, 0)
+[node name="slot_up_cerca" type="Node2D" parent="TextureRect" unique_id=1640757315]
+position = Vector2(912, 378)
 
-[node name="btn_cerca" type="TextureButton" parent="ColorRect/slot_up_cerca" unique_id=170512495]
-offset_left = 189.0
-offset_top = 23.0
-offset_right = 301.0
-offset_bottom = 135.0
+[node name="btn_cerca" type="TextureButton" parent="TextureRect/slot_up_cerca" unique_id=170512495]
+offset_left = 202.0
+offset_top = 30.0
+offset_right = 292.0
+offset_bottom = 120.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
-texture_normal = ExtResource("2_2iueu")
+texture_normal = ExtResource("8_ovh0w")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="ColorRect/slot_up_cerca" unique_id=1461552398]
+[node name="Label" type="Label" parent="TextureRect/slot_up_cerca" unique_id=1461552398]
 offset_left = 263.0
 offset_top = 102.0
 offset_right = 303.0
@@ -317,30 +374,31 @@ offset_right = 1152.0
 offset_bottom = 648.0
 color = Color(0, 0, 0, 0.52156866)
 
-[node name="caixa_info" type="ColorRect" parent="info_item" unique_id=94476160]
+[node name="caixa_info" type="TextureRect" parent="info_item" unique_id=1967906227]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -378.49792
-offset_top = -129.5
-offset_right = 378.49792
-offset_bottom = 129.5
+offset_left = -379.5
+offset_top = -210.0
+offset_right = 379.5
+offset_bottom = 210.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.6862745, 0.5411765, 0.39607844, 1)
+texture = ExtResource("11_q8aqb")
+expand_mode = 1
 
 [node name="icon_info" type="TextureRect" parent="info_item/caixa_info" unique_id=1430526822]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 20.497925
-offset_top = -108.5
-offset_right = 237.49792
-offset_bottom = 108.5
+offset_left = 55.5
+offset_top = -72.0
+offset_right = 199.5
+offset_bottom = 72.0
 grow_vertical = 2
 texture = ExtResource("2_2iueu")
 expand_mode = 1
@@ -352,9 +410,9 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -506.49792
+offset_left = -507.5
 offset_top = -94.625
-offset_right = -16.0
+offset_right = -17.002075
 offset_bottom = 94.625
 grow_horizontal = 0
 grow_vertical = 2
@@ -369,9 +427,9 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -491.49792
+offset_left = -492.5
 offset_top = -111.0
-offset_right = -54.497925
+offset_right = -55.5
 offset_bottom = -69.0
 grow_horizontal = 0
 grow_vertical = 2
@@ -388,10 +446,10 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -573.4979
-offset_top = 42.0
-offset_right = -516.4979
-offset_bottom = 111.0
+offset_left = -590.5
+offset_top = 36.0
+offset_right = -533.5
+offset_bottom = 105.0
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_font_sizes/font_size = 50
@@ -401,14 +459,202 @@ vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="btn_fechar_info" type="Button" parent="info_item/caixa_info" unique_id=1068036522]
-layout_mode = 0
-offset_left = 726.4979
-offset_top = 0.5
-offset_right = 756.99585
-offset_bottom = 31.5
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -57.5
+offset_top = 92.0
+offset_right = -18.5
+offset_bottom = 133.0
+grow_horizontal = 0
 focus_mode = 0
 mouse_default_cursor_shape = 2
-text = "X"
+flat = true
+
+[node name="info_sauna" type="ColorRect" parent="." unique_id=1681574373]
+visible = false
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 0.522)
+script = ExtResource("9_dtdep")
+
+[node name="caixa_info" type="TextureRect" parent="info_sauna" unique_id=469440319]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -532.5
+offset_top = -342.5
+offset_right = 532.5
+offset_bottom = 342.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("13_mdkmy")
+expand_mode = 1
+
+[node name="btn_fechar_sauna" type="Button" parent="info_sauna/caixa_info" unique_id=851903740]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -97.5
+offset_top = 160.5
+offset_right = -44.5
+offset_bottom = 231.5
+grow_horizontal = 0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="label_nome" type="Label" parent="info_sauna/caixa_info" unique_id=427773586]
+layout_mode = 0
+offset_left = 80.5
+offset_top = 173.5
+offset_right = 474.5
+offset_bottom = 215.5
+theme_override_font_sizes/font_size = 30
+text = "NOME"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="label_info" type="Label" parent="info_sauna/caixa_info" unique_id=153067589]
+layout_mode = 0
+offset_left = 54.5
+offset_top = 228.5
+offset_right = 498.5
+offset_bottom = 355.5
+theme_override_font_sizes/font_size = 16
+text = "TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO TEXTO "
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="nivel_conf" type="VBoxContainer" parent="info_sauna/caixa_info" unique_id=892700008]
+layout_mode = 0
+offset_left = 637.5
+offset_top = 471.5
+offset_right = 683.5
+offset_bottom = 771.5
+rotation = 3.1415927
+
+[node name="ColorRect" type="ColorRect" parent="info_sauna/caixa_info/nivel_conf" unique_id=306010584]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0, 0, 0, 0.43529412)
+
+[node name="ColorRect2" type="ColorRect" parent="info_sauna/caixa_info/nivel_conf" unique_id=1840763747]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0, 0, 0, 0.43529412)
+
+[node name="ColorRect3" type="ColorRect" parent="info_sauna/caixa_info/nivel_conf" unique_id=1569090404]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0, 0, 0, 0.43529412)
+
+[node name="ColorRect4" type="ColorRect" parent="info_sauna/caixa_info/nivel_conf" unique_id=605897038]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0, 0, 0, 0.43529412)
+
+[node name="ColorRect5" type="ColorRect" parent="info_sauna/caixa_info/nivel_conf" unique_id=425025235]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0, 0, 0, 0.43529412)
+
+[node name="nivel_agua" type="VBoxContainer" parent="info_sauna/caixa_info" unique_id=1520271154]
+layout_mode = 0
+offset_left = 785.5
+offset_top = 471.5
+offset_right = 831.5
+offset_bottom = 771.5
+rotation = 3.1415927
+
+[node name="ColorRect" type="ColorRect" parent="info_sauna/caixa_info/nivel_agua" unique_id=1067089505]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0, 0, 0, 0.43529412)
+
+[node name="ColorRect2" type="ColorRect" parent="info_sauna/caixa_info/nivel_agua" unique_id=977714002]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0, 0, 0, 0.43529412)
+
+[node name="ColorRect3" type="ColorRect" parent="info_sauna/caixa_info/nivel_agua" unique_id=651038801]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0, 0, 0, 0.43529412)
+
+[node name="ColorRect4" type="ColorRect" parent="info_sauna/caixa_info/nivel_agua" unique_id=568618425]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0, 0, 0, 0.43529412)
+
+[node name="ColorRect5" type="ColorRect" parent="info_sauna/caixa_info/nivel_agua" unique_id=87245163]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0, 0, 0, 0.43529412)
+
+[node name="nivel_pop" type="VBoxContainer" parent="info_sauna/caixa_info" unique_id=359264732]
+layout_mode = 0
+offset_left = 929.5
+offset_top = 471.5
+offset_right = 975.5
+offset_bottom = 771.5
+rotation = 3.1415927
+
+[node name="ColorRect" type="ColorRect" parent="info_sauna/caixa_info/nivel_pop" unique_id=1294357880]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0, 0, 0, 0.43529412)
+
+[node name="ColorRect2" type="ColorRect" parent="info_sauna/caixa_info/nivel_pop" unique_id=985629636]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0, 0, 0, 0.43529412)
+
+[node name="ColorRect3" type="ColorRect" parent="info_sauna/caixa_info/nivel_pop" unique_id=2060530709]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0, 0, 0, 0.43529412)
+
+[node name="ColorRect4" type="ColorRect" parent="info_sauna/caixa_info/nivel_pop" unique_id=466588764]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0, 0, 0, 0.43529412)
+
+[node name="ColorRect5" type="ColorRect" parent="info_sauna/caixa_info/nivel_pop" unique_id=130319171]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0, 0, 0, 0.43529412)
+
+[node name="label_conf" type="Label" parent="info_sauna/caixa_info" unique_id=1488382845]
+layout_mode = 0
+offset_left = 571.5
+offset_top = 474.5
+offset_right = 660.5
+offset_bottom = 497.5
+text = "CONFORTO"
+
+[node name="label_agua" type="Label" parent="info_sauna/caixa_info" unique_id=1859775393]
+layout_mode = 0
+offset_left = 740.5
+offset_top = 475.5
+offset_right = 786.5
+offset_bottom = 498.5
+text = "ÁGUA"
+
+[node name="label_pop" type="Label" parent="info_sauna/caixa_info" unique_id=410930241]
+layout_mode = 0
+offset_left = 846.5
+offset_top = 474.5
+offset_right = 968.5
+offset_bottom = 497.5
+text = "POPULARIDADE"
 
 [node name="bg_livro" type="ColorRect" parent="." unique_id=633119277]
 visible = false
@@ -427,24 +673,29 @@ flat = true
 [node name="Node2D" parent="bg_livro" unique_id=1283650794 instance=ExtResource("8_dfbvg")]
 position = Vector2(578, 299)
 
-[connection signal="pressed" from="ColorRect/ColorRect2/btn_puxar" to="ColorRect" method="_on_button_pressed"]
-[connection signal="pressed" from="ColorRect/b1" to="ColorRect" method="_on_b_1_pressed"]
-[connection signal="pressed" from="ColorRect/b1/b11" to="ColorRect" method="_on_b_11_pressed"]
-[connection signal="pressed" from="ColorRect/b2" to="ColorRect" method="_on_b_2_pressed"]
-[connection signal="pressed" from="ColorRect/b2/b22" to="ColorRect" method="_on_b_22_pressed"]
-[connection signal="pressed" from="ColorRect/b3" to="ColorRect" method="_on_b_3_pressed"]
-[connection signal="pressed" from="ColorRect/b3/b33" to="ColorRect" method="_on_b_33_pressed"]
-[connection signal="pressed" from="ColorRect/b4" to="ColorRect" method="_on_b_4_pressed"]
-[connection signal="pressed" from="ColorRect/b4/b44" to="ColorRect" method="_on_b_44_pressed"]
-[connection signal="pressed" from="ColorRect/b5" to="ColorRect" method="_on_b_5_pressed"]
-[connection signal="pressed" from="ColorRect/b5/b55" to="ColorRect" method="_on_b_55_pressed"]
-[connection signal="pressed" from="ColorRect/runebook/btn_runebook" to="ColorRect" method="_on_btn_runebook_pressed"]
-[connection signal="pressed" from="ColorRect/btn_abrir_mapa" to="ColorRect" method="_on_btn_abrir_mapa_pressed"]
-[connection signal="pressed" from="ColorRect/slot_madeira/btn_madeira" to="ColorRect" method="_on_btn_madeira_pressed"]
-[connection signal="pressed" from="ColorRect/slot_carvao/btn_carvao" to="ColorRect" method="_on_btn_carvao_pressed"]
-[connection signal="pressed" from="ColorRect/slot_up_toalha/btn_toalha" to="ColorRect" method="_on_btn_toalha_pressed"]
-[connection signal="pressed" from="ColorRect/slot_up_eucalipto/btn_eucalipto" to="ColorRect" method="_on_btn_eucalipto_pressed"]
-[connection signal="pressed" from="ColorRect/slot_up_cerca/btn_cerca" to="ColorRect" method="_on_btn_cerca_pressed"]
-[connection signal="pressed" from="mapa/ColorRect2/btn_fechar_mapa" to="ColorRect" method="_on_btn_fechar_mapa_pressed"]
-[connection signal="pressed" from="info_item/caixa_info/btn_fechar_info" to="ColorRect" method="_on_btn_fechar_info_pressed"]
-[connection signal="pressed" from="bg_livro/btn_livro" to="ColorRect" method="_on_bg_livro_pressed"]
+[connection signal="pressed" from="TextureRect/ColorRect2/btn_puxar" to="TextureRect" method="_on_btn_puxar_pressed"]
+[connection signal="pressed" from="TextureRect/ColorRect3/btn_info_sauna" to="info_sauna" method="_on_btn_info_sauna_pressed"]
+[connection signal="pressed" from="TextureRect/ColorRect3/btn_info_sauna2" to="info_sauna" method="_on_btn_info_sauna_2_pressed"]
+[connection signal="pressed" from="TextureRect/ColorRect3/btn_info_sauna3" to="info_sauna" method="_on_btn_info_sauna_3_pressed"]
+[connection signal="pressed" from="TextureRect/ColorRect3/btn_info_sauna4" to="info_sauna" method="_on_btn_info_sauna_4_pressed"]
+[connection signal="pressed" from="TextureRect/b1" to="TextureRect" method="_on_b_1_pressed"]
+[connection signal="pressed" from="TextureRect/b1/b11" to="TextureRect" method="_on_b_11_pressed"]
+[connection signal="pressed" from="TextureRect/b2" to="TextureRect" method="_on_b_2_pressed"]
+[connection signal="pressed" from="TextureRect/b2/b22" to="TextureRect" method="_on_b_22_pressed"]
+[connection signal="pressed" from="TextureRect/b3" to="TextureRect" method="_on_b_3_pressed"]
+[connection signal="pressed" from="TextureRect/b3/b33" to="TextureRect" method="_on_b_33_pressed"]
+[connection signal="pressed" from="TextureRect/b4" to="TextureRect" method="_on_b_4_pressed"]
+[connection signal="pressed" from="TextureRect/b4/b44" to="TextureRect" method="_on_b_44_pressed"]
+[connection signal="pressed" from="TextureRect/b5" to="TextureRect" method="_on_b_5_pressed"]
+[connection signal="pressed" from="TextureRect/b5/b55" to="TextureRect" method="_on_b_55_pressed"]
+[connection signal="pressed" from="TextureRect/runebook/btn_runebook" to="TextureRect" method="_on_btn_runebook_pressed"]
+[connection signal="pressed" from="TextureRect/btn_abrir_mapa" to="TextureRect" method="_on_btn_abrir_mapa_pressed"]
+[connection signal="pressed" from="TextureRect/slot_madeira/btn_madeira" to="TextureRect" method="_on_btn_madeira_pressed"]
+[connection signal="pressed" from="TextureRect/slot_carvao/btn_carvao" to="TextureRect" method="_on_btn_carvao_pressed"]
+[connection signal="pressed" from="TextureRect/slot_up_toalha/btn_toalha" to="TextureRect" method="_on_btn_toalha_pressed"]
+[connection signal="pressed" from="TextureRect/slot_up_eucalipto/btn_eucalipto" to="TextureRect" method="_on_btn_eucalipto_pressed"]
+[connection signal="pressed" from="TextureRect/slot_up_cerca/btn_cerca" to="TextureRect" method="_on_btn_cerca_pressed"]
+[connection signal="pressed" from="mapa/ColorRect2/btn_fechar_mapa" to="TextureRect" method="_on_btn_fechar_mapa_pressed"]
+[connection signal="pressed" from="info_item/caixa_info/btn_fechar_info" to="TextureRect" method="_on_btn_fechar_info_pressed"]
+[connection signal="pressed" from="info_sauna/caixa_info/btn_fechar_sauna" to="info_sauna" method="_on_btn_fechar_sauna_pressed"]
+[connection signal="pressed" from="bg_livro/btn_livro" to="TextureRect" method="_on_btn_livro_pressed"]

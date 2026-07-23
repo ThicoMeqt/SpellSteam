@@ -1,4 +1,4 @@
-extends ColorRect
+extends TextureRect
 
 @onready var btn_abrir_mapa = $btn_abrir_mapa
 @onready var btn_fechar_mapa = $"../mapa/ColorRect2/btn_fechar_mapa"
@@ -29,13 +29,13 @@ func _ready() -> void:
 	GameManager.inventory_changed.connect(update_inventory)
 	update_inventory()
 
-#==========================================================================
+#====================================================================================================================================================
 #PUXAR MENU
 var tween: Tween
-var original_y = -154
+var original_y = -513
 var aberto = false
 
-func _on_button_pressed() -> void:
+func _on_btn_puxar_pressed() -> void:
 	if aberto == true:
 		if tween:
 			tween.kill()
@@ -50,11 +50,11 @@ func _on_button_pressed() -> void:
 		tween = create_tween()
 		tween.set_trans(Tween.TRANS_SINE)
 		tween.set_ease(Tween.EASE_OUT)
-		tween.tween_property(self, "position:y", original_y + 154, 0.3)
+		tween.tween_property(self, "position:y", original_y + 135, 0.3)
 		aberto = true
 
 
-#==========================================================================
+#====================================================================================================================================================
 #MAPA
 func _on_btn_abrir_mapa_pressed() -> void:
 	mapa.visible = true
@@ -66,7 +66,7 @@ func _on_btn_fechar_mapa_pressed() -> void:
 	GameManager.player_mov = true
 	
 
-#==========================================================================
+#====================================================================================================================================================
 #ITENS
 func update_inventory():
 	var madeira = GameManager.inventory["madeira"]
@@ -95,9 +95,9 @@ func update_inventory():
 	up_cerca_count.visible = up_cerca > 0
 	up_cerca_count.text = str(up_cerca)
 
-#==========================================================================
+#====================================================================================================================================================
 #INFO_ITENS
-var desc = [
+var desc_item = [
 	"madeiramadeiramadeiramadeiramadeiramadeiramadeiramadeiramadeiramadeiramadeiramadeiramadeiramadeiramadeira",
 	"carvaocarvaocarvaocarvaocarvaocarvaocarvaocarvaocarvaocarvaocarvaocarvaocarvaocarvaocarvaocarvaocarvaocarvao",
 	"toalhatoalhatoalhatoalhatoalhatoalhatoalhatoalhatoalhatoalhatoalhatoalhatoalhatoalhatoalhatoalhatoalhatoalha",
@@ -108,35 +108,35 @@ var desc = [
 func _on_btn_madeira_pressed() -> void:
 	info_item.visible = true
 	info_quant.text = str(GameManager.inventory["madeira"])
-	info_desc.text = desc[0]
+	info_desc.text = desc_item[0]
 	info_nome.text = "Madeira"
 	info_icon.texture = madeira_icon.texture_normal
 	GameManager.player_mov = false
 func _on_btn_carvao_pressed() -> void:
 	info_item.visible = true
 	info_quant.text = str(GameManager.inventory["carvao"])
-	info_desc.text = desc[1]
+	info_desc.text = desc_item[1]
 	info_nome.text = "Carvão"
 	info_icon.texture = carvao_icon.texture_normal
 	GameManager.player_mov = false
 func _on_btn_toalha_pressed() -> void:
 	info_item.visible = true
 	info_quant.text = str(GameManager.inventory["up_toalha"])
-	info_desc.text = desc[2]
+	info_desc.text = desc_item[2]
 	info_nome.text = "Toalhas Fofinhas"
 	info_icon.texture = up_toalha_icon.texture_normal
 	GameManager.player_mov = false
 func _on_btn_eucalipto_pressed() -> void:
 	info_item.visible = true
 	info_quant.text = str(GameManager.inventory["up_eucalipto"])
-	info_desc.text = desc[3]
+	info_desc.text = desc_item[3]
 	info_nome.text = "Essencia de Eucalipto"
 	info_icon.texture = up_eucalipto_icon.texture_normal
 	GameManager.player_mov = false
 func _on_btn_cerca_pressed() -> void:
 	info_item.visible = true
 	info_quant.text = str(GameManager.inventory["up_cerca"])
-	info_desc.text = desc[4]
+	info_desc.text = desc_item[4]
 	info_nome.text = "Cercas novas"
 	info_icon.texture = up_cerca_icon.texture_normal
 	GameManager.player_mov = false
@@ -145,17 +145,19 @@ func _on_btn_fechar_info_pressed() -> void:
 	info_item.visible = false
 	GameManager.player_mov = true
 
-#==========================================================================
+#====================================================================================================================================================
 #RUNEBOOK
 
 func _on_btn_runebook_pressed() -> void:
 	bg_livro.visible = true
+	GameManager.player_mov = false
 
-func _on_bg_livro_pressed() -> void:
+func _on_btn_livro_pressed() -> void:
 	bg_livro.visible = false
+	GameManager.player_mov = true
 
 
-#==========================================================================
+#====================================================================================================================================================
 #DEBUG
 
 func _on_b_1_pressed() -> void:
