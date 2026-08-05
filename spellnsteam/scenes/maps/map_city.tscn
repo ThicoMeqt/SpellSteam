@@ -40,6 +40,9 @@ size = Vector2(26.000013, 17.25)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5f2he"]
 size = Vector2(175.97868, 74.9619)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u4ubv"]
+size = Vector2(175.97868, 74.9619)
+
 [node name="city" type="Node2D" unique_id=833922768]
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=2072987048]
@@ -135,6 +138,12 @@ position = Vector2(101.00003, 239)
 rotation = 0.4166994
 scale = Vector2(0.9999992, 0.9999992)
 shape = SubResource("RectangleShape2D_5f2he")
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="StaticBody2D2" unique_id=275430751]
+position = Vector2(7.000023, 277)
+rotation = -0.7853982
+scale = Vector2(0.9999992, 0.9999992)
+shape = SubResource("RectangleShape2D_u4ubv")
 
 [node name="BTN_menos_fogo3" parent="." unique_id=623814484 instance=ExtResource("3_qudcx")]
 offset_left = 574.0

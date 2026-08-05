@@ -198,19 +198,18 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_htfmj"]
-size = Vector2(42, 64)
+size = Vector2(32, 47)
 
 [node name="Player" type="CharacterBody2D" unique_id=297388152]
 script = ExtResource("1_k3sj2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2052521130]
 z_index = 10
-position = Vector2(1.9073486e-06, 0)
-scale = Vector2(2.4374998, 2.7362754)
+scale = Vector2(1.8906249, 2.1223674)
 sprite_frames = SubResource("SpriteFrames_6s8up")
 animation = &"walkfront"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=985172492]
-position = Vector2(0, -1)
+position = Vector2(0, -1.5)
 shape = SubResource("RectangleShape2D_htfmj")
 debug_color = Color(0, 0.64464676, 0.2829138, 0.41960785)
