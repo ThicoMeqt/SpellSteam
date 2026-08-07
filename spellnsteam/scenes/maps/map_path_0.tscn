@@ -35,6 +35,13 @@ size = Vector2(248.05786, 43.59375)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6a7x7"]
 size = Vector2(208.81146, 43.59375)
 
+[sub_resource type="InputEventKey" id="InputEventKey_h734s"]
+device = -1
+keycode = 4194305
+
+[sub_resource type="Shortcut" id="Shortcut_yrvy5"]
+events = [SubResource("InputEventKey_h734s")]
+
 [node name="path_0" type="Node2D" unique_id=245771730]
 script = ExtResource("1_h734s")
 
@@ -184,6 +191,8 @@ grow_horizontal = 2
 grow_vertical = 2
 focus_mode = 0
 mouse_default_cursor_shape = 2
+shortcut = SubResource("Shortcut_yrvy5")
+shortcut_in_tooltip = false
 text = "X"
 
 [connection signal="pressed" from="btn_abrir_quadro" to="." method="_on_btn_abrir_quadro_pressed"]

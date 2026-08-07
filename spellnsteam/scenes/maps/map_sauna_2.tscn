@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b1jcw4ob3ro1n"]
 
 [ext_resource type="Texture2D" uid="uid://drxhpjd0rbe2b" path="res://assets/map_sauna_2.jpg" id="1_45dhm"]
+[ext_resource type="Script" uid="uid://ck5btcnerew75" path="res://scripts/map_sauna_2.gd" id="1_vwfxc"]
 [ext_resource type="PackedScene" uid="uid://c8ytc0g2ok0su" path="res://scenes/teste_transição.tscn" id="2_45dhm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uemsp"]
@@ -37,6 +38,7 @@ size = Vector2(123.740265, 453.69818)
 size = Vector2(123.740265, 325.80826)
 
 [node name="sauna_2" type="Node2D" unique_id=1060057]
+script = ExtResource("1_vwfxc")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=745795020]
 offset_right = 1152.0

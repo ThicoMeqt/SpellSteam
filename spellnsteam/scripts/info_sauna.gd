@@ -62,13 +62,13 @@ func open_info_sauna(num, c, w, p):
 			cont_pop[i].color = Color(0.0, 0.0, 0.0, 0.522)
 
 func _on_btn_info_sauna_pressed() -> void:
-	open_info_sauna(0, GameManager.sp_comfort, GameManager.sp_water, GameManager.sp_popularity)
+	open_info_sauna(0, GameManager.sauna_stats["confort"], GameManager.sauna_stats["water"], GameManager.sauna_stats["popularity"])
 func _on_btn_info_sauna_2_pressed() -> void:
-	open_info_sauna(1, GameManager.sr1_comfort, GameManager.sr1_water, GameManager.sr1_popularity)
+	open_info_sauna(1, GameManager.sr1_stats["confort"], GameManager.sr1_stats["water"], GameManager.sr1_stats["popularity"])
 func _on_btn_info_sauna_3_pressed() -> void:
-	open_info_sauna(2, GameManager.sr2_comfort, GameManager.sr2_water, GameManager.sr2_popularity)
+	open_info_sauna(2, GameManager.sr2_stats["confort"], GameManager.sr2_stats["water"], GameManager.sr2_stats["popularity"])
 func _on_btn_info_sauna_4_pressed() -> void:
-	open_info_sauna(3, GameManager.sr3_comfort, GameManager.sr3_water, GameManager.sr3_popularity)
+	open_info_sauna(3, GameManager.sr3_stats["confort"], GameManager.sr3_stats["water"], GameManager.sr3_stats["popularity"])
 
 func _on_btn_fechar_sauna_pressed() -> void:
 	info_sauna.visible = false

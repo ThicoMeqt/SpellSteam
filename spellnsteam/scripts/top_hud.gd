@@ -9,6 +9,7 @@ extends TextureRect
 @onready var info_quant = $"../info_item/caixa_info/label_quant"
 @onready var info_nome = $"../info_item/caixa_info/label_nome"
 @onready var bg_livro = $"../bg_livro"
+@onready var popup = $"../bg_livro/popup_confirm"
 
 @onready var madeira_icon = $slot_madeira/btn_madeira
 @onready var madeira_count = $slot_madeira/Label
@@ -26,8 +27,22 @@ func _ready() -> void:
 	btn_fechar_mapa.disabled = true
 	info_item.visible = false
 	bg_livro.visible = false
+	popup.visible = false
 	GameManager.inventory_changed.connect(update_inventory)
 	update_inventory()
+	GameManager.map_changed.connect(update_btn_rune)
+	update_btn_rune()
+	GameManager.ja_dormiu.connect(update_timer)
+	update_timer()
+
+func ativar_btns():
+	$ColorRect2/btn_puxar.disabled = false
+	$runebook/btn_runebook.disabled = false
+	$ColorRect3/btn_info_sauna.disabled = false
+func desativar_btns():
+	$ColorRect2/btn_puxar.disabled = true
+	$runebook/btn_runebook.disabled = true
+	$ColorRect3/btn_info_sauna.disabled = true
 
 #====================================================================================================================================================
 #PUXAR MENU
@@ -53,18 +68,26 @@ func _on_btn_puxar_pressed() -> void:
 		tween.tween_property(self, "position:y", original_y + 135, 0.3)
 		aberto = true
 
-
 #====================================================================================================================================================
 #MAPA
 func _on_btn_abrir_mapa_pressed() -> void:
 	mapa.visible = true
 	btn_fechar_mapa.disabled = false
 	GameManager.player_mov = false
+	desativar_btns()
 func _on_btn_fechar_mapa_pressed() -> void:
 	mapa.visible = false
 	btn_fechar_mapa.disabled = true
 	GameManager.player_mov = true
-	
+	ativar_btns()
+
+#====================================================================================================================================================
+#INDICADOR DIAS
+func update_timer():
+	if GameManager.is_daytime:
+		$lbl_dias.text = "DIA %s" %[str(GameManager.current_day)]
+	if not GameManager.is_daytime:
+		$lbl_dias.text = "NOITE %s" %[str(GameManager.current_day)]
 
 #====================================================================================================================================================
 #ITENS
@@ -112,6 +135,7 @@ func _on_btn_madeira_pressed() -> void:
 	info_nome.text = "Madeira"
 	info_icon.texture = madeira_icon.texture_normal
 	GameManager.player_mov = false
+	desativar_btns()
 func _on_btn_carvao_pressed() -> void:
 	info_item.visible = true
 	info_quant.text = str(GameManager.inventory["carvao"])
@@ -119,6 +143,7 @@ func _on_btn_carvao_pressed() -> void:
 	info_nome.text = "Carvão"
 	info_icon.texture = carvao_icon.texture_normal
 	GameManager.player_mov = false
+	desativar_btns()
 func _on_btn_toalha_pressed() -> void:
 	info_item.visible = true
 	info_quant.text = str(GameManager.inventory["up_toalha"])
@@ -126,6 +151,7 @@ func _on_btn_toalha_pressed() -> void:
 	info_nome.text = "Toalhas Fofinhas"
 	info_icon.texture = up_toalha_icon.texture_normal
 	GameManager.player_mov = false
+	desativar_btns()
 func _on_btn_eucalipto_pressed() -> void:
 	info_item.visible = true
 	info_quant.text = str(GameManager.inventory["up_eucalipto"])
@@ -133,6 +159,7 @@ func _on_btn_eucalipto_pressed() -> void:
 	info_nome.text = "Essencia de Eucalipto"
 	info_icon.texture = up_eucalipto_icon.texture_normal
 	GameManager.player_mov = false
+	desativar_btns()
 func _on_btn_cerca_pressed() -> void:
 	info_item.visible = true
 	info_quant.text = str(GameManager.inventory["up_cerca"])
@@ -140,22 +167,73 @@ func _on_btn_cerca_pressed() -> void:
 	info_nome.text = "Cercas novas"
 	info_icon.texture = up_cerca_icon.texture_normal
 	GameManager.player_mov = false
+	desativar_btns()
 
 func _on_btn_fechar_info_pressed() -> void:
 	info_item.visible = false
 	GameManager.player_mov = true
+	ativar_btns()
 
 #====================================================================================================================================================
 #RUNEBOOK
+var sauna_stats = [GameManager.sauna_stats, GameManager.sr1_stats, GameManager.sr2_stats, GameManager.sr3_stats]
 
 func _on_btn_runebook_pressed() -> void:
 	bg_livro.visible = true
 	GameManager.player_mov = false
+	desativar_btns()
 
 func _on_btn_livro_pressed() -> void:
 	bg_livro.visible = false
 	GameManager.player_mov = true
+	popup.visible = false
+	$"../bg_livro/btn_runar".disabled = false
+	$"../bg_livro/Node2D".get_node("btn_flip_back").disabled = false
+	$"../bg_livro/Node2D".get_node("btn_flip_forward").disabled = false
+	ativar_btns()
 
+func update_btn_rune():
+	if GameManager.allow_rune == true:
+		$"../bg_livro/btn_runar".disabled = false
+		$"../bg_livro/btn_mais_stats".disabled = false
+	if GameManager.allow_rune == false:
+		$"../bg_livro/btn_runar".disabled = true
+		$"../bg_livro/btn_mais_stats".disabled = true
+
+func _on_btn_runar_pressed() -> void:
+	if GameManager.current_sauna != 0:
+		var vitima = sauna_stats[GameManager.current_sauna]
+		if vitima["confort"] > 0: vitima["confort"] -= 1 
+		if vitima["water"] > 0: vitima["water"] -= 1
+		if vitima["popularity"] > 0: vitima["popularity"] -= 1
+	else:
+		popup.visible = true
+		popup.z_index = 1000
+		$"../bg_livro/btn_runar".disabled = true
+		$"../bg_livro/Node2D".get_node("btn_flip_back").disabled = true
+		$"../bg_livro/Node2D".get_node("btn_flip_forward").disabled = true
+
+func _on_btn_conf_pop_pressed() -> void:
+	var vitima = sauna_stats[GameManager.current_sauna]
+	if vitima["confort"] > 0: vitima["confort"] -= 1 
+	if vitima["water"] > 0: vitima["water"] -= 1
+	if vitima["popularity"] > 0: vitima["popularity"] -= 1
+	popup.visible = false
+	$"../bg_livro/btn_runar".disabled = false
+	$"../bg_livro/Node2D".get_node("btn_flip_back").disabled = false
+	$"../bg_livro/Node2D".get_node("btn_flip_forward").disabled = false
+
+func _on_btn_neg_pop_pressed() -> void:
+	popup.visible = false
+	$"../bg_livro/btn_runar".disabled = false
+	$"../bg_livro/Node2D".get_node("btn_flip_back").disabled = false
+	$"../bg_livro/Node2D".get_node("btn_flip_forward").disabled = false
+
+func _on_btn_mais_stats_pressed() -> void:
+	var vitima = sauna_stats[GameManager.current_sauna]
+	if vitima["confort"] < 5: vitima["confort"] += 1 
+	if vitima["water"] < 5: vitima["water"] += 1
+	if vitima["popularity"] < 5: vitima["popularity"] += 1
 
 #====================================================================================================================================================
 #DEBUG

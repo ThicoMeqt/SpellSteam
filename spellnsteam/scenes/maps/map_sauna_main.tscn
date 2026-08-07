@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bx5wynm84d464"]
 
+[ext_resource type="Script" uid="uid://cimqxdbcw66m8" path="res://scripts/map_sauna_main.gd" id="1_25fwh"]
 [ext_resource type="Texture2D" uid="uid://bwqh2oryuk4kg" path="res://assets/map_sauna_main.jpg" id="1_e563a"]
 [ext_resource type="PackedScene" uid="uid://c8ytc0g2ok0su" path="res://scenes/teste_transição.tscn" id="3_qhvma"]
 
@@ -37,6 +38,7 @@ size = Vector2(453.8405, 85.325195)
 size = Vector2(147.80286, 150.76862)
 
 [node name="sauna_main" type="Node2D" unique_id=245771730]
+script = ExtResource("1_25fwh")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1486307255]
 offset_right = 1152.0
@@ -110,3 +112,13 @@ shape = SubResource("RectangleShape2D_8617f")
 position = Vector2(13.999983, 552)
 rotation = 2.591814
 shape = SubResource("RectangleShape2D_25fwh")
+
+[node name="btn_mimir" type="Button" parent="." unique_id=1560321994]
+offset_top = 617.0
+offset_right = 30.0
+offset_bottom = 648.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+text = "🌙"
+
+[connection signal="pressed" from="btn_mimir" to="." method="_on_btn_mimir_pressed"]

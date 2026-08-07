@@ -10,6 +10,30 @@
 [ext_resource type="Texture2D" uid="uid://b10rgbkam2ok" path="res://assets/p1.png" id="6_g2smf"]
 [ext_resource type="Texture2D" uid="uid://b8wij4jfie0mo" path="res://assets/Sprite-0003.png" id="7_c4h71"]
 
+[sub_resource type="InputEventKey" id="InputEventKey_8iq38"]
+device = -1
+keycode = 68
+unicode = 100
+
+[sub_resource type="InputEventKey" id="InputEventKey_g2smf"]
+device = -1
+keycode = 4194321
+
+[sub_resource type="Shortcut" id="Shortcut_c4h71"]
+events = [SubResource("InputEventKey_8iq38"), SubResource("InputEventKey_g2smf")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_kojp6"]
+device = -1
+keycode = 65
+unicode = 97
+
+[sub_resource type="InputEventKey" id="InputEventKey_yi4ci"]
+device = -1
+keycode = 4194319
+
+[sub_resource type="Shortcut" id="Shortcut_45yvf"]
+events = [SubResource("InputEventKey_kojp6"), SubResource("InputEventKey_yi4ci")]
+
 [node name="Node2D" type="Node2D" unique_id=1283650794]
 script = ExtResource("1_qwl53")
 
@@ -195,6 +219,8 @@ offset_right = 400.0
 offset_bottom = 310.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
+shortcut = SubResource("Shortcut_c4h71")
+shortcut_in_tooltip = false
 text = "------------>"
 
 [node name="btn_flip_back" type="Button" parent="." unique_id=1716865857]
@@ -204,6 +230,7 @@ offset_right = -281.0
 offset_bottom = 310.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
+shortcut = SubResource("Shortcut_45yvf")
 text = "<------------"
 
 [connection signal="pressed" from="btn_flip_forward" to="." method="_on_btn_flip_forward_pressed"]

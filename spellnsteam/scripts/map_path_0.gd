@@ -3,6 +3,7 @@ extends Node2D
 @onready var btn_abrir = $btn_abrir_quadro
 @onready var btn_fechar = $painel_avisos/textura_avisos/ColorRect2/btn_fechar_avisos
 @onready var painel = $painel_avisos
+@export var allow_rune := false
 
 func _ready() -> void:
 	painel.visible = false

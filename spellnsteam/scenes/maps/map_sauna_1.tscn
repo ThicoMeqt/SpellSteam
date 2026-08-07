@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cwcn5jonem6v2"]
 
+[ext_resource type="Script" uid="uid://dm3b6l0qxxr83" path="res://scripts/map_sauna_1.gd" id="1_qboya"]
 [ext_resource type="Texture2D" uid="uid://bh3p3mcx8jq7i" path="res://assets/map_sauna_1.png" id="1_ri7s7"]
 [ext_resource type="PackedScene" uid="uid://c8ytc0g2ok0su" path="res://scenes/teste_transição.tscn" id="2_y8ip5"]
 [ext_resource type="PackedScene" uid="uid://c5bjugykfyuvf" path="res://scenes/btn_menos_fogo.tscn" id="3_y8ip5"]
@@ -38,6 +39,7 @@ size = Vector2(65.13074, 79.19687)
 size = Vector2(32.398438, 254.61865)
 
 [node name="sauna_1" type="Node2D" unique_id=749243551]
+script = ExtResource("1_qboya")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1940059510]
 offset_right = 1152.0

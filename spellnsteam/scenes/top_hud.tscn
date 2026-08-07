@@ -15,6 +15,59 @@
 [ext_resource type="Texture2D" uid="uid://c08o77nlja8dw" path="res://assets/popup1.png" id="11_q8aqb"]
 [ext_resource type="Texture2D" uid="uid://ce465aek0urwp" path="res://assets/popup2.png" id="13_mdkmy"]
 
+[sub_resource type="InputEventKey" id="InputEventKey_0becy"]
+device = -1
+keycode = 4194306
+
+[sub_resource type="InputEventKey" id="InputEventKey_ufxfe"]
+device = -1
+keycode = 69
+unicode = 101
+
+[sub_resource type="Shortcut" id="Shortcut_550bf"]
+events = [SubResource("InputEventKey_0becy"), SubResource("InputEventKey_ufxfe")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_nf2rd"]
+device = -1
+keycode = 81
+unicode = 113
+
+[sub_resource type="Shortcut" id="Shortcut_napu8"]
+events = [SubResource("InputEventKey_nf2rd")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_550bf"]
+device = -1
+keycode = 82
+unicode = 114
+
+[sub_resource type="Shortcut" id="Shortcut_nf2rd"]
+events = [SubResource("InputEventKey_550bf")]
+
+[sub_resource type="LabelSettings" id="LabelSettings_mdkmy"]
+font_size = 25
+outline_size = 6
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="InputEventKey" id="InputEventKey_b5kcj"]
+keycode = 4194305
+
+[sub_resource type="Shortcut" id="Shortcut_0becy"]
+events = [SubResource("InputEventKey_b5kcj")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_mdkmy"]
+keycode = 4194305
+
+[sub_resource type="Shortcut" id="Shortcut_b5kcj"]
+events = [SubResource("InputEventKey_mdkmy")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_napu8"]
+device = -1
+keycode = 32
+unicode = 32
+
+[sub_resource type="Shortcut" id="Shortcut_751re"]
+events = [SubResource("InputEventKey_napu8")]
+
 [node name="top_HUD" type="Control" unique_id=1072271423]
 layout_mode = 3
 anchors_preset = 15
@@ -57,6 +110,8 @@ grow_horizontal = 2
 grow_vertical = 2
 focus_mode = 0
 mouse_default_cursor_shape = 2
+shortcut = SubResource("Shortcut_550bf")
+shortcut_in_tooltip = false
 
 [node name="ColorRect3" type="ColorRect" parent="TextureRect" unique_id=1672981594]
 layout_mode = 0
@@ -74,6 +129,8 @@ offset_right = 152.0
 offset_bottom = 35.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
+shortcut = SubResource("Shortcut_napu8")
+shortcut_in_tooltip = false
 texture_normal = ExtResource("2_2iueu")
 ignore_texture_size = true
 stretch_mode = 0
@@ -199,6 +256,8 @@ offset_right = 178.0
 offset_bottom = 185.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
+shortcut = SubResource("Shortcut_nf2rd")
+shortcut_in_tooltip = false
 texture_normal = ExtResource("3_dfbvg")
 ignore_texture_size = true
 stretch_mode = 0
@@ -335,6 +394,24 @@ text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="lbl_dias" type="Label" parent="TextureRect" unique_id=573960341]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.77000004
+anchor_top = 0.65400004
+anchor_right = 0.77000004
+anchor_bottom = 0.65400004
+offset_left = -79.380066
+offset_top = -17.742065
+offset_right = 79.619934
+offset_bottom = 17.257935
+grow_horizontal = 2
+grow_vertical = 2
+text = "DIA 1"
+label_settings = SubResource("LabelSettings_mdkmy")
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="mapa" type="TextureRect" parent="." unique_id=473140118]
 visible = false
 layout_mode = 0
@@ -365,6 +442,8 @@ grow_horizontal = 2
 grow_vertical = 2
 focus_mode = 0
 mouse_default_cursor_shape = 2
+shortcut = SubResource("Shortcut_0becy")
+shortcut_in_tooltip = false
 text = "X"
 
 [node name="info_item" type="ColorRect" parent="." unique_id=2115360988]
@@ -470,6 +549,7 @@ offset_bottom = 133.0
 grow_horizontal = 0
 focus_mode = 0
 mouse_default_cursor_shape = 2
+shortcut = SubResource("Shortcut_0becy")
 flat = true
 
 [node name="info_sauna" type="ColorRect" parent="." unique_id=1681574373]
@@ -508,6 +588,8 @@ offset_bottom = 184.5
 grow_horizontal = 0
 focus_mode = 0
 mouse_default_cursor_shape = 2
+shortcut = SubResource("Shortcut_0becy")
+shortcut_in_tooltip = false
 flat = true
 
 [node name="label_nome" type="Label" parent="info_sauna/caixa_info" unique_id=427773586]
@@ -668,10 +750,108 @@ layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 648.0
 focus_mode = 0
+shortcut = SubResource("Shortcut_b5kcj")
+shortcut_in_tooltip = false
 flat = true
+
+[node name="btn_runar" type="Button" parent="bg_livro" unique_id=949556734]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -78.0
+offset_top = -75.0
+offset_right = 78.0
+offset_bottom = -18.604675
+grow_horizontal = 2
+grow_vertical = 0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 30
+shortcut = SubResource("Shortcut_751re")
+shortcut_in_tooltip = false
+text = "USAR"
+
+[node name="btn_mais_stats" type="Button" parent="bg_livro" unique_id=636670845]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 396.0
+offset_right = 149.0
+offset_bottom = 447.0
+focus_mode = 0
+text = "magia debug"
 
 [node name="Node2D" parent="bg_livro" unique_id=1283650794 instance=ExtResource("8_dfbvg")]
 position = Vector2(578, 299)
+
+[node name="popup_confirm" type="ColorRect" parent="bg_livro" unique_id=1057774630]
+layout_mode = 0
+offset_left = 230.0
+offset_top = 191.0
+offset_right = 937.0
+offset_bottom = 449.0
+color = Color(0.6862745, 0.5411765, 0.39607844, 1)
+
+[node name="Label" type="Label" parent="bg_livro/popup_confirm" unique_id=1335947658]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -78.0
+offset_top = -103.0
+offset_right = 78.0
+offset_bottom = -54.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "PERIGO!!!"
+
+[node name="Label2" type="Label" parent="bg_livro/popup_confirm" unique_id=797418640]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -247.5
+offset_top = -44.0
+offset_right = 247.5
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+text = "Você está prestes a lançar um feitiço em sua própria sauna. Tem certeza que deseja fazer isso?"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="btn_conf_pop" type="Button" parent="bg_livro/popup_confirm" unique_id=1219363067]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 196.0
+offset_right = 282.0
+offset_bottom = 241.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+text = "SIM"
+
+[node name="btn_neg_pop" type="Button" parent="bg_livro/popup_confirm" unique_id=1212357]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 43.0
+offset_top = 196.0
+offset_right = 133.0
+offset_bottom = 241.0
+grow_horizontal = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+text = "NÃO"
 
 [connection signal="pressed" from="TextureRect/ColorRect2/btn_puxar" to="TextureRect" method="_on_btn_puxar_pressed"]
 [connection signal="pressed" from="TextureRect/ColorRect3/btn_info_sauna" to="info_sauna" method="_on_btn_info_sauna_pressed"]
@@ -699,3 +879,7 @@ position = Vector2(578, 299)
 [connection signal="pressed" from="info_item/caixa_info/btn_fechar_info" to="TextureRect" method="_on_btn_fechar_info_pressed"]
 [connection signal="pressed" from="info_sauna/caixa_info/btn_fechar_sauna" to="info_sauna" method="_on_btn_fechar_sauna_pressed"]
 [connection signal="pressed" from="bg_livro/btn_livro" to="TextureRect" method="_on_btn_livro_pressed"]
+[connection signal="pressed" from="bg_livro/btn_runar" to="TextureRect" method="_on_btn_runar_pressed"]
+[connection signal="pressed" from="bg_livro/btn_mais_stats" to="TextureRect" method="_on_btn_mais_stats_pressed"]
+[connection signal="pressed" from="bg_livro/popup_confirm/btn_conf_pop" to="TextureRect" method="_on_btn_conf_pop_pressed"]
+[connection signal="pressed" from="bg_livro/popup_confirm/btn_neg_pop" to="TextureRect" method="_on_btn_neg_pop_pressed"]

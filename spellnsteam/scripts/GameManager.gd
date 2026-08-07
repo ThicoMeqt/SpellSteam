@@ -7,23 +7,36 @@ var player_enable = true
 #MANAGEMENT DO MAPA
 var next_spawn = ""
 var changing_map = false
+var allow_rune := false
+var current_sauna = 0
+signal map_changed
 
 #-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 #MANAGEMENT DO DIA
 var current_day = 1
 var is_daytime = true
+var sleeping = false
+signal dormir
+signal ja_dormiu
 
 #-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 #MANAGEMENT DAS ACOES
 var max_day_actions = 3
 var max_night_actions = 2
 var remaining_actions = 3
+signal actions_changed(valor)
+
+func gastar_fogo(amount := 1):
+	remaining_actions -= amount
+	actions_changed.emit(remaining_actions)
 
 #-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 #STATS DO PLAYER
-var sp_comfort = 0
-var sp_water = 0
-var sp_popularity = 0
+var sauna_stats = {
+	"confort": 0,
+	"water": 0,
+	"popularity": 0
+}
 
 #-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 #INVENTARIO PLAYER
@@ -58,27 +71,27 @@ func coletar(item):
 
 #-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 #SAUNA RIVAL 1
-var sr1_comfort = 1
-var sr1_water = 1
-var sr1_popularity = 1
+var sr1_stats = {
+	"confort": 1,
+	"water": 1,
+	"popularity": 1
+}
+
 #-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 #SAUNA RIVAL 2
-var sr2_comfort = 2
-var sr2_water = 2
-var sr2_popularity = 2
+var sr2_stats = {
+	"confort": 2,
+	"water": 2,
+	"popularity": 2
+}
+
 #-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 #SAUNA RIVAL 3
-var sr3_comfort = 3
-var sr3_water = 3
-var sr3_popularity = 3
-
-#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-#SISTEMA DE ACOES
-signal actions_changed(valor)
-
-func gastar_fogo(amount := 1):
-	remaining_actions -= amount
-	actions_changed.emit(remaining_actions)
+var sr3_stats = {
+	"confort": 3,
+	"water": 3,
+	"popularity": 3
+}
 
 #-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 #SISTEMA DIA/NOITE

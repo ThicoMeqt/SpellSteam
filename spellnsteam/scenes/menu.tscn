@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://q4jj47o5njp"]
+
+[ext_resource type="Script" uid="uid://dg5awt6bmbas1" path="res://scripts/menu.gd" id="1_yqeox"]
+
+[node name="Control" type="Control" unique_id=1441943712]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yqeox")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1023719273]
+
+[node name="fundo" type="ColorRect" parent="." unique_id=1601275929]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.10747976, 0.10747973, 0.10747973, 1)
+
+[node name="Label" type="Label" parent="fundo" unique_id=467690089]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.5
+offset_top = -209.0
+offset_right = 150.5
+offset_bottom = -72.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 100
+text = "MENU"
+
+[node name="play" type="Button" parent="." unique_id=779223514]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -59.5
+offset_top = 15.0
+offset_right = 59.5
+offset_bottom = 86.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 45
+text = "Jogar"
+
+[node name="quit" type="Button" parent="." unique_id=1832150978]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -19.0
+offset_top = 139.5
+offset_right = 19.0
+offset_bottom = 170.5
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 30
+text = "Sair"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1729633550]
+modulate = Color(0, 0, 0, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[connection signal="pressed" from="play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]

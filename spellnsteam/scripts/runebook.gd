@@ -1,7 +1,7 @@
 extends Node2D
 
 @export var spacing := 3.0
-@export var flip_duration := 0.4
+@export var flip_duration := 0.3
 
 @onready var left_stack = $LeftStack
 @onready var right_stack = $RightStack
@@ -51,8 +51,8 @@ func flip_forward():
 	var tween = create_tween().set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 
 	var tilt = deg_to_rad(-15)
-
 	# Move + close + tilt
+	page.pivot_offset = Vector2(0, page.size.y / 2)
 	tween.parallel().tween_property(page, "position", center_pos, flip_duration / 2)
 	tween.parallel().tween_property(page, "scale:x", 0.0, flip_duration / 2)
 	tween.parallel().tween_property(page, "rotation", tilt, flip_duration / 2)
@@ -73,6 +73,7 @@ func flip_forward():
 	var final_pos = Vector2(-final_index * spacing, -page.size.y / 2)
 
 	# Move + open + straighten	
+	page.pivot_offset = Vector2(0, page.size.y / 2)
 	tween.parallel().tween_property(page, "position", final_pos, flip_duration / 2)
 	tween.parallel().tween_property(page, "scale:x", -1.0, flip_duration / 2)
 	tween.parallel().tween_property(page, "rotation", 0.0, flip_duration / 2)
@@ -135,7 +136,7 @@ func flip_backward():
 # 👉 STACK POSITIONING
 # =========================
 func update_positions():
-	var depth := 1.5  # increase this too
+	var depth := 1.0  # increase this too
 
 	# Left side
 	for i in range(left_pages.size()):
