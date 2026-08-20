@@ -4,6 +4,9 @@ extends Node2D
 @onready var player = $Player
 @onready var fade = $ColorRect
 @onready var nighttime = $nighttime
+@onready var lbl_dia1 = $ColorRect/lbl_dia1
+@onready var lbl_dia2 = $ColorRect/lbl_dia2
+@onready var block_dias = $ColorRect/Control
 
 func _ready() -> void:
 	nighttime.visible = false
@@ -42,9 +45,20 @@ func change_map(path):
 func mimir():
 	if GameManager.sleeping:
 		return
+	block_dias.visible = false
+	lbl_dia2.visible = false
+	lbl_dia1.visible = true
+	var pos1_og = lbl_dia1.get_screen_position()
+	var pos2_og = lbl_dia2.get_screen_position()
 	GameManager.sleeping = true
 	fade.visible = true
 	GameManager.player_mov = false
+	if GameManager.is_daytime == true:
+		lbl_dia1.text = "DIA %s" %[str(GameManager.current_day)]
+		lbl_dia2.text = "NOITE %s" %[str(GameManager.current_day)]
+	elif GameManager.is_daytime == false:
+		lbl_dia1.text = "NOITE %s" %[str((GameManager.current_day))]
+		lbl_dia2.text = "DIA %s" %[str((GameManager.current_day)+1)]
 	var tween = create_tween()
 	tween.tween_property(fade, "modulate:a", 1.0, 1.5)
 	await tween.finished
@@ -59,9 +73,20 @@ func mimir():
 		GameManager.remaining_actions = GameManager.max_day_actions
 	GameManager.actions_changed.emit(GameManager.remaining_actions)
 	GameManager.ja_dormiu.emit()
+	block_dias.visible = true
+	lbl_dia2.visible = true
+	tween = create_tween()
+	tween.tween_property(lbl_dia1, "position:y", 70, 1.5)
+	var tween2 = create_tween()
+	tween2.tween_property(lbl_dia2, "position:y", 250, 1.5)
+	await tween.finished
+	block_dias.visible = false
+	lbl_dia1.visible = false
 	tween = create_tween()
 	tween.tween_property(fade, "modulate:a", 0, 1.5)
 	await tween.finished
 	fade.visible = false
+	lbl_dia1.position = pos1_og
+	lbl_dia2.position = pos2_og
 	GameManager.player_mov = true
 	GameManager.sleeping = false

@@ -1,6 +1,11 @@
 [gd_scene format=3 uid="uid://ct71guhtf1hlg"]
 
 [ext_resource type="Script" uid="uid://ba8v3cg43vee7" path="res://scripts/skilltree.gd" id="1_n6rpy"]
+[ext_resource type="Texture2D" uid="uid://bqpkqe245o5u7" path="res://assets/item_wood.png" id="2_m02x7"]
+[ext_resource type="Texture2D" uid="uid://bet3baj6v781n" path="res://assets/item_coal.png" id="3_ausvb"]
+[ext_resource type="Texture2D" uid="uid://bwipkqujadrxx" path="res://assets/item_cerca.png" id="4_wacfa"]
+[ext_resource type="Texture2D" uid="uid://bqjwdsigs07mx" path="res://assets/item_towel.png" id="5_ow5wr"]
+[ext_resource type="Texture2D" uid="uid://cplt024oy60tv" path="res://assets/icon.svg" id="6_nva11"]
 
 [node name="Skilltree" type="Control" unique_id=394577640]
 layout_mode = 3
@@ -9,6 +14,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("1_n6rpy")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=654379642]
@@ -21,6 +27,7 @@ scale = Vector2(1.8491414, 1.7450364)
 
 [node name="Label" type="Label" parent="VBoxContainer" unique_id=804337379]
 layout_mode = 2
+theme_override_font_sizes/font_size = 16
 text = "agua"
 horizontal_alignment = 1
 
@@ -34,16 +41,22 @@ alignment = 1
 [node name="water1" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=183735015]
 layout_mode = 2
 size_flags_horizontal = 3
+focus_mode = 0
+mouse_default_cursor_shape = 2
 text = "1"
 
 [node name="water2" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=751338165]
 layout_mode = 2
 size_flags_horizontal = 3
+focus_mode = 0
+mouse_default_cursor_shape = 2
 text = "2"
 
 [node name="water3" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=1208064225]
 layout_mode = 2
 size_flags_horizontal = 3
+focus_mode = 0
+mouse_default_cursor_shape = 2
 text = "3"
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=2078483965]
@@ -76,19 +89,227 @@ alignment = 1
 [node name="comfort1" type="Button" parent="VBoxContainer2/HBoxContainer" unique_id=880533907]
 layout_mode = 2
 size_flags_horizontal = 3
+focus_mode = 0
+mouse_default_cursor_shape = 2
 text = "1"
 
 [node name="comfort2" type="Button" parent="VBoxContainer2/HBoxContainer" unique_id=842457019]
 layout_mode = 2
 size_flags_horizontal = 3
+focus_mode = 0
+mouse_default_cursor_shape = 2
 text = "2"
 
 [node name="comfort3" type="Button" parent="VBoxContainer2/HBoxContainer" unique_id=1936100672]
 layout_mode = 2
 size_flags_horizontal = 3
+focus_mode = 0
+mouse_default_cursor_shape = 2
 text = "3"
 
 [node name="comfort4" type="Button" parent="VBoxContainer2/HBoxContainer" unique_id=1709912298]
 layout_mode = 2
 size_flags_horizontal = 3
+focus_mode = 0
+mouse_default_cursor_shape = 2
 text = "4"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=977911667]
+layout_mode = 0
+offset_left = 347.0
+offset_top = 242.0
+offset_right = 372.0
+offset_bottom = 267.0
+mouse_filter = 2
+texture = ExtResource("2_m02x7")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect" unique_id=714532522]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 3.0
+offset_right = 76.0
+offset_bottom = 28.0
+mouse_filter = 2
+texture = ExtResource("2_m02x7")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=2122635675]
+layout_mode = 0
+offset_left = 524.0
+offset_top = 226.0
+offset_right = 564.0
+offset_bottom = 266.0
+mouse_filter = 2
+texture = ExtResource("3_ausvb")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="TextureRect2" unique_id=1358727470]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 7.0
+offset_right = 91.0
+offset_bottom = 47.0
+mouse_filter = 2
+texture = ExtResource("3_ausvb")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="." unique_id=1241864767]
+layout_mode = 0
+offset_left = 810.0
+offset_top = 502.0
+offset_right = 850.0
+offset_bottom = 542.0
+mouse_filter = 2
+texture = ExtResource("4_wacfa")
+expand_mode = 1
+
+[node name="TextureRect4" type="TextureRect" parent="." unique_id=1992999966]
+layout_mode = 0
+offset_left = 667.0
+offset_top = 504.0
+offset_right = 707.0
+offset_bottom = 544.0
+mouse_filter = 2
+texture = ExtResource("5_ow5wr")
+expand_mode = 1
+
+[node name="TextureRect5" type="TextureRect" parent="." unique_id=2126667565]
+layout_mode = 0
+offset_left = 535.0
+offset_top = 501.0
+offset_right = 575.0
+offset_bottom = 541.0
+mouse_filter = 2
+texture = ExtResource("4_wacfa")
+expand_mode = 1
+
+[node name="TextureRect6" type="TextureRect" parent="." unique_id=237677579]
+layout_mode = 0
+offset_left = 348.0
+offset_top = 549.0
+offset_right = 373.0
+offset_bottom = 574.0
+mouse_filter = 2
+texture = ExtResource("2_m02x7")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect6" unique_id=291011308]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 3.0
+offset_right = 76.0
+offset_bottom = 28.0
+mouse_filter = 2
+texture = ExtResource("2_m02x7")
+expand_mode = 1
+
+[node name="TextureRect7" type="TextureRect" parent="." unique_id=302107904]
+layout_mode = 0
+offset_left = 473.0
+offset_top = 552.0
+offset_right = 498.0
+offset_bottom = 577.0
+mouse_filter = 2
+texture = ExtResource("2_m02x7")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect7" unique_id=1360694729]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 3.0
+offset_right = 76.0
+offset_bottom = 28.0
+mouse_filter = 2
+texture = ExtResource("2_m02x7")
+expand_mode = 1
+
+[node name="TextureRect8" type="TextureRect" parent="." unique_id=677943393]
+layout_mode = 0
+offset_left = 751.0
+offset_top = 539.0
+offset_right = 776.0
+offset_bottom = 564.0
+mouse_filter = 2
+texture = ExtResource("2_m02x7")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect8" unique_id=2064509182]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 3.0
+offset_right = 76.0
+offset_bottom = 28.0
+mouse_filter = 2
+texture = ExtResource("2_m02x7")
+expand_mode = 1
+
+[node name="TextureRect9" type="TextureRect" parent="." unique_id=809707821]
+layout_mode = 0
+offset_left = 746.0
+offset_top = 564.0
+offset_right = 771.0
+offset_bottom = 589.0
+mouse_filter = 2
+texture = ExtResource("2_m02x7")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect9" unique_id=1573457289]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 3.0
+offset_right = 76.0
+offset_bottom = 28.0
+mouse_filter = 2
+texture = ExtResource("2_m02x7")
+expand_mode = 1
+
+[node name="TextureRect10" type="TextureRect" parent="." unique_id=137595559]
+layout_mode = 0
+offset_left = 602.0
+offset_top = 540.0
+offset_right = 642.0
+offset_bottom = 580.0
+mouse_filter = 2
+texture = ExtResource("3_ausvb")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="TextureRect10" unique_id=1748922197]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 7.0
+offset_right = 91.0
+offset_bottom = 47.0
+mouse_filter = 2
+texture = ExtResource("3_ausvb")
+expand_mode = 1
+
+[node name="TextureRect11" type="TextureRect" parent="." unique_id=1089190482]
+layout_mode = 0
+offset_left = 789.0
+offset_top = 217.0
+offset_right = 829.0
+offset_bottom = 257.0
+mouse_filter = 2
+texture = ExtResource("6_nva11")
+expand_mode = 1
+
+[node name="TextureRect12" type="TextureRect" parent="." unique_id=350411354]
+layout_mode = 0
+offset_left = 710.0
+offset_top = 243.0
+offset_right = 750.0
+offset_bottom = 283.0
+mouse_filter = 2
+texture = ExtResource("3_ausvb")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="TextureRect12" unique_id=1043184193]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 7.0
+offset_right = 91.0
+offset_bottom = 47.0
+mouse_filter = 2
+texture = ExtResource("3_ausvb")
+expand_mode = 1

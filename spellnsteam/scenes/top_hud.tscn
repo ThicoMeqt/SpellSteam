@@ -643,11 +643,6 @@ layout_mode = 2
 size_flags_vertical = 3
 color = Color(0, 0, 0, 0.43529412)
 
-[node name="ColorRect5" type="ColorRect" parent="info_sauna/caixa_info/nivel_conf" unique_id=425025235]
-layout_mode = 2
-size_flags_vertical = 3
-color = Color(0, 0, 0, 0.43529412)
-
 [node name="nivel_agua" type="VBoxContainer" parent="info_sauna/caixa_info" unique_id=1520271154]
 layout_mode = 0
 offset_left = 789.5
@@ -667,16 +662,6 @@ size_flags_vertical = 3
 color = Color(0, 0, 0, 0.43529412)
 
 [node name="ColorRect3" type="ColorRect" parent="info_sauna/caixa_info/nivel_agua" unique_id=651038801]
-layout_mode = 2
-size_flags_vertical = 3
-color = Color(0, 0, 0, 0.43529412)
-
-[node name="ColorRect4" type="ColorRect" parent="info_sauna/caixa_info/nivel_agua" unique_id=568618425]
-layout_mode = 2
-size_flags_vertical = 3
-color = Color(0, 0, 0, 0.43529412)
-
-[node name="ColorRect5" type="ColorRect" parent="info_sauna/caixa_info/nivel_agua" unique_id=87245163]
 layout_mode = 2
 size_flags_vertical = 3
 color = Color(0, 0, 0, 0.43529412)

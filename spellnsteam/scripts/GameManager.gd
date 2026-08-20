@@ -9,6 +9,7 @@ var next_spawn = ""
 var changing_map = false
 var allow_rune := false
 var current_sauna = 0
+@warning_ignore("unused_signal")
 signal map_changed
 
 #-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
@@ -16,7 +17,9 @@ signal map_changed
 var current_day = 1
 var is_daytime = true
 var sleeping = false
+@warning_ignore("unused_signal")
 signal dormir
+@warning_ignore("unused_signal")
 signal ja_dormiu
 
 #-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-

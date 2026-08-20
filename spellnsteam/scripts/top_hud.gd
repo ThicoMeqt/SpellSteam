@@ -231,8 +231,8 @@ func _on_btn_neg_pop_pressed() -> void:
 
 func _on_btn_mais_stats_pressed() -> void:
 	var vitima = sauna_stats[GameManager.current_sauna]
-	if vitima["confort"] < 5: vitima["confort"] += 1 
-	if vitima["water"] < 5: vitima["water"] += 1
+	if vitima["confort"] < 4: vitima["confort"] += 1 
+	if vitima["water"] < 3: vitima["water"] += 1
 	if vitima["popularity"] < 5: vitima["popularity"] += 1
 
 #====================================================================================================================================================

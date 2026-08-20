@@ -13,14 +13,11 @@ func _ready() -> void:
 	lvl_conf.get_node("ColorRect"),
 	lvl_conf.get_node("ColorRect2"),
 	lvl_conf.get_node("ColorRect3"),
-	lvl_conf.get_node("ColorRect4"),
-	lvl_conf.get_node("ColorRect5")]
+	lvl_conf.get_node("ColorRect4")]
 	cont_agua = [
 	lvl_agua.get_node("ColorRect"),
 	lvl_agua.get_node("ColorRect2"),
-	lvl_agua.get_node("ColorRect3"),
-	lvl_agua.get_node("ColorRect4"),
-	lvl_agua.get_node("ColorRect5")]
+	lvl_agua.get_node("ColorRect3")]
 	cont_pop = [
 	lvl_pop.get_node("ColorRect"),
 	lvl_pop.get_node("ColorRect2"),

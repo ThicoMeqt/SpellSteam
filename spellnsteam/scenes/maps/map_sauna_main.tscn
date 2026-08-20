@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cimqxdbcw66m8" path="res://scripts/map_sauna_main.gd" id="1_25fwh"]
 [ext_resource type="Texture2D" uid="uid://bwqh2oryuk4kg" path="res://assets/map_sauna_main.jpg" id="1_e563a"]
 [ext_resource type="PackedScene" uid="uid://c8ytc0g2ok0su" path="res://scenes/teste_transição.tscn" id="3_qhvma"]
+[ext_resource type="PackedScene" uid="uid://ct71guhtf1hlg" path="res://scenes/skilltree.tscn" id="4_kkh5l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ws5rw"]
 size = Vector2(345, 106.5)
@@ -32,10 +33,13 @@ size = Vector2(1223, 55)
 size = Vector2(147.80286, 55)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8617f"]
-size = Vector2(453.8405, 85.325195)
+size = Vector2(301.80362, 79.38971)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_25fwh"]
 size = Vector2(147.80286, 150.76862)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fwrke"]
+size = Vector2(155.07657, 31.19963)
 
 [node name="sauna_main" type="Node2D" unique_id=245771730]
 script = ExtResource("1_25fwh")
@@ -103,15 +107,20 @@ rotation = 2.86234
 shape = SubResource("RectangleShape2D_qhvma")
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D2" unique_id=745730271]
-position = Vector2(584.23, 554.47766)
+position = Vector2(511.56995, 577.0193)
 rotation = -0.26179934
-scale = Vector2(0.9999997, 0.9999997)
+scale = Vector2(0.9999996, 0.9999996)
 shape = SubResource("RectangleShape2D_8617f")
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1149999818]
 position = Vector2(13.999983, 552)
 rotation = 2.591814
 shape = SubResource("RectangleShape2D_25fwh")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1177210452]
+position = Vector2(726.53827, 514)
+scale = Vector2(0.99999946, 0.99999946)
+shape = SubResource("RectangleShape2D_fwrke")
 
 [node name="btn_mimir" type="Button" parent="." unique_id=1560321994]
 offset_top = 617.0
@@ -121,4 +130,56 @@ focus_mode = 0
 mouse_default_cursor_shape = 2
 text = "🌙"
 
+[node name="btn_skilltree" type="Button" parent="." unique_id=1207256302]
+offset_top = 588.0
+offset_right = 30.0
+offset_bottom = 619.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+text = "🏠"
+
+[node name="ctrl_sklltree" type="Control" parent="." unique_id=570317661]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="bg_sktr" type="ColorRect" parent="ctrl_sklltree" unique_id=779427880]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0.52156866)
+
+[node name="btn_fechar_sktr" type="Button" parent="ctrl_sklltree" unique_id=1173010863]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+flat = true
+
+[node name="ColorRect" type="ColorRect" parent="ctrl_sklltree" unique_id=43907699]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -330.0
+offset_top = -312.5
+offset_right = 330.0
+offset_bottom = 312.5
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.6862745, 0.5411765, 0.39607844, 1)
+
+[node name="Skilltree" parent="ctrl_sklltree" unique_id=394577640 instance=ExtResource("4_kkh5l")]
+layout_mode = 1
+
 [connection signal="pressed" from="btn_mimir" to="." method="_on_btn_mimir_pressed"]
+[connection signal="pressed" from="btn_skilltree" to="." method="_on_btn_skilltree_pressed"]
+[connection signal="pressed" from="ctrl_sklltree/btn_fechar_sktr" to="." method="_on_btn_fechar_sktr_pressed"]

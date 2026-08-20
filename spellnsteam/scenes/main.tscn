@@ -41,3 +41,75 @@ offset_right = 1152.0
 offset_bottom = 648.0
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
+
+[node name="lbl_dia1" type="Label" parent="ColorRect" unique_id=1291365240]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -85.5
+offset_right = 400.0
+offset_bottom = 85.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 125
+text = "DIA 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lbl_dia2" type="Label" parent="ColorRect" unique_id=926034457]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = 121.0
+offset_right = 400.0
+offset_bottom = 292.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 125
+text = "DIA 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="ColorRect" unique_id=21489411]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect/Control" unique_id=1570267870]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 14.400001
+anchor_top = 13.775001
+anchor_right = 14.400001
+anchor_bottom = 13.775001
+offset_left = -576.0
+offset_top = -97.0
+offset_right = 576.0
+offset_bottom = 97.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="ColorRect/Control" unique_id=656141007]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 14.400001
+anchor_top = 3.025
+anchor_right = 14.400001
+anchor_bottom = 3.025
+offset_left = -576.0
+offset_top = -121.0
+offset_right = 576.0
+offset_bottom = 121.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
