@@ -7,6 +7,18 @@
 [ext_resource type="Texture2D" uid="uid://bqjwdsigs07mx" path="res://assets/item_towel.png" id="5_ow5wr"]
 [ext_resource type="Texture2D" uid="uid://cplt024oy60tv" path="res://assets/icon.svg" id="6_nva11"]
 
+[sub_resource type="InputEventKey" id="InputEventKey_m02x7"]
+keycode = 4194305
+
+[sub_resource type="Shortcut" id="Shortcut_ausvb"]
+events = [SubResource("InputEventKey_m02x7")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_ausvb"]
+keycode = 4194305
+
+[sub_resource type="Shortcut" id="Shortcut_wacfa"]
+events = [SubResource("InputEventKey_ausvb")]
+
 [node name="Skilltree" type="Control" unique_id=394577640]
 layout_mode = 3
 anchors_preset = 15
@@ -114,7 +126,12 @@ focus_mode = 0
 mouse_default_cursor_shape = 2
 text = "4"
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=977911667]
+[node name="icones (temporario)" type="Control" parent="." unique_id=2143716294]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="icones (temporario)" unique_id=977911667]
 layout_mode = 0
 offset_left = 347.0
 offset_top = 242.0
@@ -124,7 +141,7 @@ mouse_filter = 2
 texture = ExtResource("2_m02x7")
 expand_mode = 1
 
-[node name="TextureRect" type="TextureRect" parent="TextureRect" unique_id=714532522]
+[node name="TextureRect" type="TextureRect" parent="icones (temporario)/TextureRect" unique_id=714532522]
 layout_mode = 0
 offset_left = 51.0
 offset_top = 3.0
@@ -134,7 +151,7 @@ mouse_filter = 2
 texture = ExtResource("2_m02x7")
 expand_mode = 1
 
-[node name="TextureRect2" type="TextureRect" parent="." unique_id=2122635675]
+[node name="TextureRect2" type="TextureRect" parent="icones (temporario)" unique_id=2122635675]
 layout_mode = 0
 offset_left = 524.0
 offset_top = 226.0
@@ -144,7 +161,7 @@ mouse_filter = 2
 texture = ExtResource("3_ausvb")
 expand_mode = 1
 
-[node name="TextureRect2" type="TextureRect" parent="TextureRect2" unique_id=1358727470]
+[node name="TextureRect2" type="TextureRect" parent="icones (temporario)/TextureRect2" unique_id=1358727470]
 layout_mode = 0
 offset_left = 51.0
 offset_top = 7.0
@@ -154,7 +171,7 @@ mouse_filter = 2
 texture = ExtResource("3_ausvb")
 expand_mode = 1
 
-[node name="TextureRect3" type="TextureRect" parent="." unique_id=1241864767]
+[node name="TextureRect3" type="TextureRect" parent="icones (temporario)" unique_id=1241864767]
 layout_mode = 0
 offset_left = 810.0
 offset_top = 502.0
@@ -164,7 +181,7 @@ mouse_filter = 2
 texture = ExtResource("4_wacfa")
 expand_mode = 1
 
-[node name="TextureRect4" type="TextureRect" parent="." unique_id=1992999966]
+[node name="TextureRect4" type="TextureRect" parent="icones (temporario)" unique_id=1992999966]
 layout_mode = 0
 offset_left = 667.0
 offset_top = 504.0
@@ -174,7 +191,7 @@ mouse_filter = 2
 texture = ExtResource("5_ow5wr")
 expand_mode = 1
 
-[node name="TextureRect5" type="TextureRect" parent="." unique_id=2126667565]
+[node name="TextureRect5" type="TextureRect" parent="icones (temporario)" unique_id=2126667565]
 layout_mode = 0
 offset_left = 535.0
 offset_top = 501.0
@@ -184,7 +201,7 @@ mouse_filter = 2
 texture = ExtResource("4_wacfa")
 expand_mode = 1
 
-[node name="TextureRect6" type="TextureRect" parent="." unique_id=237677579]
+[node name="TextureRect6" type="TextureRect" parent="icones (temporario)" unique_id=237677579]
 layout_mode = 0
 offset_left = 348.0
 offset_top = 549.0
@@ -194,7 +211,7 @@ mouse_filter = 2
 texture = ExtResource("2_m02x7")
 expand_mode = 1
 
-[node name="TextureRect" type="TextureRect" parent="TextureRect6" unique_id=291011308]
+[node name="TextureRect" type="TextureRect" parent="icones (temporario)/TextureRect6" unique_id=291011308]
 layout_mode = 0
 offset_left = 51.0
 offset_top = 3.0
@@ -204,7 +221,7 @@ mouse_filter = 2
 texture = ExtResource("2_m02x7")
 expand_mode = 1
 
-[node name="TextureRect7" type="TextureRect" parent="." unique_id=302107904]
+[node name="TextureRect7" type="TextureRect" parent="icones (temporario)" unique_id=302107904]
 layout_mode = 0
 offset_left = 473.0
 offset_top = 552.0
@@ -214,7 +231,7 @@ mouse_filter = 2
 texture = ExtResource("2_m02x7")
 expand_mode = 1
 
-[node name="TextureRect" type="TextureRect" parent="TextureRect7" unique_id=1360694729]
+[node name="TextureRect" type="TextureRect" parent="icones (temporario)/TextureRect7" unique_id=1360694729]
 layout_mode = 0
 offset_left = 51.0
 offset_top = 3.0
@@ -224,7 +241,7 @@ mouse_filter = 2
 texture = ExtResource("2_m02x7")
 expand_mode = 1
 
-[node name="TextureRect8" type="TextureRect" parent="." unique_id=677943393]
+[node name="TextureRect8" type="TextureRect" parent="icones (temporario)" unique_id=677943393]
 layout_mode = 0
 offset_left = 751.0
 offset_top = 539.0
@@ -234,7 +251,7 @@ mouse_filter = 2
 texture = ExtResource("2_m02x7")
 expand_mode = 1
 
-[node name="TextureRect" type="TextureRect" parent="TextureRect8" unique_id=2064509182]
+[node name="TextureRect" type="TextureRect" parent="icones (temporario)/TextureRect8" unique_id=2064509182]
 layout_mode = 0
 offset_left = 51.0
 offset_top = 3.0
@@ -244,7 +261,7 @@ mouse_filter = 2
 texture = ExtResource("2_m02x7")
 expand_mode = 1
 
-[node name="TextureRect9" type="TextureRect" parent="." unique_id=809707821]
+[node name="TextureRect9" type="TextureRect" parent="icones (temporario)" unique_id=809707821]
 layout_mode = 0
 offset_left = 746.0
 offset_top = 564.0
@@ -254,7 +271,7 @@ mouse_filter = 2
 texture = ExtResource("2_m02x7")
 expand_mode = 1
 
-[node name="TextureRect" type="TextureRect" parent="TextureRect9" unique_id=1573457289]
+[node name="TextureRect" type="TextureRect" parent="icones (temporario)/TextureRect9" unique_id=1573457289]
 layout_mode = 0
 offset_left = 51.0
 offset_top = 3.0
@@ -264,7 +281,7 @@ mouse_filter = 2
 texture = ExtResource("2_m02x7")
 expand_mode = 1
 
-[node name="TextureRect10" type="TextureRect" parent="." unique_id=137595559]
+[node name="TextureRect10" type="TextureRect" parent="icones (temporario)" unique_id=137595559]
 layout_mode = 0
 offset_left = 602.0
 offset_top = 540.0
@@ -274,7 +291,7 @@ mouse_filter = 2
 texture = ExtResource("3_ausvb")
 expand_mode = 1
 
-[node name="TextureRect2" type="TextureRect" parent="TextureRect10" unique_id=1748922197]
+[node name="TextureRect2" type="TextureRect" parent="icones (temporario)/TextureRect10" unique_id=1748922197]
 layout_mode = 0
 offset_left = 51.0
 offset_top = 7.0
@@ -284,7 +301,7 @@ mouse_filter = 2
 texture = ExtResource("3_ausvb")
 expand_mode = 1
 
-[node name="TextureRect11" type="TextureRect" parent="." unique_id=1089190482]
+[node name="TextureRect11" type="TextureRect" parent="icones (temporario)" unique_id=1089190482]
 layout_mode = 0
 offset_left = 789.0
 offset_top = 217.0
@@ -294,7 +311,7 @@ mouse_filter = 2
 texture = ExtResource("6_nva11")
 expand_mode = 1
 
-[node name="TextureRect12" type="TextureRect" parent="." unique_id=350411354]
+[node name="TextureRect12" type="TextureRect" parent="icones (temporario)" unique_id=350411354]
 layout_mode = 0
 offset_left = 710.0
 offset_top = 243.0
@@ -304,7 +321,7 @@ mouse_filter = 2
 texture = ExtResource("3_ausvb")
 expand_mode = 1
 
-[node name="TextureRect2" type="TextureRect" parent="TextureRect12" unique_id=1043184193]
+[node name="TextureRect2" type="TextureRect" parent="icones (temporario)/TextureRect12" unique_id=1043184193]
 layout_mode = 0
 offset_left = 51.0
 offset_top = 7.0
@@ -313,3 +330,195 @@ offset_bottom = 47.0
 mouse_filter = 2
 texture = ExtResource("3_ausvb")
 expand_mode = 1
+
+[node name="info" type="ColorRect" parent="." unique_id=2079852938]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -432.0
+offset_top = -176.25
+offset_right = 432.0
+offset_bottom = 176.25
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.6862745, 0.5411765, 0.39607844, 1)
+
+[node name="Label" type="Label" parent="info" unique_id=813411339]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -325.0
+offset_top = -158.0
+offset_right = -124.0
+offset_bottom = -95.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 45
+text = "nome_up"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="info" unique_id=1573302551]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -17.0
+offset_top = -155.0
+offset_right = 395.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 24
+text = "desc_up"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label3" type="Label" parent="info" unique_id=402465832]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -345.0
+offset_top = -60.0
+offset_right = -127.94635
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+text = "1X item
+1X item"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label4" type="Label" parent="info" unique_id=1258381684]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -291.0
+offset_top = -77.0
+offset_right = -184.0
+offset_bottom = -41.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 26
+text = "Custo:"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="btn_conf" type="Button" parent="info" unique_id=991427583]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 252.25
+offset_right = 302.0
+offset_bottom = 323.25
+focus_mode = 0
+mouse_default_cursor_shape = 2
+text = "SIM"
+
+[node name="btn_negar" type="Button" parent="info" unique_id=244106754]
+layout_mode = 0
+offset_left = 569.0
+offset_top = 252.25
+offset_right = 711.0
+offset_bottom = 323.25
+focus_mode = 0
+mouse_default_cursor_shape = 2
+shortcut = SubResource("Shortcut_ausvb")
+shortcut_in_tooltip = false
+text = "NÃO"
+
+[node name="ColorRect" type="ColorRect" parent="info" unique_id=712931775]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 80.25
+offset_right = 368.0
+offset_bottom = 89.25
+color = Color(0.53420717, 0.40954843, 0.2837297, 1)
+
+[node name="popup" type="ColorRect" parent="info" unique_id=1354658484]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -324.5
+offset_right = 576.0
+offset_bottom = 324.5
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.31764707)
+
+[node name="popup" type="ColorRect" parent="info/popup" unique_id=858255560]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -361.0
+offset_top = -90.5
+offset_right = 346.0
+offset_bottom = 99.5
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.6862745, 0.5411765, 0.39607844, 1)
+
+[node name="Label" type="Label" parent="info/popup/popup" unique_id=438780561]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -319.5
+offset_top = -27.5
+offset_right = 319.5
+offset_bottom = 27.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "Upgrade comprado com sucesso!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="info/popup/popup" unique_id=1637114076]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -218.0
+offset_top = -234.0
+offset_right = 231.0
+offset_bottom = 229.0
+grow_horizontal = 2
+grow_vertical = 2
+tooltip_auto_translate_mode = 2
+focus_mode = 0
+shortcut = SubResource("Shortcut_wacfa")
+shortcut_in_tooltip = false
+flat = true
+
+[connection signal="pressed" from="info/btn_conf" to="." method="_on_btn_conf_pressed"]
+[connection signal="pressed" from="info/btn_negar" to="." method="_on_btn_negar_pressed"]
+[connection signal="pressed" from="info/popup/popup/Button" to="." method="_on_button_pressed"]
