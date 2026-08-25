@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://bne7ykx6bjfar"]
+
+[ext_resource type="Script" uid="uid://dhajr47st4l4a" path="res://scripts/diálogo.gd" id="1_uf7rg"]
+[ext_resource type="Texture2D" uid="uid://cplt024oy60tv" path="res://assets/icon.svg" id="2_6mggi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1kj50"]
+bg_color = Color(0, 0, 0, 0.5882353)
+corner_radius_top_left = 27
+corner_radius_top_right = 27
+corner_radius_bottom_right = 27
+corner_radius_bottom_left = 27
+
+[node name="Control" type="Control" unique_id=305825017]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uf7rg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=420874737]
+position = Vector2(172, 498.00003)
+scale = Vector2(1.8554686, 1.8554686)
+texture = ExtResource("2_6mggi")
+
+[node name="Label" type="Label" parent="Sprite2D" unique_id=1302809284]
+offset_left = -7.006316
+offset_top = -34.49265
+offset_right = 58.745262
+offset_bottom = 14.507351
+rotation = 0.7853982
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 14
+text = "SPRITE GOBLIN"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Panel" type="Panel" parent="." unique_id=2129216139]
+layout_mode = 0
+offset_left = 333.0
+offset_top = 457.0
+offset_right = 1128.0
+offset_bottom = 628.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1kj50")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=2055540112]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 11.0
+offset_right = -15.0
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer" unique_id=1634822282]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer" unique_id=1890573674]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "NOME"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/MarginContainer/VBoxContainer" unique_id=1125038893]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 20
+text = "TEXTO"

@@ -2,6 +2,9 @@ extends Node
 
 var player_mov = true
 var player_enable = true
+var player_shortcut = true
+signal dialogo_sabotar_start
+signal dialogo_sabotar_end
 
 #-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 #MANAGEMENT DO MAPA
@@ -35,6 +38,7 @@ func gastar_fogo(amount := 1):
 
 #-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 #STATS DO PLAYER
+var player_name = "Safas"
 var sauna_stats = {
 	"confort": 0,
 	"water": 0,
@@ -75,15 +79,15 @@ func coletar(item):
 #-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 #SAUNA RIVAL 1
 var sr1_stats = {
-	"confort": 1,
-	"water": 1,
-	"popularity": 1
+	"confort": 2,
+	"water": 3,
+	"popularity": 3
 }
 
 #-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 #SAUNA RIVAL 2
 var sr2_stats = {
-	"confort": 2,
+	"confort": 4,
 	"water": 2,
 	"popularity": 2
 }
@@ -92,8 +96,8 @@ var sr2_stats = {
 #SAUNA RIVAL 3
 var sr3_stats = {
 	"confort": 3,
-	"water": 3,
-	"popularity": 3
+	"water": 1,
+	"popularity": 5
 }
 
 #-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-

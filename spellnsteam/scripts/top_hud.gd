@@ -28,12 +28,15 @@ func _ready() -> void:
 	info_item.visible = false
 	bg_livro.visible = false
 	popup.visible = false
+	$"../dialogo".visible = false
 	GameManager.inventory_changed.connect(update_inventory)
 	update_inventory()
 	GameManager.map_changed.connect(update_btn_rune)
 	update_btn_rune()
 	GameManager.ja_dormiu.connect(update_timer)
 	update_timer()
+	GameManager.dialogo_sabotar_start.connect(start_dialogo)
+	GameManager.dialogo_sabotar_end.connect(end_dialogo)
 
 func ativar_btns():
 	$ColorRect2/btn_puxar.disabled = false
@@ -43,6 +46,18 @@ func desativar_btns():
 	$ColorRect2/btn_puxar.disabled = true
 	$runebook/btn_runebook.disabled = true
 	$ColorRect3/btn_info_sauna.disabled = true
+func start_dialogo():
+	$"../dialogo".visible = true
+	$"../bg_livro/btn_livro".disabled = true
+	$"../bg_livro/btn_runar".disabled = true
+	$ColorRect2/btn_puxar.disabled = true
+	$ColorRect3/btn_info_sauna.disabled = true
+func end_dialogo():
+	$"../dialogo".visible = false
+	$"../bg_livro/btn_livro".disabled = false
+	$"../bg_livro/btn_runar".disabled = false
+	$ColorRect2/btn_puxar.disabled = false
+	$ColorRect3/btn_info_sauna.disabled = false
 
 #====================================================================================================================================================
 #PUXAR MENU
@@ -121,11 +136,11 @@ func update_inventory():
 #====================================================================================================================================================
 #INFO_ITENS
 var desc_item = [
-	"madeiramadeiramadeiramadeiramadeiramadeiramadeiramadeiramadeiramadeiramadeiramadeiramadeiramadeiramadeira",
-	"carvaocarvaocarvaocarvaocarvaocarvaocarvaocarvaocarvaocarvaocarvaocarvaocarvaocarvaocarvaocarvaocarvaocarvao",
-	"toalhatoalhatoalhatoalhatoalhatoalhatoalhatoalhatoalhatoalhatoalhatoalhatoalhatoalhatoalhatoalhatoalhatoalha",
-	"eucaliptoeucaliptoeucaliptoeucaliptoeucaliptoeucaliptoeucaliptoeucaliptoeucaliptoeucaliptoeucaliptoeucaliptoeucalipto",
-	"cercacercacercacercacercacercacercacercacercacercacercacercacercacercacercacercacercacercacercacercacercacerca"
+	"Madeira resistente e versátil, coletada diretamente das árvores da floresta. Um recurso essencial para a criação de ferramentas, construções e diversos outros objetos.",
+	"Um material escuro e leve, obtido da queima da madeira. É uma fonte de combustível muito útil, sendo empregado na criação de ferramentas, na produção de energia e em diversos processos de fabricação.",
+	"Toalhas macias e confortáveis, perfeitas para relaxar depois de uma boa sauna. Um pequeno detalhe que torna a experiência muito mais aconchegante e agradável.",
+	"Uma essência refrescante extraída do eucalipto. Quando usada na sauna, libera um aroma agradável que deixa o ambiente mais fresco, relaxante e revigorante.",
+	"Cercas simples feitas de madeira resistente. Além de dar um toque mais rústico à sauna, ajudam a deixá-la mais aconchegante e bem cuidada."
 ]
 
 func _on_btn_madeira_pressed() -> void:
@@ -179,11 +194,13 @@ func _on_btn_fechar_info_pressed() -> void:
 var sauna_stats = [GameManager.sauna_stats, GameManager.sr1_stats, GameManager.sr2_stats, GameManager.sr3_stats]
 
 func _on_btn_runebook_pressed() -> void:
+	#abrir livro
 	bg_livro.visible = true
 	GameManager.player_mov = false
 	desativar_btns()
 
 func _on_btn_livro_pressed() -> void:
+	#fechar livro
 	bg_livro.visible = false
 	GameManager.player_mov = true
 	popup.visible = false
@@ -201,17 +218,21 @@ func update_btn_rune():
 		$"../bg_livro/btn_mais_stats".disabled = true
 
 func _on_btn_runar_pressed() -> void:
-	if GameManager.current_sauna != 0:
-		var vitima = sauna_stats[GameManager.current_sauna]
-		if vitima["confort"] > 0: vitima["confort"] -= 1 
-		if vitima["water"] > 0: vitima["water"] -= 1
-		if vitima["popularity"] > 0: vitima["popularity"] -= 1
+	#usar runa
+	if GameManager.is_daytime:
+		GameManager.dialogo_sabotar_start.emit()
 	else:
-		popup.visible = true
-		popup.z_index = 1000
-		$"../bg_livro/btn_runar".disabled = true
-		$"../bg_livro/Node2D".get_node("btn_flip_back").disabled = true
-		$"../bg_livro/Node2D".get_node("btn_flip_forward").disabled = true
+		if GameManager.current_sauna != 0:
+			var vitima = sauna_stats[GameManager.current_sauna]
+			if vitima["confort"] > 0: vitima["confort"] -= 1 
+			if vitima["water"] > 0: vitima["water"] -= 1
+			if vitima["popularity"] > 0: vitima["popularity"] -= 1
+		else:
+			popup.visible = true
+			popup.z_index = 1000
+			$"../bg_livro/btn_runar".disabled = true
+			$"../bg_livro/Node2D".get_node("btn_flip_back").disabled = true
+			$"../bg_livro/Node2D".get_node("btn_flip_forward").disabled = true
 
 func _on_btn_conf_pop_pressed() -> void:
 	var vitima = sauna_stats[GameManager.current_sauna]
@@ -230,6 +251,7 @@ func _on_btn_neg_pop_pressed() -> void:
 	$"../bg_livro/Node2D".get_node("btn_flip_forward").disabled = false
 
 func _on_btn_mais_stats_pressed() -> void:
+	#FUNÇÃO DEBUG - TIRAR DPS
 	var vitima = sauna_stats[GameManager.current_sauna]
 	if vitima["confort"] < 4: vitima["confort"] += 1 
 	if vitima["water"] < 3: vitima["water"] += 1
@@ -242,22 +264,18 @@ func _on_b_1_pressed() -> void:
 	GameManager.add_item("madeira")
 func _on_b_11_pressed() -> void:
 	GameManager.remove_item("madeira")
-
 func _on_b_2_pressed() -> void:
 	GameManager.add_item("carvao")
 func _on_b_22_pressed() -> void:
 	GameManager.remove_item("carvao")
-
 func _on_b_3_pressed() -> void:
 	GameManager.add_item("up_toalha")
 func _on_b_33_pressed() -> void:
 	GameManager.remove_item("up_toalha")
-
 func _on_b_4_pressed() -> void:
 	GameManager.add_item("up_eucalipto")
 func _on_b_44_pressed() -> void:
 	GameManager.remove_item("up_eucalipto")
-
 func _on_b_5_pressed() -> void:
 	GameManager.add_item("up_cerca")
 func _on_b_55_pressed() -> void:

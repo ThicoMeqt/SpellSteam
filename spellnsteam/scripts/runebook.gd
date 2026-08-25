@@ -2,24 +2,32 @@ extends Node2D
 
 @export var spacing := 3.0
 @export var flip_duration := 0.3
-
 @onready var left_stack = $LeftStack
 @onready var right_stack = $RightStack
 
 var right_pages = []
 var left_pages = []
-
 var is_flipping := false
-
+var btns_disabled = false
 
 func _ready():
 	position = get_viewport_rect().size / 2
-
 	# Grab existing pages (DO NOT create)
 	for child in right_stack.get_children():
 		right_pages.append(child)
-
 	update_positions()
+	GameManager.dialogo_sabotar_start.connect(btns_toggle)
+	GameManager.dialogo_sabotar_end.connect(btns_toggle)
+
+func btns_toggle():
+	if btns_disabled:
+		btns_disabled = false
+		$btn_flip_forward.disabled = false
+		$btn_flip_back.disabled = false
+	else:
+		btns_disabled = true
+		$btn_flip_forward.disabled = true
+		$btn_flip_back.disabled = true
 
 func get_center_position(page):
 	return Vector2(0, -page.size.y / 2)

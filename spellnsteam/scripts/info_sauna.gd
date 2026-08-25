@@ -29,12 +29,13 @@ var cont_conf = []
 var cont_agua = []
 var cont_pop = []
 
-var nomes_sauna = ["A sua sauna","sauna1","sauna2","sauna3"]
+var nomes_sauna = ["A velha sauna","A Fonte Cristalina","O Refúgio Aconchegante","A Sauna da Moda"]
 var desc_saunas = [
-	"    A sua sauna. A melhor sauna de todas, a única liderada por um golbin safado (você).",
-	"sauna1fds sauna1fds sauna1fds sauna1fds sauna1fds sauna1fds sauna1fds sauna1fds sauna1fds sauna1fds sauna1fds sauna1fds ",
-	"sauna2fds sauna2fds sauna2fds sauna2fds sauna2fds sauna2fds sauna2fds sauna2fds sauna2fds sauna2fds sauna2fds sauna2fds ",
-	"sauna3fds sauna3fds sauna3fds sauna3fds sauna3fds sauna3fds sauna3fds sauna3fds sauna3fds sauna3fds sauna3fds sauna3fds "]
+	"   Já teve dias melhores. As tábuas rangem, a água não é das melhores e poucas pessoas ainda se lembram de quando este lugar era motivo de orgulho para a família. Agora, abandonada e quase esquecida, a velha sauna está longe de sua antiga glória.
+	   Mas ela foi deixada para você como herança, e você não pretende deixá-la desaparecer. Com trabalho, dedicação e algumas boas ideias, talvez seja possível devolver à sauna o brilho de seus dias de ouro.",
+	"   Conhecida por ter a água mais pura de toda a região. Cada gota é cuidadosamente tratada e dizem que até os clientes mais exigentes saem de lá sentindo que renasceram. Se existe uma sauna onde a água é levada a sério, é esta. ",
+	"   Aqui, o objetivo é simples: fazer ninguém querer ir embora. Bancos macios, toalhas fofinhas, temperatura perfeita e um ambiente tão aconchegante que alguns clientes parecem esquecer que vieram para uma sauna e não para tirar uma soneca. ",
+	"   A sauna mais comentada da cidade (e provavelmente a mais cheia também). Todo mundo quer dizer que já passou por aqui. Com fama, clientes fiéis e filas na porta, sua maior especialidade não é apenas proporcionar uma boa sauna… é fazer questão de que todo mundo saiba disso. "]
 
 
 func open_info_sauna(num, c, w, p):
