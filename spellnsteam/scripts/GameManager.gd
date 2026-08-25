@@ -2,9 +2,10 @@ extends Node
 
 var player_mov = true
 var player_enable = true
-var player_shortcut = true
 signal dialogo_sabotar_start
 signal dialogo_sabotar_end
+signal dialogo_floresta_start
+signal dialogo_floresta_end
 
 #-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 #MANAGEMENT DO MAPA
@@ -54,17 +55,23 @@ var inventory = {
 	"up_eucalipto": 0,
 	"up_cerca": 0
 }
+var itens_get = {
+	"madeira": false,
+	"carvao": false,
+	"up_toalha": false,
+	"up_eucalipto": false,
+	"up_cerca": false
+}
 
 signal inventory_changed
 
 func add_item(item_name: String):
-	if !inventory.has(item_name):
-		return
 	inventory[item_name] += 1
+	itens_get[item_name] = true
 	inventory_changed.emit()
 
 func remove_item(item_name: String):
-	if !inventory.has(item_name) or inventory[item_name] == 0:
+	if inventory[item_name] == 0:
 		return
 	inventory[item_name] -= 1
 	inventory_changed.emit()

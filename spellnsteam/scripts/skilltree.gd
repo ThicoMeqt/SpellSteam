@@ -6,19 +6,21 @@ extends Control
 @onready var info_nome = $info/Label
 @onready var info_desc = $info/Label2
 @onready var info_preco = $info/Label3
-var upA_nomes = ["água1", "água2", "água3"]
+var text_fail = "Materiais Insuficientes."
+var text_success = "Upgrade comprado com sucesso!"
+var upA_nomes = ["Água Renovada", "Água Aquecida", "Banho de Eucalipto"]
 var upA_desc = [
-	"descricao agua 1 - descricao agua 1 - descricao agua 1 - descricao agua 1 - descricao agua 1 - descricao agua 1 - descricao agua 1 - descricao agua 1 - ", 
-	"descricao agua 2 - descricao agua 2 - descricao agua 2 - descricao agua 2 - descricao agua 2 - descricao agua 2 - descricao agua 2 - descricao agua 2 - ", 
-	"descricao agua 3 - descricao agua 3 - descricao agua 3 - descricao agua 3 - descricao agua 3 - descricao agua 3 - descricao agua 3 - descricao agua 3 - "]
-var upA_preco = ["2X madeira", "2X carvão", "2X cravão, 1X eucalipto"]
-var upC_nomes = ["conf 1", "conf 2", "conf 3", "conf 4"]
+	"Uma pequena reforma para dar vida nova ao sistema de água da sauna. Com madeira nova e um pouco de trabalho, a água já começa a ficar mais limpa e agradável.", 
+	"Um sistema de aquecimento mais eficiente transforma a sauna em um lugar muito mais confortável. A água agora pode atingir a temperatura ideal e permanecer quente por mais tempo.", 
+	"Uma melhoria de respeito. Além de manter a água quente, a essência de eucalipto deixa um aroma refrescante e revigorante no ambiente. Agora a sauna começa a ter aquele toque especial que os clientes não esquecem."]
+var upA_preco = ["3X madeira", "3X carvão", "3X cravão, 1X eucalipto"]
+var upC_nomes = ["Bancos Novos", "Área Cercada", "Conforto Extra", "Sauna Renovada"]
 var upC_desc = [
-	"descricao conforto 1 - descricao conforto 1 - descricao conforto 1 - descricao conforto 1 - descricao conforto 1 - descricao conforto 1 - descricao conforto 1 - ", 
-	"descricao conforto 2 - descricao conforto 2 - descricao conforto 2 - descricao conforto 2 - descricao conforto 2 - descricao conforto 2 - descricao conforto 2 - ", 
-	"descricao conforto 3 - descricao conforto 3 - descricao conforto 3 - descricao conforto 3 - descricao conforto 3 - descricao conforto 3 - descricao conforto 3 - ", 
-	"descricao conforto 4 - descricao conforto 4 - descricao conforto 4 - descricao conforto 4 - descricao conforto 4 - descricao conforto 4 - descricao conforto 4 - "]
-var upC_preco = ["2X madeira", "2X madeira, 1X cercas", "2X cravão, 1X toalhas", "4X madeira, 1X cercas"]
+	"Bancos novos para substituir a madeira velha e desconfortável. Um pequeno investimento que já faz a sauna parecer muito mais acolhedora.", 
+	"Uma cerca de madeira para delimitar e organizar melhor o espaço. Além de deixar tudo mais bonito, dá à sauna aquela sensação de um lugar bem cuidado.", 
+	"Toalhas macias e um ambiente mais quentinho transformam uma simples visita à sauna em uma experiência muito mais confortável. Afinal, ninguém gosta de sair tremendo de frio.", 
+	"Uma reforma completa no espaço, com madeira nova e cercas reforçadas. A velha sauna começa, finalmente, a recuperar o charme e o conforto que um dia fizeram parte de sua história."]
+var upC_preco = ["3X madeira", "3X madeira, 1X cercas", "3X cravão, 1X toalhas", "4X madeira, 1X cercas"]
 var upgrade = ""
 
 func _ready():
@@ -56,10 +58,10 @@ func info_upC(x):
 
 func fail():
 	popup.visible = true
-	popuptext.text = "Materiais Insuficientes."
+	popuptext.text = str(text_fail)
 func success():
 	popup.visible = true
-	popuptext.text = "Upgrade comprado com sucesso!"
+	popuptext.text = str(text_success)
 
 func _on_btn_conf_pressed() -> void:
 	if upgrade == "w1":
@@ -79,10 +81,11 @@ func _on_btn_conf_pressed() -> void:
 
 func _on_btn_negar_pressed() -> void:
 	info.visible = false
-	
+
 func _on_button_pressed() -> void:
 	popup.visible = false
-	info.visible = false
+	if popuptext.text == str(text_success):
+		info.visible = false
 
 # ====================================================================================
 # WATER UPGRADES
@@ -93,7 +96,7 @@ func buy_w1():
 	if GameManager.inventory["madeira"] < 2:
 		fail()
 		return
-	GameManager.inventory["madeira"] -= 2
+	GameManager.inventory["madeira"] -= 3
 	GameManager.sauna_stats["water"] = 1
 	GameManager.inventory_changed.emit()
 	$VBoxContainer/HBoxContainer/water2.disabled = false
@@ -107,7 +110,7 @@ func buy_w2():
 	if GameManager.inventory["carvao"] < 2:
 		fail()
 		return
-	GameManager.inventory["carvao"] -= 2
+	GameManager.inventory["carvao"] -= 3
 	GameManager.sauna_stats["water"] = 2
 	GameManager.inventory_changed.emit()
 	$VBoxContainer/HBoxContainer/water3.disabled = false
@@ -122,7 +125,7 @@ func buy_w3():
 	if GameManager.inventory["carvao"] < 2 or GameManager.inventory["up_eucalipto"] < 1:
 		fail()
 		return
-	GameManager.inventory["carvao"] -= 2
+	GameManager.inventory["carvao"] -= 3
 	GameManager.inventory["up_eucalipto"] -= 1
 	GameManager.sauna_stats["water"] = 3
 	GameManager.inventory_changed.emit()
@@ -138,7 +141,7 @@ func buy_c1():
 	if GameManager.inventory["madeira"] < 2:
 		fail()
 		return
-	GameManager.inventory["madeira"] -= 2
+	GameManager.inventory["madeira"] -= 3
 	GameManager.sauna_stats["confort"] = 1
 	GameManager.inventory_changed.emit()
 	$VBoxContainer2/HBoxContainer/comfort2.disabled = false
@@ -152,7 +155,7 @@ func buy_c2():
 	if GameManager.inventory["madeira"] < 2 or GameManager.inventory["up_cerca"] < 1:
 		fail()
 		return
-	GameManager.inventory["madeira"] -= 2
+	GameManager.inventory["madeira"] -= 3
 	GameManager.inventory["up_cerca"] -= 1
 	GameManager.sauna_stats["confort"] = 2
 	GameManager.inventory_changed.emit()
@@ -167,7 +170,7 @@ func buy_c3():
 	if GameManager.inventory["carvao"] < 2 or GameManager.inventory["up_toalha"] < 1:
 		fail()
 		return
-	GameManager.inventory["carvao"] -= 2
+	GameManager.inventory["carvao"] -= 3
 	GameManager.inventory["up_toalha"] -= 1
 	GameManager.sauna_stats["confort"] = 3
 	GameManager.inventory_changed.emit()

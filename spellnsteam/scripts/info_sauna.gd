@@ -42,6 +42,10 @@ func open_info_sauna(num, c, w, p):
 	nome_sauna.text = nomes_sauna[num]
 	desc_sauna.text = desc_saunas[num]
 	info_sauna.visible = true
+	$"../bg_livro/btn_livro".disabled = true
+	$"../bg_livro/btn_runar".disabled = true
+	$"../TextureRect/ColorRect2/btn_puxar".disabled = true
+	$"../TextureRect/ColorRect3/btn_info_sauna".disabled = true
 	GameManager.player_mov = false
 	for i in range (cont_conf.size()):
 		if i < c:
@@ -70,4 +74,8 @@ func _on_btn_info_sauna_4_pressed() -> void:
 
 func _on_btn_fechar_sauna_pressed() -> void:
 	info_sauna.visible = false
+	$"../bg_livro/btn_livro".disabled = false
+	$"../bg_livro/btn_runar".disabled = false
+	$"../TextureRect/ColorRect2/btn_puxar".disabled = false
+	$"../TextureRect/ColorRect3/btn_info_sauna".disabled = false
 	GameManager.player_mov = true

@@ -570,6 +570,7 @@ shortcut_in_tooltip = false
 flat = true
 
 [node name="info_sauna" type="ColorRect" parent="." unique_id=1681574373]
+visible = false
 layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 648.0

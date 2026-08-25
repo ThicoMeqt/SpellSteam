@@ -9,18 +9,25 @@ var current_line = 0
 var text_speed = 0.02
 var is_typing = false
 var full_text_shown = false
-var full_text = [
+var full_text_sabotar = [
 		"Ainda está muito cedo e têm muitas pessoas por perto. Tentar algo agora seria muito arriscado.", 
 		"Acho que devo voltar aqui mais tarde e tentar novamente quando a área estiver vazia."]
+var full_text_floresta = [
+		"A floresta fica cheia de criaturas durante a noite.", 
+		"Acho que devo voltar aqui amanhã quando estiver mais claro."]
 
 
 func _ready():
-	GameManager.dialogo_sabotar_start.connect(comecar)
+	GameManager.dialogo_sabotar_start.connect(comecar_sabotar)
+	GameManager.dialogo_floresta_start.connect(comecar_floresta)
 	original_scale = npc_sprite.scale
 	name_label.text = GameManager.player_name
 
-func comecar():
-	start_dialogue(full_text)
+func comecar_sabotar():
+	start_dialogue(full_text_sabotar)
+
+func comecar_floresta():
+	start_dialogue(full_text_floresta)
 
 func play_squash():
 	if npc_sprite == null:

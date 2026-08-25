@@ -11,16 +11,8 @@ extends TextureRect
 @onready var bg_livro = $"../bg_livro"
 @onready var popup = $"../bg_livro/popup_confirm"
 
-@onready var madeira_icon = $slot_madeira/btn_madeira
-@onready var madeira_count = $slot_madeira/Label
-@onready var carvao_icon = $slot_carvao/btn_carvao
-@onready var carvao_count = $slot_carvao/Label
-@onready var up_toalha_icon = $slot_up_toalha/btn_toalha
-@onready var up_toalha_count = $slot_up_toalha/Label
-@onready var up_eucalipto_icon = $slot_up_eucalipto/btn_eucalipto
-@onready var up_eucalipto_count = $slot_up_eucalipto/Label
-@onready var up_cerca_icon = $slot_up_cerca/btn_cerca
-@onready var up_cerca_count = $slot_up_cerca/Label
+var inventory_icons = {}
+var inventory_counts = {}
 
 func _ready() -> void:
 	mapa.visible = false
@@ -29,6 +21,18 @@ func _ready() -> void:
 	bg_livro.visible = false
 	popup.visible = false
 	$"../dialogo".visible = false
+	inventory_icons = {
+		"madeira": $slot_madeira/btn_madeira,
+		"carvao": $slot_carvao/btn_carvao,
+		"up_toalha": $slot_up_toalha/btn_toalha,
+		"up_eucalipto": $slot_up_eucalipto/btn_eucalipto,
+		"up_cerca": $slot_up_cerca/btn_cerca}
+	inventory_counts = {
+		"madeira": $slot_madeira/Label,
+		"carvao": $slot_carvao/Label,
+		"up_toalha": $slot_up_toalha/Label,
+		"up_eucalipto": $slot_up_eucalipto/Label,
+		"up_cerca": $slot_up_cerca/Label}
 	GameManager.inventory_changed.connect(update_inventory)
 	update_inventory()
 	GameManager.map_changed.connect(update_btn_rune)
@@ -37,6 +41,8 @@ func _ready() -> void:
 	update_timer()
 	GameManager.dialogo_sabotar_start.connect(start_dialogo)
 	GameManager.dialogo_sabotar_end.connect(end_dialogo)
+	GameManager.dialogo_floresta_start.connect(start_dialogo)
+	GameManager.dialogo_floresta_end.connect(end_dialogo)
 
 func ativar_btns():
 	$ColorRect2/btn_puxar.disabled = false
@@ -52,12 +58,14 @@ func start_dialogo():
 	$"../bg_livro/btn_runar".disabled = true
 	$ColorRect2/btn_puxar.disabled = true
 	$ColorRect3/btn_info_sauna.disabled = true
+	GameManager.player_mov = false
 func end_dialogo():
 	$"../dialogo".visible = false
 	$"../bg_livro/btn_livro".disabled = false
 	$"../bg_livro/btn_runar".disabled = false
 	$ColorRect2/btn_puxar.disabled = false
 	$ColorRect3/btn_info_sauna.disabled = false
+	GameManager.player_mov = true
 
 #====================================================================================================================================================
 #PUXAR MENU
@@ -107,31 +115,12 @@ func update_timer():
 #====================================================================================================================================================
 #ITENS
 func update_inventory():
-	var madeira = GameManager.inventory["madeira"]
-	madeira_icon.visible = madeira > 0
-	madeira_icon.disabled = madeira <= 0
-	madeira_count.visible = madeira > 0
-	madeira_count.text = str(madeira)
-	var carvao = GameManager.inventory["carvao"]
-	carvao_icon.visible = carvao > 0
-	carvao_icon.disabled = carvao <= 0
-	carvao_count.visible = carvao > 0
-	carvao_count.text = str(carvao)
-	var up_toalha = GameManager.inventory["up_toalha"]
-	up_toalha_icon.visible = up_toalha > 0
-	up_toalha_icon.disabled = up_toalha <= 0
-	up_toalha_count.visible = up_toalha > 0
-	up_toalha_count.text = str(up_toalha)
-	var up_eucalipto = GameManager.inventory["up_eucalipto"]
-	up_eucalipto_icon.visible = up_eucalipto > 0
-	up_eucalipto_icon.disabled = up_eucalipto <= 0
-	up_eucalipto_count.visible = up_eucalipto > 0
-	up_eucalipto_count.text = str(up_eucalipto)
-	var up_cerca = GameManager.inventory["up_cerca"]
-	up_cerca_icon.visible = up_cerca > 0
-	up_cerca_icon.disabled = up_cerca <= 0
-	up_cerca_count.visible = up_cerca > 0
-	up_cerca_count.text = str(up_cerca)
+	for item in GameManager.inventory:
+		var count = GameManager.inventory[item]
+		inventory_icons[item].visible = false if (count <= 0 and not GameManager.itens_get[item]) else true
+		inventory_icons[item].self_modulate.a = 0.5 if (count <= 0 and GameManager.itens_get[item]) else 1.0
+		inventory_counts[item].visible = false if (count <= 0 and not GameManager.itens_get[item]) else true
+		inventory_counts[item].text = str(count)
 
 #====================================================================================================================================================
 #INFO_ITENS
@@ -148,7 +137,7 @@ func _on_btn_madeira_pressed() -> void:
 	info_quant.text = str(GameManager.inventory["madeira"])
 	info_desc.text = desc_item[0]
 	info_nome.text = "Madeira"
-	info_icon.texture = madeira_icon.texture_normal
+	info_icon.texture = inventory_icons["madeira"].texture_normal
 	GameManager.player_mov = false
 	desativar_btns()
 func _on_btn_carvao_pressed() -> void:
@@ -156,7 +145,7 @@ func _on_btn_carvao_pressed() -> void:
 	info_quant.text = str(GameManager.inventory["carvao"])
 	info_desc.text = desc_item[1]
 	info_nome.text = "Carvão"
-	info_icon.texture = carvao_icon.texture_normal
+	info_icon.texture = inventory_icons["carvao"].texture_normal
 	GameManager.player_mov = false
 	desativar_btns()
 func _on_btn_toalha_pressed() -> void:
@@ -164,7 +153,7 @@ func _on_btn_toalha_pressed() -> void:
 	info_quant.text = str(GameManager.inventory["up_toalha"])
 	info_desc.text = desc_item[2]
 	info_nome.text = "Toalhas Fofinhas"
-	info_icon.texture = up_toalha_icon.texture_normal
+	info_icon.texture = inventory_icons["up_toalha"].texture_normal
 	GameManager.player_mov = false
 	desativar_btns()
 func _on_btn_eucalipto_pressed() -> void:
@@ -172,7 +161,7 @@ func _on_btn_eucalipto_pressed() -> void:
 	info_quant.text = str(GameManager.inventory["up_eucalipto"])
 	info_desc.text = desc_item[3]
 	info_nome.text = "Essencia de Eucalipto"
-	info_icon.texture = up_eucalipto_icon.texture_normal
+	info_icon.texture = inventory_icons["up_eucalipto"].texture_normal
 	GameManager.player_mov = false
 	desativar_btns()
 func _on_btn_cerca_pressed() -> void:
@@ -180,7 +169,7 @@ func _on_btn_cerca_pressed() -> void:
 	info_quant.text = str(GameManager.inventory["up_cerca"])
 	info_desc.text = desc_item[4]
 	info_nome.text = "Cercas novas"
-	info_icon.texture = up_cerca_icon.texture_normal
+	info_icon.texture = inventory_icons["up_cerca"].texture_normal
 	GameManager.player_mov = false
 	desativar_btns()
 

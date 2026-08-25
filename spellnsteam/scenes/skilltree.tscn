@@ -151,6 +151,16 @@ mouse_filter = 2
 texture = ExtResource("2_m02x7")
 expand_mode = 1
 
+[node name="TextureRect2" type="TextureRect" parent="icones (temporario)/TextureRect" unique_id=1170247010]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 20.0
+offset_right = 46.0
+offset_bottom = 45.0
+mouse_filter = 2
+texture = ExtResource("2_m02x7")
+expand_mode = 1
+
 [node name="TextureRect2" type="TextureRect" parent="icones (temporario)" unique_id=2122635675]
 layout_mode = 0
 offset_left = 524.0
@@ -167,6 +177,16 @@ offset_left = 51.0
 offset_top = 7.0
 offset_right = 91.0
 offset_bottom = 47.0
+mouse_filter = 2
+texture = ExtResource("3_ausvb")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="icones (temporario)/TextureRect2" unique_id=1990795552]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 26.0
+offset_right = 62.0
+offset_bottom = 66.0
 mouse_filter = 2
 texture = ExtResource("3_ausvb")
 expand_mode = 1
@@ -221,6 +241,16 @@ mouse_filter = 2
 texture = ExtResource("2_m02x7")
 expand_mode = 1
 
+[node name="TextureRect2" type="TextureRect" parent="icones (temporario)/TextureRect6" unique_id=1351654594]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 16.0
+offset_right = 45.0
+offset_bottom = 41.0
+mouse_filter = 2
+texture = ExtResource("2_m02x7")
+expand_mode = 1
+
 [node name="TextureRect7" type="TextureRect" parent="icones (temporario)" unique_id=302107904]
 layout_mode = 0
 offset_left = 473.0
@@ -237,6 +267,16 @@ offset_left = 51.0
 offset_top = 3.0
 offset_right = 76.0
 offset_bottom = 28.0
+mouse_filter = 2
+texture = ExtResource("2_m02x7")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="icones (temporario)/TextureRect7" unique_id=1376622169]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 14.0
+offset_right = 46.0
+offset_bottom = 39.0
 mouse_filter = 2
 texture = ExtResource("2_m02x7")
 expand_mode = 1
@@ -301,6 +341,16 @@ mouse_filter = 2
 texture = ExtResource("3_ausvb")
 expand_mode = 1
 
+[node name="TextureRect3" type="TextureRect" parent="icones (temporario)/TextureRect10" unique_id=2112116345]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 17.0
+offset_right = 65.0
+offset_bottom = 57.0
+mouse_filter = 2
+texture = ExtResource("3_ausvb")
+expand_mode = 1
+
 [node name="TextureRect11" type="TextureRect" parent="icones (temporario)" unique_id=1089190482]
 layout_mode = 0
 offset_left = 789.0
@@ -331,18 +381,36 @@ mouse_filter = 2
 texture = ExtResource("3_ausvb")
 expand_mode = 1
 
-[node name="info" type="ColorRect" parent="." unique_id=2079852938]
+[node name="TextureRect3" type="TextureRect" parent="icones (temporario)/TextureRect12" unique_id=481778063]
+layout_mode = 0
+offset_left = 30.0
+offset_top = -13.0
+offset_right = 70.0
+offset_bottom = 27.0
+mouse_filter = 2
+texture = ExtResource("3_ausvb")
+expand_mode = 1
+
+[node name="info" type="ColorRect" parent="." unique_id=1272567965]
 visible = false
+layout_mode = 0
+offset_left = -3.0
+offset_top = -2.0
+offset_right = 1153.0
+offset_bottom = 649.0
+color = Color(0, 0, 0, 0.3764706)
+
+[node name="ColorRect2" type="ColorRect" parent="info" unique_id=2079852938]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -432.0
-offset_top = -176.25
-offset_right = 432.0
-offset_bottom = 176.25
+offset_left = -431.0
+offset_top = -175.75
+offset_right = 433.0
+offset_bottom = 176.75
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.6862745, 0.5411765, 0.39607844, 1)
@@ -354,10 +422,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -325.0
-offset_top = -158.0
-offset_right = -124.0
-offset_bottom = -95.0
+offset_left = -306.0
+offset_top = -159.5
+offset_right = -105.0
+offset_bottom = -96.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 45
@@ -372,13 +440,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -17.0
-offset_top = -155.0
-offset_right = 395.0
-offset_bottom = 50.0
+offset_left = -6.0
+offset_top = -148.5
+offset_right = 406.0
+offset_bottom = 56.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 20
 text = "desc_up"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -391,10 +459,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -345.0
-offset_top = -60.0
-offset_right = -127.94635
-offset_bottom = 48.0
+offset_left = -326.0
+offset_top = -61.5
+offset_right = -108.94635
+offset_bottom = 46.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 20
@@ -411,10 +479,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -291.0
-offset_top = -77.0
-offset_right = -184.0
-offset_bottom = -41.0
+offset_left = -272.0
+offset_top = -78.5
+offset_right = -165.0
+offset_bottom = -42.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 26
@@ -425,32 +493,32 @@ autowrap_mode = 3
 
 [node name="btn_conf" type="Button" parent="info" unique_id=991427583]
 layout_mode = 0
-offset_left = 160.0
-offset_top = 252.25
-offset_right = 302.0
-offset_bottom = 323.25
+offset_left = 286.0
+offset_top = 400.0
+offset_right = 428.0
+offset_bottom = 471.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
-text = "SIM"
+text = "MELHORAR"
 
 [node name="btn_negar" type="Button" parent="info" unique_id=244106754]
 layout_mode = 0
-offset_left = 569.0
-offset_top = 252.25
-offset_right = 711.0
-offset_bottom = 323.25
+offset_left = 716.0
+offset_top = 402.0
+offset_right = 858.0
+offset_bottom = 473.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
 shortcut = SubResource("Shortcut_ausvb")
 shortcut_in_tooltip = false
-text = "NÃO"
+text = "CANCELAR"
 
 [node name="ColorRect" type="ColorRect" parent="info" unique_id=712931775]
 layout_mode = 0
-offset_left = 49.0
-offset_top = 80.25
-offset_right = 368.0
-offset_bottom = 89.25
+offset_left = 214.0
+offset_top = 228.0
+offset_right = 533.0
+offset_bottom = 237.0
 color = Color(0.53420717, 0.40954843, 0.2837297, 1)
 
 [node name="popup" type="ColorRect" parent="info" unique_id=1354658484]
@@ -461,10 +529,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -576.0
-offset_top = -324.5
-offset_right = 576.0
-offset_bottom = 324.5
+offset_left = -575.0
+offset_top = -324.0
+offset_right = 577.0
+offset_bottom = 325.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.31764707)

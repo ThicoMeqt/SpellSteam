@@ -6,6 +6,7 @@ extends CharacterBody2D
 func _physics_process(_delta):
 	if GameManager.player_mov == false:
 		velocity = Vector2.ZERO
+		anim.stop()
 		move_and_slide()
 		return
 	if GameManager.player_enable == false:
