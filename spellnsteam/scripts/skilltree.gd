@@ -56,13 +56,6 @@ func info_upC(x):
 	info_desc.text = upC_desc[x]
 	info_preco.text = upC_preco[x]
 
-func fail():
-	popup.visible = true
-	popuptext.text = str(text_fail)
-func success():
-	popup.visible = true
-	popuptext.text = str(text_success)
-
 func _on_btn_conf_pressed() -> void:
 	if upgrade == "w1":
 		buy_w1()
@@ -87,6 +80,13 @@ func _on_button_pressed() -> void:
 	if popuptext.text == str(text_success):
 		info.visible = false
 
+func fail():
+	popup.visible = true
+	popuptext.text = str(text_fail)
+func success():
+	popup.visible = true
+	popuptext.text = str(text_success)
+	
 # ====================================================================================
 # WATER UPGRADES
 func _on_water1_pressed():
