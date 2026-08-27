@@ -43,6 +43,8 @@ func _ready() -> void:
 	GameManager.dialogo_sabotar_end.connect(end_dialogo)
 	GameManager.dialogo_floresta_start.connect(start_dialogo)
 	GameManager.dialogo_floresta_end.connect(end_dialogo)
+	GameManager.desativar_btns.connect(desativar_btns)
+	GameManager.ativar_btns.connect(ativar_btns)
 
 func ativar_btns():
 	$ColorRect2/btn_puxar.disabled = false

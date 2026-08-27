@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://dm3b6l0qxxr83" path="res://scripts/map_sauna_1.gd" id="1_qboya"]
 [ext_resource type="Texture2D" uid="uid://bh3p3mcx8jq7i" path="res://assets/map_sauna_1.png" id="1_ri7s7"]
 [ext_resource type="PackedScene" uid="uid://c8ytc0g2ok0su" path="res://scenes/teste_transição.tscn" id="2_y8ip5"]
-[ext_resource type="PackedScene" uid="uid://c5bjugykfyuvf" path="res://scenes/btn_menos_fogo.tscn" id="3_y8ip5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_juw2p"]
 size = Vector2(284.2218, 113.138596)
@@ -114,9 +113,3 @@ shape = SubResource("RectangleShape2D_kdieb")
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1936852898]
 position = Vector2(75, 256)
 shape = SubResource("RectangleShape2D_vqdfs")
-
-[node name="BTN_menos_fogo" parent="." unique_id=1835488899 instance=ExtResource("3_y8ip5")]
-offset_left = 786.0
-offset_top = 515.0
-offset_right = 786.0
-offset_bottom = 515.0

@@ -2,10 +2,18 @@ extends Node
 
 var player_mov = true
 var player_enable = true
+@warning_ignore("unused_signal")
 signal dialogo_sabotar_start
+@warning_ignore("unused_signal")
 signal dialogo_sabotar_end
+@warning_ignore("unused_signal")
 signal dialogo_floresta_start
+@warning_ignore("unused_signal")
 signal dialogo_floresta_end
+@warning_ignore("unused_signal")
+signal desativar_btns
+@warning_ignore("unused_signal")
+signal ativar_btns
 
 #-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 #MANAGEMENT DO MAPA
@@ -33,7 +41,7 @@ var max_night_actions = 2
 var remaining_actions = 3
 signal actions_changed(valor)
 
-func gastar_fogo(amount := 1):
+func gastar_fogo(amount):
 	remaining_actions -= amount
 	actions_changed.emit(remaining_actions)
 
@@ -62,8 +70,15 @@ var itens_get = {
 	"up_eucalipto": false,
 	"up_cerca": false
 }
+var itens_comprados = {
+	"toalha": false,
+	"cerca1": false,
+	"cerca2": false
+}
 
 signal inventory_changed
+@warning_ignore("unused_signal")
+signal update_loja
 
 func add_item(item_name: String):
 	inventory[item_name] += 1

@@ -1,4 +1,4 @@
 extends Control
 
 func _on_button_pressed() -> void:
-	GameManager.gastar_fogo()
+	GameManager.gastar_fogo(1)

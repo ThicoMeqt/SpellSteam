@@ -160,6 +160,7 @@ offset_left = 406.0
 offset_top = 128.0
 offset_right = 466.0
 offset_bottom = 188.0
+focus_mode = 0
 text = "LOJA"
 
 [node name="Control" parent="Control" unique_id=1184121270 instance=ExtResource("3_qudcx")]

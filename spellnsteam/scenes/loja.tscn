@@ -20,6 +20,13 @@ keycode = 4194305
 [sub_resource type="Shortcut" id="Shortcut_sdw51"]
 events = [SubResource("InputEventKey_ausvb")]
 
+[sub_resource type="InputEventKey" id="InputEventKey_sdw51"]
+device = -1
+keycode = 4194305
+
+[sub_resource type="Shortcut" id="Shortcut_dr1o3"]
+events = [SubResource("InputEventKey_sdw51")]
+
 [node name="Control" type="Control" unique_id=1184121270]
 layout_mode = 3
 anchors_preset = 15
@@ -223,8 +230,6 @@ offset_bottom = 107.72452
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 20
-text = "1X item
-1X item"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
@@ -255,13 +260,11 @@ layout_mode = 2
 [node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer" unique_id=1508223591]
 layout_mode = 2
 theme_override_font_sizes/font_size = 28
-text = "NOME"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel/MarginContainer/VBoxContainer" unique_id=739828454]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/normal_font_size = 18
-text = "TEXTO"
 
 [node name="popup" type="ColorRect" parent="." unique_id=1181545132]
 visible = false
@@ -331,10 +334,13 @@ flat = true
 
 [node name="btn_fechar" type="Button" parent="." unique_id=602673148]
 layout_mode = 0
-offset_left = 1096.0
-offset_top = 4.0
-offset_right = 1147.0
-offset_bottom = 55.0
+offset_left = 1086.0
+offset_top = 87.0
+offset_right = 1137.0
+offset_bottom = 138.0
+focus_mode = 0
+shortcut = SubResource("Shortcut_dr1o3")
+shortcut_in_tooltip = false
 text = "X"
 
 [connection signal="pressed" from="TextureRect/icon_toalha/btn_toalha" to="." method="_on_btn_toalha_pressed"]
