@@ -29,7 +29,7 @@ var cont_conf = []
 var cont_agua = []
 var cont_pop = []
 
-var nomes_sauna = ["A velha sauna","A Fonte Cristalina","O Refúgio Aconchegante","A Sauna da Moda"]
+var nomes_sauna = [GameManager.sauna0_nome, GameManager.sauna1_nome, GameManager.sauna2_nome, GameManager.sauna3_nome]
 var desc_saunas = [
 	"   Já teve dias melhores. As tábuas rangem, a água não é das melhores e poucas pessoas ainda se lembram de quando este lugar era motivo de orgulho para a família. Agora, abandonada e quase esquecida, a velha sauna está longe de sua antiga glória.
 	   Mas ela foi deixada para você como herança, e você não pretende deixá-la desaparecer. Com trabalho, dedicação e algumas boas ideias, talvez seja possível devolver à sauna o brilho de seus dias de ouro.",

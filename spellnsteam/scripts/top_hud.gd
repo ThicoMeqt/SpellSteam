@@ -48,11 +48,11 @@ func _ready() -> void:
 
 func ativar_btns():
 	$ColorRect2/btn_puxar.disabled = false
-	$runebook/btn_runebook.disabled = false
+	$"../runebook/btn_runebook".disabled = false
 	$ColorRect3/btn_info_sauna.disabled = false
 func desativar_btns():
 	$ColorRect2/btn_puxar.disabled = true
-	$runebook/btn_runebook.disabled = true
+	$"../runebook/btn_runebook".disabled = true
 	$ColorRect3/btn_info_sauna.disabled = true
 func start_dialogo():
 	$"../dialogo".visible = true

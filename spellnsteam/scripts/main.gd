@@ -82,11 +82,16 @@ func mimir():
 	await tween.finished
 	block_dias.visible = false
 	lbl_dia1.visible = false
-	tween = create_tween()
-	tween.tween_property(fade, "modulate:a", 0, 1.5)
-	await tween.finished
-	fade.visible = false
-	lbl_dia1.position = pos1_og
-	lbl_dia2.position = pos2_og
-	GameManager.player_mov = true
-	GameManager.sleeping = false
+	if GameManager.current_day == 7:
+		get_tree().change_scene_to_file("res://scenes/finalizacao.tscn")
+		GameManager.player_enable = false
+	else:
+		tween = create_tween()
+		tween.tween_property(fade, "modulate:a", 0, 1.5)
+		await tween.finished
+		fade.visible = false
+		lbl_dia1.position = pos1_og
+		lbl_dia2.position = pos2_og
+		GameManager.player_mov = true
+		GameManager.sleeping = false
+		GameManager.ativar_btns.emit()

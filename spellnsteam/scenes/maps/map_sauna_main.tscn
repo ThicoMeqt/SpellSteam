@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bwqh2oryuk4kg" path="res://assets/map_sauna_main.jpg" id="1_e563a"]
 [ext_resource type="PackedScene" uid="uid://c8ytc0g2ok0su" path="res://scenes/teste_transição.tscn" id="3_qhvma"]
 [ext_resource type="PackedScene" uid="uid://ct71guhtf1hlg" path="res://scenes/skilltree.tscn" id="4_kkh5l"]
+[ext_resource type="Texture2D" uid="uid://50h5hfcrwxux" path="res://assets/hud_generico_quad.png" id="4_qhvma"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ws5rw"]
 size = Vector2(345, 106.5)
@@ -162,20 +163,14 @@ grow_vertical = 2
 focus_mode = 0
 flat = true
 
-[node name="ColorRect" type="ColorRect" parent="ctrl_sklltree" unique_id=43907699]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -330.0
-offset_top = -312.5
-offset_right = 330.0
-offset_bottom = 312.5
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.6862745, 0.5411765, 0.39607844, 1)
+[node name="TextureRect" type="TextureRect" parent="ctrl_sklltree" unique_id=452043162]
+layout_mode = 0
+offset_left = 207.0
+offset_top = -21.0
+offset_right = 940.0
+offset_bottom = 660.0
+texture = ExtResource("4_qhvma")
+expand_mode = 1
 
 [node name="Skilltree" parent="ctrl_sklltree" unique_id=394577640 instance=ExtResource("4_kkh5l")]
 layout_mode = 1

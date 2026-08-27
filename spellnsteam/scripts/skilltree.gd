@@ -2,11 +2,11 @@ extends Control
 
 @onready var info = $info
 @onready var popup = $info/popup
-@onready var popuptext = $info/popup/popup/Label
+@onready var popuptext = $info/popup/popup/TextureRect/Label
 @onready var info_nome = $info/Label
 @onready var info_desc = $info/Label2
 @onready var info_preco = $info/Label3
-var text_fail = "Materiais Insuficientes."
+var text_fail = "Recursos Insuficientes."
 var text_success = "Upgrade comprado com sucesso!"
 var upA_nomes = ["Água Renovada", "Água Aquecida", "Banho de Eucalipto"]
 var upA_desc = [
@@ -93,11 +93,12 @@ func _on_water1_pressed():
 	upgrade = "w1"
 	info_upA(0)
 func buy_w1():
-	if GameManager.inventory["madeira"] < 2:
+	if GameManager.inventory["madeira"] < 2 or GameManager.remaining_actions == 0:
 		fail()
 		return
 	GameManager.inventory["madeira"] -= 3
 	GameManager.sauna_stats["water"] = 1
+	GameManager.gastar_fogo(1)
 	GameManager.inventory_changed.emit()
 	$VBoxContainer/HBoxContainer/water2.disabled = false
 	$VBoxContainer/HBoxContainer/water1.disabled = true
@@ -107,27 +108,28 @@ func _on_water2_pressed():
 	upgrade = "w2"
 	info_upA(1)
 func buy_w2():
-	if GameManager.inventory["carvao"] < 2:
+	if GameManager.inventory["carvao"] < 2 or GameManager.remaining_actions == 0:
 		fail()
 		return
 	GameManager.inventory["carvao"] -= 3
 	GameManager.sauna_stats["water"] = 2
+	GameManager.gastar_fogo(1)
 	GameManager.inventory_changed.emit()
 	$VBoxContainer/HBoxContainer/water3.disabled = false
 	$VBoxContainer/HBoxContainer/water2.disabled = true
 	success()
 
-
 func _on_water3_pressed():
 	upgrade = "w3"
 	info_upA(2)
 func buy_w3():
-	if GameManager.inventory["carvao"] < 2 or GameManager.inventory["up_eucalipto"] < 1:
+	if GameManager.inventory["carvao"] < 2 or GameManager.inventory["up_eucalipto"] < 1 or GameManager.remaining_actions == 0:
 		fail()
 		return
 	GameManager.inventory["carvao"] -= 3
 	GameManager.inventory["up_eucalipto"] -= 1
 	GameManager.sauna_stats["water"] = 3
+	GameManager.gastar_fogo(1)
 	GameManager.inventory_changed.emit()
 	$VBoxContainer/HBoxContainer/water3.disabled = true
 	success()
@@ -138,11 +140,12 @@ func _on_comfort1_pressed():
 	upgrade = "c1"
 	info_upC(0)
 func buy_c1():
-	if GameManager.inventory["madeira"] < 2:
+	if GameManager.inventory["madeira"] < 2 or GameManager.remaining_actions == 0:
 		fail()
 		return
 	GameManager.inventory["madeira"] -= 3
 	GameManager.sauna_stats["confort"] = 1
+	GameManager.gastar_fogo(1)
 	GameManager.inventory_changed.emit()
 	$VBoxContainer2/HBoxContainer/comfort2.disabled = false
 	$VBoxContainer2/HBoxContainer/comfort1.disabled = true
@@ -152,12 +155,13 @@ func _on_comfort2_pressed():
 	upgrade = "c2"
 	info_upC(1)
 func buy_c2():
-	if GameManager.inventory["madeira"] < 2 or GameManager.inventory["up_cerca"] < 1:
+	if GameManager.inventory["madeira"] < 2 or GameManager.inventory["up_cerca"] < 1 or GameManager.remaining_actions == 0:
 		fail()
 		return
 	GameManager.inventory["madeira"] -= 3
 	GameManager.inventory["up_cerca"] -= 1
 	GameManager.sauna_stats["confort"] = 2
+	GameManager.gastar_fogo(1)
 	GameManager.inventory_changed.emit()
 	$VBoxContainer2/HBoxContainer/comfort3.disabled = false
 	$VBoxContainer2/HBoxContainer/comfort2.disabled = true
@@ -167,12 +171,13 @@ func _on_comfort3_pressed():
 	upgrade = "c3"
 	info_upC(2)
 func buy_c3():
-	if GameManager.inventory["carvao"] < 2 or GameManager.inventory["up_toalha"] < 1:
+	if GameManager.inventory["carvao"] < 2 or GameManager.inventory["up_toalha"] < 1 or GameManager.remaining_actions == 0:
 		fail()
 		return
 	GameManager.inventory["carvao"] -= 3
 	GameManager.inventory["up_toalha"] -= 1
 	GameManager.sauna_stats["confort"] = 3
+	GameManager.gastar_fogo(1)
 	GameManager.inventory_changed.emit()
 	$VBoxContainer2/HBoxContainer/comfort4.disabled = false
 	$VBoxContainer2/HBoxContainer/comfort3.disabled = true
@@ -182,12 +187,13 @@ func _on_comfort4_pressed():
 	upgrade = "c4"
 	info_upC(3)
 func buy_c4():
-	if GameManager.inventory["madeira"] < 4 or GameManager.inventory["up_cerca"] < 1:
+	if GameManager.inventory["madeira"] < 4 or GameManager.inventory["up_cerca"] < 1 or GameManager.remaining_actions == 0:
 		fail()
 		return
 	GameManager.inventory["madeira"] -= 4
 	GameManager.inventory["up_cerca"] -= 1
 	GameManager.sauna_stats["confort"] = 4
+	GameManager.gastar_fogo(1)
 	GameManager.inventory_changed.emit()
 	$VBoxContainer2/HBoxContainer/comfort4.disabled = true
 	success()

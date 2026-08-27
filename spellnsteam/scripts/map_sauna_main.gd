@@ -9,6 +9,7 @@ func _ready() -> void:
 
 func _on_btn_mimir_pressed() -> void:
 	GameManager.dormir.emit()
+	GameManager.desativar_btns.emit()
 
 
 func _on_btn_skilltree_pressed() -> void:

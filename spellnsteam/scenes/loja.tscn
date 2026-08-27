@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b33nnwi5we88s" path="res://assets/hud_loja.png" id="3_dr1o3"]
 [ext_resource type="Texture2D" uid="uid://bqjwdsigs07mx" path="res://assets/item_towel.png" id="4_cqcu4"]
 [ext_resource type="Texture2D" uid="uid://bwipkqujadrxx" path="res://assets/item_cerca.png" id="5_f8dx1"]
+[ext_resource type="Texture2D" uid="uid://2egla58ustju" path="res://assets/hud_generico_ret.png" id="7_dr1o3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sdw51"]
 bg_color = Color(0, 0, 0, 0.5882353)
@@ -280,7 +281,7 @@ offset_right = 577.0
 offset_bottom = 325.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 0.31764707)
+color = Color(0, 0, 0, 0.43137255)
 
 [node name="popup" type="ColorRect" parent="popup" unique_id=1718734002]
 layout_mode = 1
@@ -295,19 +296,33 @@ offset_right = 346.0
 offset_bottom = 99.5
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.6862745, 0.5411765, 0.39607844, 1)
+color = Color(0.6862745, 0.5411765, 0.39607844, 0)
 
-[node name="Label" type="Label" parent="popup/popup" unique_id=103245748]
+[node name="TextureRect" type="TextureRect" parent="popup/popup" unique_id=309255840]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -28.0
+offset_top = -32.0
+offset_right = 16.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_dr1o3")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="popup/popup/TextureRect" unique_id=103245748]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -319.5
-offset_top = -27.5
-offset_right = 319.5
-offset_bottom = 27.5
+offset_left = -313.5
+offset_top = -21.5
+offset_right = 325.5
+offset_bottom = 33.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 40
@@ -315,15 +330,15 @@ text = "Upgrade comprado com sucesso!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button" type="Button" parent="popup/popup" unique_id=1218556905]
+[node name="Button" type="Button" parent="popup/popup/TextureRect" unique_id=1218556905]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -218.0
-offset_top = -234.0
-offset_right = 231.0
-offset_bottom = 229.0
+offset_left = -190.0
+offset_top = -202.0
+offset_right = 259.0
+offset_bottom = 261.0
 grow_horizontal = 2
 grow_vertical = 2
 tooltip_auto_translate_mode = 2
@@ -347,5 +362,5 @@ text = "X"
 [connection signal="pressed" from="TextureRect/icon_cerca1/btn_cerca1" to="." method="_on_btn_cerca_1_pressed"]
 [connection signal="pressed" from="TextureRect/icon_cerca2/btn_cerca2" to="." method="_on_btn_cerca_2_pressed"]
 [connection signal="pressed" from="TextureRect/btn_comprar" to="." method="_on_btn_comprar_pressed"]
-[connection signal="pressed" from="popup/popup/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="popup/popup/TextureRect/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="btn_fechar" to="." method="_on_btn_fechar_pressed"]

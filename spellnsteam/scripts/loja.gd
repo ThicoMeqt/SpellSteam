@@ -20,7 +20,7 @@ extends Control
 @onready var npc_sprite = $Sprite2D
 @onready var btn_comprar = $TextureRect/btn_comprar
 @onready var popup = $popup
-@onready var popuptext = $popup/popup/Label
+@onready var popuptext = $popup/popup/TextureRect/Label
 var item_preco = ["1X carvão   1X ação", "1X madeira 1X ação", "3X madeira 1X ação"]
 var current_item = 3
 var text_fail = "Recursos Insuficientes."
@@ -138,6 +138,8 @@ func buy_toalha():
 	GameManager.inventory_changed.emit()
 	GameManager.itens_comprados["toalha"] = true
 	success()
+	start_dialogue(full_text_arigathanks)
+	$TextureRect/Label4/Label3.text = ""
 func buy_cerca1():
 	if GameManager.inventory["madeira"] < 1 or GameManager.remaining_actions == 0:
 		fail()
@@ -148,6 +150,8 @@ func buy_cerca1():
 	GameManager.inventory_changed.emit()
 	GameManager.itens_comprados["cerca1"] = true
 	success()
+	start_dialogue(full_text_arigathanks)
+	$TextureRect/Label4/Label3.text = ""
 func buy_cerca2():
 	if GameManager.inventory["madeira"] < 3 or GameManager.remaining_actions == 0:
 		fail()
@@ -158,6 +162,8 @@ func buy_cerca2():
 	GameManager.inventory_changed.emit()
 	GameManager.itens_comprados["cerca2"] = true
 	success()
+	start_dialogue(full_text_arigathanks)
+	$TextureRect/Label4/Label3.text = ""
 
 func _on_btn_toalha_pressed() -> void:
 	if current_item != 0:
@@ -215,8 +221,6 @@ func _on_btn_comprar_pressed() -> void:
 	elif current_item == 3:
 		return
 	update_loja()
-	start_dialogue(full_text_arigathanks)
-	$TextureRect/Label4/Label3.text = ""
 
 func _on_btn_fechar_pressed() -> void:
 	GameManager.player_enable = true

@@ -48,6 +48,7 @@ func gastar_fogo(amount):
 #-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 #STATS DO PLAYER
 var player_name = "Safas"
+var sauna0_nome = "A velha Sauna"
 var sauna_stats = {
 	"confort": 0,
 	"water": 0,
@@ -100,6 +101,7 @@ func coletar(item):
 
 #-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 #SAUNA RIVAL 1
+var sauna1_nome = "A Fonte Cristalina"
 var sr1_stats = {
 	"confort": 2,
 	"water": 3,
@@ -108,6 +110,7 @@ var sr1_stats = {
 
 #-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 #SAUNA RIVAL 2
+var sauna2_nome = "O Refúgio Aconchegante"
 var sr2_stats = {
 	"confort": 4,
 	"water": 2,
@@ -116,6 +119,7 @@ var sr2_stats = {
 
 #-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 #SAUNA RIVAL 3
+var sauna3_nome = "A Sauna da Moda"
 var sr3_stats = {
 	"confort": 3,
 	"water": 1,

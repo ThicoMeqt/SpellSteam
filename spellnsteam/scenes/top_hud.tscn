@@ -6,8 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://cplt024oy60tv" path="res://assets/icon.svg" id="2_2iueu"]
 [ext_resource type="Texture2D" uid="uid://cwstbiuaktp1v" path="res://assets/map_full.png" id="2_4f3nj"]
 [ext_resource type="Texture2D" uid="uid://bqpkqe245o5u7" path="res://assets/item_wood.png" id="2_idhx5"]
-[ext_resource type="Texture2D" uid="uid://xwjepqjagn24" path="res://assets/teste_livro.png" id="3_dfbvg"]
 [ext_resource type="Texture2D" uid="uid://bet3baj6v781n" path="res://assets/item_coal.png" id="3_u6q5j"]
+[ext_resource type="Texture2D" uid="uid://b0nofvniycqbl" path="res://assets/livro.png" id="4_b5kcj"]
 [ext_resource type="Texture2D" uid="uid://bqjwdsigs07mx" path="res://assets/item_towel.png" id="4_dfbvg"]
 [ext_resource type="PackedScene" uid="uid://blw6u6h47yn1i" path="res://scenes/runebook.tscn" id="8_dfbvg"]
 [ext_resource type="Texture2D" uid="uid://bwipkqujadrxx" path="res://assets/item_cerca.png" id="8_ovh0w"]
@@ -36,6 +36,11 @@ unicode = 113
 [sub_resource type="Shortcut" id="Shortcut_napu8"]
 events = [SubResource("InputEventKey_nf2rd")]
 
+[sub_resource type="LabelSettings" id="LabelSettings_mdkmy"]
+font_size = 25
+outline_size = 6
+outline_color = Color(0, 0, 0, 1)
+
 [sub_resource type="InputEventKey" id="InputEventKey_550bf"]
 device = -1
 keycode = 82
@@ -43,11 +48,6 @@ unicode = 114
 
 [sub_resource type="Shortcut" id="Shortcut_nf2rd"]
 events = [SubResource("InputEventKey_550bf")]
-
-[sub_resource type="LabelSettings" id="LabelSettings_mdkmy"]
-font_size = 25
-outline_size = 6
-outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="InputEventKey" id="InputEventKey_b5kcj"]
 keycode = 4194305
@@ -124,9 +124,8 @@ color = Color(0.6862745, 0.5411765, 0.39607844, 0)
 
 [node name="btn_info_sauna" type="TextureButton" parent="TextureRect/ColorRect3" unique_id=204457180]
 layout_mode = 0
-offset_left = 121.0
 offset_top = 4.0
-offset_right = 152.0
+offset_right = 164.0
 offset_bottom = 35.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
@@ -138,9 +137,9 @@ stretch_mode = 0
 
 [node name="btn_info_sauna2" type="TextureButton" parent="TextureRect/ColorRect3" unique_id=328722399]
 layout_mode = 0
-offset_left = 162.0
+offset_left = 182.0
 offset_top = 4.0
-offset_right = 193.0
+offset_right = 213.0
 offset_bottom = 35.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
@@ -150,9 +149,9 @@ stretch_mode = 0
 
 [node name="btn_info_sauna3" type="TextureButton" parent="TextureRect/ColorRect3" unique_id=1862239770]
 layout_mode = 0
-offset_left = 195.0
+offset_left = 215.0
 offset_top = 4.0
-offset_right = 226.0
+offset_right = 246.0
 offset_bottom = 35.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
@@ -162,9 +161,9 @@ stretch_mode = 0
 
 [node name="btn_info_sauna4" type="TextureButton" parent="TextureRect/ColorRect3" unique_id=514177918]
 layout_mode = 0
-offset_left = 228.0
+offset_left = 248.0
 offset_top = 4.0
-offset_right = 259.0
+offset_right = 279.0
 offset_bottom = 35.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
@@ -246,22 +245,6 @@ offset_top = 87.0
 offset_right = 19.0
 offset_bottom = 108.0
 focus_mode = 0
-
-[node name="runebook" type="Node2D" parent="TextureRect" unique_id=111870621]
-position = Vector2(116, 366)
-
-[node name="btn_runebook" type="TextureButton" parent="TextureRect/runebook" unique_id=765850707]
-offset_left = 77.0
-offset_top = 154.0
-offset_right = 178.0
-offset_bottom = 185.0
-focus_mode = 0
-mouse_default_cursor_shape = 2
-shortcut = SubResource("Shortcut_nf2rd")
-shortcut_in_tooltip = false
-texture_normal = ExtResource("3_dfbvg")
-ignore_texture_size = true
-stretch_mode = 0
 
 [node name="btn_abrir_mapa" type="Button" parent="TextureRect" unique_id=132462734]
 layout_mode = 0
@@ -428,6 +411,40 @@ text = "DIA 1"
 label_settings = SubResource("LabelSettings_mdkmy")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="runebook" type="Node2D" parent="." unique_id=111870621]
+position = Vector2(200, -49)
+rotation = 1.5707964
+
+[node name="btn_runebook" type="TextureButton" parent="runebook" unique_id=765850707]
+offset_left = 51.0
+offset_top = 211.0
+offset_right = 135.23515
+offset_bottom = 374.46625
+rotation = -1.5707964
+focus_mode = 0
+mouse_default_cursor_shape = 2
+shortcut = SubResource("Shortcut_nf2rd")
+shortcut_in_tooltip = false
+texture_normal = ExtResource("4_b5kcj")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Control" type="Control" parent="runebook" unique_id=798451653]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 44.0
+offset_top = 182.0
+offset_right = 237.0
+offset_bottom = 222.0
+
+[node name="Control2" type="Control" parent="runebook" unique_id=1364632886]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 41.0
+offset_top = 114.0
+offset_right = 234.0
+offset_bottom = 154.0
 
 [node name="mapa" type="TextureRect" parent="." unique_id=473140118]
 visible = false
@@ -877,13 +894,13 @@ layout_mode = 1
 [connection signal="pressed" from="TextureRect/b4/b44" to="TextureRect" method="_on_b_44_pressed"]
 [connection signal="pressed" from="TextureRect/b5" to="TextureRect" method="_on_b_5_pressed"]
 [connection signal="pressed" from="TextureRect/b5/b55" to="TextureRect" method="_on_b_55_pressed"]
-[connection signal="pressed" from="TextureRect/runebook/btn_runebook" to="TextureRect" method="_on_btn_runebook_pressed"]
 [connection signal="pressed" from="TextureRect/btn_abrir_mapa" to="TextureRect" method="_on_btn_abrir_mapa_pressed"]
 [connection signal="pressed" from="TextureRect/slot_madeira/btn_madeira" to="TextureRect" method="_on_btn_madeira_pressed"]
 [connection signal="pressed" from="TextureRect/slot_carvao/btn_carvao" to="TextureRect" method="_on_btn_carvao_pressed"]
 [connection signal="pressed" from="TextureRect/slot_up_toalha/btn_toalha" to="TextureRect" method="_on_btn_toalha_pressed"]
 [connection signal="pressed" from="TextureRect/slot_up_eucalipto/btn_eucalipto" to="TextureRect" method="_on_btn_eucalipto_pressed"]
 [connection signal="pressed" from="TextureRect/slot_up_cerca/btn_cerca" to="TextureRect" method="_on_btn_cerca_pressed"]
+[connection signal="pressed" from="runebook/btn_runebook" to="TextureRect" method="_on_btn_runebook_pressed"]
 [connection signal="pressed" from="mapa/ColorRect2/btn_fechar_mapa" to="TextureRect" method="_on_btn_fechar_mapa_pressed"]
 [connection signal="pressed" from="info_item/caixa_info/btn_fechar_info" to="TextureRect" method="_on_btn_fechar_info_pressed"]
 [connection signal="pressed" from="info_sauna/caixa_info/btn_fechar_sauna" to="info_sauna" method="_on_btn_fechar_sauna_pressed"]
